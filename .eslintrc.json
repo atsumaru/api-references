@@ -26,6 +26,7 @@
     "semi": [
       2,
       "always"
-    ]
+    ],
+    "jsx-a11y/anchor-is-valid": [0]
   }
 }

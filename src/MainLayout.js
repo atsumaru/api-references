@@ -63,6 +63,10 @@ const MainNavigation = ({ apiList }) => (
     {apiList.map(api => (
       <Link className="MainNavigation__Item" key={api.slug} to={`/${api.slug}`}>{api.title}</Link>
     ))}
+
+    <Link className="MainNavigation__Item" to="http://ch.nicovideo.jp/indies-game/blomaga/ar1163608" target="_blank" rel="noopener">
+      旧リファレンス
+    </Link>
   </nav>
 );
 
