@@ -237,7 +237,12 @@ var MainNavigation = function MainNavigation(_ref2) {
         { className: "MainNavigation__Item", key: api.slug, to: "/" + api.slug },
         api.title
       );
-    })
+    }),
+    _react2.default.createElement(
+      _reactStatic.Link,
+      { className: "MainNavigation__Item", to: "http://ch.nicovideo.jp/indies-game/blomaga/ar1163608", target: "_blank", rel: "noopener" },
+      "\u65E7\u30EA\u30D5\u30A1\u30EC\u30F3\u30B9"
+    )
   );
 };
 
@@ -1664,4 +1669,4 @@ exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody {\n  font-fami
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.16ecf504.js.map
+//# sourceMappingURL=static.fba7c2f6.js.map
