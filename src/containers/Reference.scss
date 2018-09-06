@@ -1,0 +1,25 @@
+@import "../colors.scss";
+
+.Reference__Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > h1 {
+    flex-grow: 1;
+  }
+}
+
+.Reference__EditButton {
+  flex-shrink: 0;
+  display: block;
+  border: solid 1px $positive;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  margin-left: 1rem;
+  transition: opacity .2s ease-in-out;
+
+  &:hover {
+    opacity: .75;
+  }
+}

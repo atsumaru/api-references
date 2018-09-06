@@ -1,0 +1,51 @@
+{
+  "name": "atsumaru-api-references",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env SITE_ROOT=\"http://localhost:3000\" BASE_PATH=\"/\" react-static start",
+    "stage": "react-static build --staging",
+    "build": "react-static build",
+    "serve": "react-static build && serve dist -p 3000",
+    "lint": "eslint --fix src",
+    "precommit": "lint-staged",
+    "deploy": "react-static build && gh-pages -d dist -b gh-pages"
+  },
+  "dependencies": {
+    "chokidar": "2.0.3",
+    "github-markdown-css": "^2.10.0",
+    "htmr": "0.6.3",
+    "jdown": "0.6.4",
+    "marked": "0.5.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-hot-loader": "^4.0.0-beta.21",
+    "react-router": "^4.2.0",
+    "react-static": "^5.9.7",
+    "ress": "^1.2.2"
+  },
+  "devDependencies": {
+    "cross-env": "5.2.0",
+    "editorconfig-tools": "^0.1.1",
+    "eslint": "5.5.0",
+    "eslint-config-react-tools": "1.1.6",
+    "extract-text-webpack-plugin": "3.0.2",
+    "gh-pages": "^1.2.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "serve": "^6.1.0"
+  },
+  "lint-staged": {
+    "*.{json,md}": [
+      "editorconfig-tools fix",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}

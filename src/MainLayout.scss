@@ -1,0 +1,169 @@
+@import "./colors.scss";
+
+.MainLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.Header {
+  background-color: $niconico-black;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-image: linear-gradient(
+      to right,
+      $atsumaru-red 20%,
+      $atsumaru-yellow 20%,
+      $atsumaru-yellow 40%,
+      $atsumaru-green 40%,
+      $atsumaru-green 60%,
+      $atsumaru-blue 60%,
+      $atsumaru-blue 80%,
+      $atsumaru-purple 80%
+    );
+  }
+}
+
+.Header__Nav {
+  display: flex;
+  align-items: baseline;
+  padding: .5rem 1.5rem;
+
+  & > a {
+    color: $pure-white;
+    font-weight: bold;
+
+    &:nth-child(n+2) {
+      margin-left: 1em;
+    }
+  }
+}
+
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  padding: 1rem 2rem;
+  color: $pure-white;
+  font-size: .75rem;
+  background-color: $niconico-black;
+}
+
+.Footer__Nav > a {
+  color: $pure-white;
+
+  &::before {
+    content: '》 ';
+  }
+}
+
+.MainNavigation {
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+  padding: 1rem;
+
+  background-color: $white;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.MainNavigation__Logo {
+  text-align: right;
+  font-size: .75rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  max-width: 18rem;
+  margin: 0 auto;
+  color: $jet-black;
+  transition: opacity ease-in-out .2s;
+
+  &:hover {
+    opacity: .75;
+    text-decoration: none;
+  }
+
+  & > img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.MainNavigation__Item {
+  display: block;
+  padding: .5rem;
+  margin-top: .25rem;
+
+  &[aria-current] {
+    font-weight: bold;
+    color: $jet-black;
+    cursor: default;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.MainLayout__Body {
+  flex-grow: 1;
+  display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.MainSection {
+  width: 100%;
+  padding: 2rem 1.5rem 4rem;
+
+  & > table {
+    max-width: 100%;
+    & td:nth-child(1),
+    & th:nth-child(1) {
+      font-weight: bold;
+      word-break: keep-all;
+    }
+  }
+
+  & .negative {
+    color: $negative;
+  }
+  &.markdown-body {
+    line-height: 1.5;
+  }
+
+  &.markdown-body a {
+    color: $positive;
+  }
+  &.markdown-body h2 {
+    margin-top: 3rem;
+  }
+  &.markdown-body h3 {
+    margin-top: 2.4rem;
+  }
+
+  &.markdown-body ul li,
+  &.markdown-body ol li {
+    margin-bottom: 0.75rem;
+  }
+
+  &.markdown-body img {
+    max-width: 60%;
+    max-height: 60vh;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+}
