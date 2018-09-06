@@ -67,7 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "https://pages.github.com/atsumaru/api-references/";
+/******/ 	__webpack_require__.p = "https://atsumaru.github.io/api-references/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 11);
@@ -1664,4 +1664,4 @@ exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody {\n  font-fami
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.1586b118.js.map
+//# sourceMappingURL=static.16ecf504.js.map
