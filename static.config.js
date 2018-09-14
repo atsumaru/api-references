@@ -27,8 +27,11 @@ export default {
   getRoutes: async () => {
     const { apis, overview, changelog } = await jdown("content", {renderer});
 
+    // errorsは一番後ろにする
+    const errors = apis.filter(api => api.slug === "errors");
+    const apisWithoutErrors = apis.filter(api => api.slug !== "errors");
     // contents を含めるとデータが肥大化するので、除いたものを apiList とし、 navigation 用に各ページに含める
-    const apiList = apis.map(({ contents, ...rest }) => rest);
+    const apiList = apisWithoutErrors.concat(errors).map(({ contents, ...rest }) => rest);
 
     return [
       {
