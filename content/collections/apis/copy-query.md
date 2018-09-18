@@ -30,7 +30,7 @@ description: RPGアツマールでURLのquery情報を取得するにはこの�
 
 ## 公式プラグインの利用方法
 公式プラグインでクエリパラメータを取得するには以下のようにします。
-1. プロジェクトのプラグインフォルダに [AtsumaruQueryExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruCreatorInformationModalExperimental.js) を右クリックし「保存」して設置
+1. プロジェクトのプラグインフォルダに [AtsumaruQueryExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruQueryExperimental.js) を右クリックし「保存」して設置
 1. イベントに `AtsumaruQueryExperimental` プラグインを設定
 1. プラグインコマンドでクエリパラメータを取得
 
