@@ -22,7 +22,7 @@ interface AtsumaruApiError {
 code一覧 | 解説
 :---|:---
 BAD_REQUEST | ゲーム側で何かしらAPIの使い方を間違えている場合のコードです
-UNAUTHORIZED | プレイヤーがログインしている必要があるAPIを、プレイヤーが非ログイン状態で使った場合コードです
+UNAUTHORIZED | プレイヤーがログインしている必要があるAPIを、プレイヤーが非ログイン状態で使った場合のコードです
 INTERNAL_SERVER_ERROR | サーバ側で何らかの問題が発生していたり、通信に失敗した場合のコードです
 
 ### コード例

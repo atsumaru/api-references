@@ -47,25 +47,28 @@ description: RPGアツマールのゲームの作者情報が記載されたダ�
 <br>
 
 
-プラグインコマンドは
+プラグインコマンドは次のいずれかのように指定します。（どちらでも動作は同じです）
 
 ```
 DisplayCreatorInformationModal {niconicoUserId}
+作者情報ダイアログ表示 {niconicoUserId}
 ```
 
-と記載してください。 `{niconicoUserId}` 部分は省略可能で、省略した場合はプラグインを設置しているゲームの作者自信の情報が表示されます。自分以外の作者情報を表示したい場合は、`{niconicoUserId}` にniconicoユーザIDを指定することも可能です。
+ `{niconicoUserId}` 部分は省略可能で、省略した場合はプラグインを設置しているゲームの作者自信の情報が表示されます。自分以外の作者情報を表示したい場合は、`{niconicoUserId}` にniconicoユーザIDを指定することも可能です。
 
 ### プラグインコマンド例
 
 #### 現在のゲームの作者情報(=自分の作者情報)を表示する
 ```
 DisplayCreatorInformationModal
+作者情報ダイアログ表示
 ```
 
 
 #### ニコニコユーザーID 64341294 のユーザーの作者情報を表示する
 ```
 DisplayCreatorInformationModal 64341294
+作者情報ダイアログ表示 64341294
 ```
 
 
@@ -76,6 +79,6 @@ DisplayCreatorInformationModal 64341294
 :---|:---
 説明 | 引数のniconico_user_idにniconicoユーザIDをint値で渡すことにより、作者情報ダイアログを表示するメソッド。<br>引数に渡す文字列の形式は整数で、省略(null)も可能。省略した場合は実行しているゲームの作者情報を表示。
 引数 | niconicoユーザID(整数)。またはnull
-戻り値 | 無し
+戻り値 | Promise[void]
 リリース日 | 2018/07/02
 更新日 | 2018/08/02
