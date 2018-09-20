@@ -56,13 +56,27 @@ description: RPGアツマール内で動作するゲームのスコア(点数)�
 
 <br>
 
-公式プラグインを利用してスコアボードへの記録を行う場合、プラグインコマンドで
+公式プラグインを利用してスコアボードへの記録を行う場合、プラグインコマンドで次のいずれかのように指定します。（どちらでも動作は同じです）
 
 ```
 SetRecordToScoreboard {boardId} {variableId}
+スコア送信 {boardId} {variableId}
 ```
 
-と記載してください。<code>{boardId}</code>にはスコアを記録したいスコアボードのIDを半角数字で指定してください。また、<code>{variableId}</code>にはスコアが格納されている変数のIDを記載してください。
+<code>{boardId}</code>にはスコアを記録したいスコアボードのIDを半角数字で指定してください。また、<code>{variableId}</code>にはスコアが格納されている変数のIDを記載してください。
+
+<br>
+
+#### スコアボードへの記録：応用
+
+スコアボードへの記録を行いながら、記録に成功したかチェックする場合、プラグインコマンドで次のいずれかのように指定します。（どちらでも動作は同じです）
+
+```
+SetRecordToScoreboard {boardId} {variableId} {errorVariableId}
+スコア送信 {boardId} {variableId} {errorVariableId}
+```
+
+記録に失敗した場合、<code>{errorVariableId}</code>で指定されたIDの変数にエラーメッセージがセットされます。記録に成功した場合は、単に0がセットされます。
 
 <br>
 
@@ -72,13 +86,14 @@ SetRecordToScoreboard {boardId} {variableId}
 
 <br>
 
-公式プラグインを利用してスコアボードへの記録を行う場合、プラグインコマンドで
+公式プラグインを利用してスコアボードへの記録を行う場合、プラグインコマンドで次のいずれかのように指定します。（どちらでも動作は同じです）
 
 ```
 DisplayScoreboard {boardId}
+スコア表示 {boardId}
 ```
 
-と記載してください。<code>{boardId}</code>には表示したスコアボードのIDを半角数字で指定してください。
+<code>{boardId}</code>には表示したスコアボードのIDを半角数字で指定してください。
 
 
 ### スコアボードのデータの読み込み
@@ -90,13 +105,14 @@ DisplayScoreboard {boardId}
 
 の手順が必要です。
 
-公式プラグインを利用してスコアボード内の情報を取得するには、プラグインコマンドで
+公式プラグインを利用してスコアボード内の情報を取得するには、プラグインコマンドで次のいずれかのように指定します。（どちらでも動作は同じです）
 
 ```
 FetchRecordsFromScoreboard {boardId}
+スコア受信 {boardId}
 ```
 
-と記載してください。<code>{boardId}</code>には取得したいスコアボードのIDを半角数字で指定してください。
+<code>{boardId}</code>には取得したいスコアボードのIDを半角数字で指定してください。
 
 <br>
 
@@ -107,27 +123,29 @@ FetchRecordsFromScoreboard {boardId}
 
 <br>
 
-公式プラグインを利用してスコアボード内の情報を変数に格納するには、プラグインコマンドで
+公式プラグインを利用してスコアボード内の情報を変数に格納するには、プラグインコマンドで次のいずれかのように指定します。（どちらでも動作は同じです）
 
 ```
 GetDataFromScoreboardRecords {target} {variableId}
+スコア取得 {target} {variableId}
 ```
-と記載してください。<code>{target}</code>には取得したいターゲットを指定(下部に利用できるターゲットを記載)。<code>{variableId}</code>には格納したい変数のIDを指定してください。
+<code>{target}</code>には取得したいターゲットを指定(下部に利用できるターゲットを記載)。<code>{variableId}</code>には格納したい変数のIDを指定してください。
 
 #### 利用できるターゲットの一覧
 ターゲット | 説明
 :---|:---
-myRecord | 今回の自己レコードの有無を取得。ある場合は1、ない場合は2がセットされる
-myRecord.rank | 今回の自己レコードのランキングを取得。ある場合はスコアが、非ログインの場合は0がセットされる
-myRecord.score | 今回の自己レコードのスコアがセットされる
+myRecord | 今回の自己レコードの有無を取得。ある場合は1、ない場合は0がセットされる
+myRecord.rank | 今回の自己レコードのランキング順位を取得。ない場合は0がセットされる
+myRecord.score | 今回の自己レコードのスコアを取得。ない場合は0がセットされる
 myRecord.isNewRecord | 今回の自己レコードが自己新記録かどうかを取得。自己新記録なら1、そうでない場合は0がセットされる
-myBestRecord | 自己ベスト記録の有無を取得。ある場合は1、ない場合は0がセットされる
-myBestRecord.rank | 自己ベスト記録のランキング順位を取得。非ログインの場合は0がセットされる
-myBestRecord.score | 自己ベスト記録のスコアを取得。非ログインの場合は0がセットされる
+myBestRecord | 自己ベスト記録の有無を取得。ある場合は1、ない場合（または非ログイン）は0がセットされる
+myBestRecord.rank | 自己ベスト記録のランキング順位を取得。ない場合（または非ログイン）は0がセットされる
+myBestRecord.score | 自己ベスト記録のスコアを取得。ない場合（または非ログイン）は0がセットされる
 ranking.length | ランキングデータの長さの取得
 ranking[n].rank | n+1番目のランキングを取得
 ranking[n].userName | n+1番目のランクのユーザ名を取得
 ranking[n].score | n+1番目のランクのスコアを取得
+errorMessage | スコアの読み込みに失敗した場合、エラーメッセージを取得する。成功した場合は0がセットされる
 
 ## APIを使ったスコアボードの利用方法
 
@@ -136,7 +154,7 @@ ranking[n].score | n+1番目のランクのスコアを取得
 :---|:---
 説明 | 引数のboard_idを指定することによりスコアを記録するスコアボードを指定。<br>第2引数のscoreでスコアを指定し、記録するスコアの点数を記録。
 引数 | <ul><li>スコアボードID(1〜10までの整数)</li><li>記録するスコアの点数</li></ul>
-戻り値 | 無し
+戻り値 | Promise[void]
 リリース日 | 2018/06/15
 更新日 | 2018/08/28
 
@@ -146,7 +164,7 @@ ranking[n].score | n+1番目のランクのスコアを取得
 :---|:---
 説明 | 引数のboard_idを指定することによりスコアを記録するスコアボードを指定してスコアボード表示
 引数 | スコアボードID(1〜10までの整数)
-戻り値 | 無し
+戻り値 | Promise[void]
 リリース日 | 2018/06/15
 更新日 | 2018/06/15
 
@@ -163,21 +181,25 @@ ranking[n].score | n+1番目のランクのスコアを取得
 :---|:---
 説明 | 引数のboard_idを指定することによりスコアボードの情報を取得
 引数 | スコアボードID(1〜10までの整数)
-戻り値 | <code>result</code>
+戻り値 | Promise[<code>ScoreboardData</code>]
 リリース日 | 2018/06/15
 更新日 | 2018/06/15
 
-#### 利用できるターゲットの一覧
-ターゲット | 説明
-:---|:---
-myRecord | 今回の自己レコードの有無を取得。ある場合は1、ない場合は2がセットされる
-myRecord.rank | 今回の自己レコードのランキングを取得。ある場合はスコアが、非ログインの場合は0がセットされる
-myRecord.score | 今回の自己レコードのスコアがセットされる
-myRecord.isNewRecord | 今回の自己レコードが自己新記録かどうかを取得。自己新記録なら1、そうでない場合は0がセットされる
-myBestRecord | 自己ベスト記録の有無を取得。ある場合は1、ない場合は0がセットされる
-myBestRecord.rank | 自己ベスト記録のランキング順位を取得。非ログインの場合は0がセットされる
-myBestRecord.score | 自己ベスト記録のスコアを取得。非ログインの場合は0がセットされる
-ranking.length | ランキングデータの長さの取得
-ranking[n].rank | n+1番目のランキングを取得
-ranking[n].userName | n+1番目のランクのユーザ名を取得
-ranking[n].score | n+1番目のランクのスコアを取得
+#### ScoreboardDataオブジェクトについて
+名前 | 型 | 説明
+:---|:---|:---
+boardId | number | ボードID
+boardName | string | ボードの名前
+myRecord | object or null | 今回の自己レコード
+myRecord.rank | number | 今回の自己レコードのランキング順位
+myRecord.score | number | 今回の自己レコードのスコア
+myRecord.isNewRecord | boolean | 今回の自己レコードが自己新記録かどうか
+myBestRecord | object or null | 自己ベスト記録。ログインしていないと必ずnullになる
+myBestRecord.rank | number | 自己ベスト記録のランキング順位
+myBestRecord.userName | string | 自己ベスト記録のユーザ名
+myBestRecord.score | number | 自己ベスト記録のスコア
+ranking | array | ランキングデータ
+ranking.length | number | ランキングデータの長さ
+ranking[n].rank | number | n+1番目のランキング
+ranking[n].userName | string | n+1番目のランクのユーザ名
+ranking[n].score | number | n+1番目のランクのスコア

@@ -47,10 +47,11 @@ description: RPGアツマールで外部リンクを設置したい場合は、�
 
 <br>
 
-プラグインコマンドは以下のように利用します。
+プラグインコマンドは次のいずれかのように指定します。（どちらでも動作は同じです）
 
 ```
 OpenLink http://example.com/
+リンク表示 http://example.com/
 ```
 
 ### プラグインコマンド例
@@ -58,6 +59,7 @@ OpenLink http://example.com/
 #### https://game.nicovideo.jp/atsumaru を開く
 ```
 OpenLink https://game.nicovideo.jp/atsumaru
+リンク表示 https://game.nicovideo.jp/atsumaru
 ```
 
 
@@ -70,6 +72,6 @@ OpenLink https://game.nicovideo.jp/atsumaru
 :---|:---
 説明 | 引数のopenLink_urlにリンク先を表す特定の文字列を渡すことにより、外部リンクを記載したダイアログを表示するメソッド。<br>引数に渡す文字列の形式は `OpenLink http://example.com/` (url部分は任意のURLに置き換え)
 引数 | リンクの値を表す文字列
-戻り値 | 無し
+戻り値 | Promise[void]
 リリース日 | 2018/01/18
 更新日 | 2018/08/30
