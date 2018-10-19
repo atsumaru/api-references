@@ -1656,16 +1656,19 @@ var MainNavigationApiLink = function (_React$Component) {
         ),
         _react2.default.createElement(
           "div",
-          { className: "MainNavigationItem__Children", "aria-hidden": "" + !isOpen },
+          { className: "MainNavigationItem__Children", "aria-hidden": !isOpen },
           api.children.map(function (child) {
-            return _react2.default.createElement(_reactStatic.Link, {
-              className: (0, _classnames2.default)("MainNavigationItem", "MainNavigationItem--child"),
-              key: child.slug,
-              to: "/" + child.slug,
-              children: child.title,
-              title: child.description,
-              exact: true
-            });
+            return _react2.default.createElement(
+              _reactStatic.Link,
+              {
+                className: (0, _classnames2.default)("MainNavigationItem", "MainNavigationItem--child"),
+                key: child.slug,
+                to: "/" + child.slug,
+                title: child.description,
+                exact: true
+              },
+              child.title
+            );
           })
         )
       );
@@ -1795,4 +1798,4 @@ exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody {\n  font-fami
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.ba32c8d1.js.map
+//# sourceMappingURL=static.1b588d25.js.map
