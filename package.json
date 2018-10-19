@@ -14,9 +14,11 @@
   },
   "dependencies": {
     "chokidar": "2.0.3",
+    "classnames": "2.2.6",
     "github-markdown-css": "^2.10.0",
-    "htmr": "0.6.3",
+    "htmr": "0.7.0",
     "jdown": "0.6.4",
+    "lodash": "4.17.11",
     "marked": "0.5.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",

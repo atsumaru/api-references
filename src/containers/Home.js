@@ -1,12 +1,11 @@
 import React from "react";
 import { withRouteData, Link } from "react-static";
-import convert from "htmr";
 
-import MainLayout from "../MainLayout";
+import { htmlToComponent } from "../utils/htmlToComponent";
 
 export default withRouteData(({ apiList, overview, changelog }) => (
-  <MainLayout apiList={apiList}>
-    {convert(overview.contents)}
+  <div>
+    {htmlToComponent(overview.contents)}
 
     <h2>提供機能一覧</h2>
     <table>
@@ -23,7 +22,7 @@ export default withRouteData(({ apiList, overview, changelog }) => (
               <Link key={api.slug} to={`/${api.slug}`}>{api.title}</Link>
             </th>
             <td>
-              {convert(api.description)}
+              {htmlToComponent(api.description)}
             </td>
           </tr>
         ))}
@@ -31,7 +30,7 @@ export default withRouteData(({ apiList, overview, changelog }) => (
     </table>
 
     <h2>更新履歴</h2>
-    {convert(changelog.contents)}
+    {htmlToComponent(changelog.contents)}
 
-  </MainLayout>
+  </div>
 ));

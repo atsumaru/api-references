@@ -5,6 +5,7 @@ import jdown from "jdown";
 import marked from "marked";
 import chokidar from "chokidar";
 import ExtractTextPlugin from "extract-text-webpack-plugin"; // eslint-disable-line import/no-extraneous-dependencies
+import lodash from "lodash";
 
 const siteRoot = process.env.SITE_ROOT || "https://atsumaru.github.io";
 const basePath = process.env.BASE_PATH || "/api-references";
@@ -12,8 +13,6 @@ const basePath = process.env.BASE_PATH || "/api-references";
 // 相対リンク(/) を絶対リンクに差し替えるためのrendererの用意
 const renderer = new marked.Renderer();
 const convertHref = href => /^\//.test(href) ? url.resolve(siteRoot, path.join(basePath + href)) : href;
-const originLinkRenderer = renderer.link;
-renderer.link = (href, title, text) => originLinkRenderer.apply(renderer, [ convertHref(href), title, text ]);
 const originImageRenderer = renderer.image;
 renderer.image = (href, title, text) => originImageRenderer.apply(renderer, [ convertHref(href), title, text ]);
 
@@ -25,13 +24,14 @@ export default {
   devBasePath: "/",
 
   getRoutes: async () => {
-    const { apis, overview, changelog } = await jdown("content", {renderer});
+    const { apis, overview, changelog } = await jdown("content", { renderer });
 
-    // errorsは一番後ろにする
-    const errors = apis.filter(api => api.slug === "errors");
-    const apisWithoutErrors = apis.filter(api => api.slug !== "errors");
     // contents を含めるとデータが肥大化するので、除いたものを apiList とし、 navigation 用に各ページに含める
-    const apiList = apisWithoutErrors.concat(errors).map(({ contents, ...rest }) => rest);
+    const apiListSorted = lodash.sortBy(apis, a => a.order || 1).map(({ contents, ...rest }) => rest);
+    // / を含んでいるものは子ページなので、filterしてgroupしておく
+    const apiListChildren = lodash.groupBy(apiListSorted.filter(a => /\//.test(a.slug)), a => a.slug.replace(/^([^/]+)\/.+$/, '$1'));
+    // / を含んでない親ページに子ページをくっつけて、apiListとする
+    const apiList = apiListSorted.filter(a => !/\//.test(a.slug)).map(a => ({ ...a, children: apiListChildren[a.slug] || [] }))
 
     return [
       {
@@ -48,7 +48,9 @@ export default {
           component: "src/containers/Reference",
           getData: () => ({
             apiList,
-            reference
+            reference,
+            title: reference.title,
+            path: `/${reference.slug}`
           }),
         })),
       },
@@ -56,7 +58,9 @@ export default {
         is404: true,
         component: "src/containers/404",
         getData: () => ({
-          apiList
+          apiList,
+          title: "ページが見つかりません",
+          path: "/404"
         })
       },
     ];
