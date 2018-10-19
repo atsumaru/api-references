@@ -11,10 +11,11 @@
     "eslint:recommended"
   ],
   "rules": {
-    "indent": [
-      2,
-      2
-    ],
+    // indent のルールがあるとfixが失敗するため、一時的にコメントアウトしている
+    // "indent": [
+    //   2,
+    //   2
+    // ],
     "quotes": [
       2,
       "double"
@@ -27,7 +28,6 @@
       2,
       "always"
     ],
-    "jsx-a11y/anchor-is-valid": [0],
-    "template-curly-spacing": [0]
+    "jsx-a11y/anchor-is-valid": [0]
   }
 }

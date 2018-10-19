@@ -82,16 +82,17 @@ class MainNavigationApiLink extends React.Component {
             <button className="MainNavigationItem__Button" onClick={this.onClickAngle} data-is-open={`${isOpen}`} />
           ) : null}
         </Link>
-        <div className="MainNavigationItem__Children" aria-hidden={`${!isOpen}`} >
+        <div className="MainNavigationItem__Children" aria-hidden={!isOpen} >
           {api.children.map(child => (
             <Link
               className={classNames("MainNavigationItem", "MainNavigationItem--child")}
               key={child.slug}
               to={`/${child.slug}`}
-              children={child.title}
               title={child.description}
               exact
-            />
+            >
+              {child.title}
+            </Link>
           ))}
         </div>
       </div>
