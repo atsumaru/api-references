@@ -1,0 +1,2 @@
+webpackJsonp([2],{52:function(e,t,n){"use strict";function u(e){if(null==e)throw new TypeError("Cannot destructure undefined")}Object.defineProperty(t,"__esModule",{value:!0});var l=n(0),r=function(e){return e&&e.__esModule?e:{default:e}}(l),a=n(17);t.default=(0,a.withRouteData)(function(e){return u(e),r.default.createElement("div",null,r.default.createElement("h1",null,"ページが見つかりません"),r.default.createElement("div",null,"移動もしくは削除された可能性があります。",r.default.createElement("br",null),"URLやファイル名に間違いがないか、再度ご確認ください。"))})}});
+//# sourceMappingURL=404.eb27da77.js.map

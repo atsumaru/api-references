@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "https://atsumaru.github.io/api-references/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -115,162 +115,6 @@ module.exports = function(module) {
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactStatic = __webpack_require__(1);
-
-var _favicon = __webpack_require__(24);
-
-var _favicon2 = _interopRequireDefault(_favicon);
-
-var _logo = __webpack_require__(25);
-
-var _logo2 = _interopRequireDefault(_logo);
-
-__webpack_require__(26);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SITE_NAME = "RPGアツマール APIリファレンス";
-
-var Meta = function Meta(_ref) {
-  var title = _ref.title;
-
-  var titleText = (title ? title + " - " : "") + SITE_NAME;
-  var description = "RPGアツマールに投稿したゲームから利用可能なAPIのリファレンスです。";
-
-  return _react2.default.createElement(
-    _reactStatic.Head,
-    null,
-    _react2.default.createElement(
-      "title",
-      null,
-      titleText
-    ),
-    _react2.default.createElement("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }),
-    _react2.default.createElement("meta", { name: "description", content: description }),
-    _react2.default.createElement("meta", { name: "keywords", content: "RPG\u30A2\u30C4\u30DE\u30FC\u30EB,RPG\u30C4\u30AF\u30FC\u30EBMV,\u81EA\u4F5C\u30B2\u30FC\u30E0,\u30A4\u30F3\u30C7\u30A3\u30FC\u30BA\u30B2\u30FC\u30E0,\u30B2\u30FC\u30E0,\u30D5\u30EA\u30FC\u30B2\u30FC\u30E0,\u540C\u4EBA\u30B2\u30FC\u30E0,\u7121\u6599,niconico" }),
-    _react2.default.createElement("meta", { property: "og:title", content: titleText }),
-    _react2.default.createElement("meta", { property: "og:type", content: "website" }),
-    _react2.default.createElement("meta", { property: "og:url", content: "https://site.nicovideo.jp/atsumaru/declaration/" }),
-    _react2.default.createElement("meta", { property: "og:image", content: "https://site.nicovideo.jp/atsumaru/declaration/img/2018/img2.jpg" }),
-    _react2.default.createElement("meta", { property: "og:site_name", content: "RPG\u30A2\u30C4\u30DE\u30FC\u30EB" }),
-    _react2.default.createElement("meta", { property: "og:description", content: description }),
-    _react2.default.createElement("meta", { name: "twitter:card", content: "summary_large_image" }),
-    _react2.default.createElement("meta", { name: "twitter:site", content: "@nico_indiesgame" }),
-    _react2.default.createElement("link", { rel: "icon", href: _favicon2.default })
-  );
-};
-
-var Header = function Header() {
-  return _react2.default.createElement(
-    "header",
-    { className: "Header" },
-    _react2.default.createElement(
-      "nav",
-      { className: "Header__Nav" },
-      _react2.default.createElement(
-        "a",
-        { href: "http://www.nicovideo.jp/" },
-        "niconico"
-      ),
-      _react2.default.createElement(
-        "a",
-        { href: "https://game.nicovideo.jp/atsumaru/" },
-        "RPG\u30A2\u30C4\u30DE\u30FC\u30EB"
-      )
-    )
-  );
-};
-
-var Footer = function Footer() {
-  return _react2.default.createElement(
-    "footer",
-    { className: "Footer" },
-    _react2.default.createElement(
-      "nav",
-      { className: "Footer__Nav" },
-      _react2.default.createElement(
-        "a",
-        { href: "https://game.nicovideo.jp/atsumaru/" },
-        "RPG\u30A2\u30C4\u30DE\u30FC\u30EB \u306B\u623B\u308B"
-      )
-    ),
-    _react2.default.createElement(
-      "span",
-      null,
-      "\xA9DWANGO Co., Ltd."
-    )
-  );
-};
-
-var MainNavigation = function MainNavigation(_ref2) {
-  var apiList = _ref2.apiList;
-  return _react2.default.createElement(
-    "nav",
-    { className: "MainNavigation" },
-    _react2.default.createElement(
-      _reactStatic.Link,
-      { to: "/", className: "MainNavigation__Logo" },
-      _react2.default.createElement("img", { src: _logo2.default, alt: "RPG\u30A2\u30C4\u30DE\u30FC\u30EB" }),
-      "API\u30EA\u30D5\u30A1\u30EC\u30F3\u30B9"
-    ),
-    _react2.default.createElement(
-      _reactStatic.Link,
-      { className: "MainNavigation__Item", to: "/", exact: true },
-      "\u6982\u8981"
-    ),
-    apiList.map(function (api) {
-      return _react2.default.createElement(
-        _reactStatic.Link,
-        { className: "MainNavigation__Item", key: api.slug, to: "/" + api.slug },
-        api.title
-      );
-    }),
-    _react2.default.createElement(
-      _reactStatic.Link,
-      { className: "MainNavigation__Item", to: "http://ch.nicovideo.jp/indies-game/blomaga/ar1163608", target: "_blank", rel: "noopener" },
-      "\u65E7\u30EA\u30D5\u30A1\u30EC\u30F3\u30B9"
-    )
-  );
-};
-
-exports.default = function (_ref3) {
-  var title = _ref3.title,
-      apiList = _ref3.apiList,
-      children = _ref3.children;
-  return _react2.default.createElement(
-    "div",
-    { className: "MainLayout" },
-    _react2.default.createElement(Meta, { title: title }),
-    _react2.default.createElement(Header, null),
-    _react2.default.createElement(
-      "main",
-      { className: "MainLayout__Body" },
-      _react2.default.createElement(MainNavigation, { apiList: apiList }),
-      _react2.default.createElement(
-        "article",
-        { className: "MainSection markdown-body" },
-        children
-      )
-    ),
-    _react2.default.createElement(Footer, null)
-  );
-};
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports) {
 
 /*
@@ -352,7 +196,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -469,13 +313,13 @@ var cacheProm = exports.cacheProm = function cacheProm(pr, chunkName, props, pro
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = require("prop-types");
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -491,13 +335,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactStatic = __webpack_require__(1);
 
-var _htmr = __webpack_require__(8);
-
-var _htmr2 = _interopRequireDefault(_htmr);
-
-var _MainLayout = __webpack_require__(3);
-
-var _MainLayout2 = _interopRequireDefault(_MainLayout);
+var _htmlToComponent = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -506,9 +344,9 @@ exports.default = (0, _reactStatic.withRouteData)(function (_ref) {
       overview = _ref.overview,
       changelog = _ref.changelog;
   return _react2.default.createElement(
-    _MainLayout2.default,
-    { apiList: apiList },
-    (0, _htmr2.default)(overview.contents),
+    "div",
+    null,
+    (0, _htmlToComponent.htmlToComponent)(overview.contents),
     _react2.default.createElement(
       "h2",
       null,
@@ -554,7 +392,7 @@ exports.default = (0, _reactStatic.withRouteData)(function (_ref) {
             _react2.default.createElement(
               "td",
               null,
-              (0, _htmr2.default)(api.description)
+              (0, _htmlToComponent.htmlToComponent)(api.description)
             )
           );
         })
@@ -565,15 +403,107 @@ exports.default = (0, _reactStatic.withRouteData)(function (_ref) {
       null,
       "\u66F4\u65B0\u5C65\u6B74"
     ),
-    (0, _htmr2.default)(changelog.contents)
+    (0, _htmlToComponent.htmlToComponent)(changelog.contents)
   );
 });
 
 /***/ }),
-/* 8 */
-/***/ (function(module, exports) {
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("htmr");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.htmlToComponent = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactStatic = __webpack_require__(1);
+
+var _htmr = __webpack_require__(23);
+
+var _htmr2 = _interopRequireDefault(_htmr);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var htmlToComponent = exports.htmlToComponent = function htmlToComponent(html) {
+  return (0, _htmr2.default)(html, {
+    transform: {
+      a: function a(props) {
+        return _react2.default.createElement(_reactStatic.Link, _extends({}, props, { to: props.href }, props.href.match(/^https?:\/\//) ? { rel: "noopener", target: "_blank" } : {}));
+      },
+      h1: function h1(props) {
+        return _react2.default.createElement("h1", _extends({}, props, { id: ("" + props.children).replace(/\s+/, '-') }));
+      },
+      h2: function h2(props) {
+        return _react2.default.createElement("h2", _extends({}, props, { id: ("" + props.children).replace(/\s+/, '-') }));
+      },
+      h3: function h3(props) {
+        return _react2.default.createElement("h3", _extends({}, props, { id: ("" + props.children).replace(/\s+/, '-') }));
+      }
+    }
+  });
+};
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactStatic = __webpack_require__(1);
+
+var _htmlToComponent = __webpack_require__(7);
+
+__webpack_require__(24);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GITHUB_URL = "https://github.com/atsumaru/api-references";
+
+exports.default = (0, _reactStatic.withRouteData)(function (_ref) {
+  var reference = _ref.reference;
+  return _react2.default.createElement(
+    "div",
+    null,
+    _react2.default.createElement(
+      "div",
+      { className: "Reference__Header" },
+      _react2.default.createElement(
+        "h1",
+        null,
+        reference.title
+      ),
+      _react2.default.createElement(
+        "a",
+        { className: "Reference__EditButton", href: GITHUB_URL + "/blob/master/content/collections/apis/" + reference.slug + ".md" },
+        "\u7DE8\u96C6"
+      )
+    ),
+    _react2.default.createElement(
+      "p",
+      null,
+      (0, _htmlToComponent.htmlToComponent)(reference.description)
+    ),
+    (0, _htmlToComponent.htmlToComponent)(reference.contents)
+  );
+});
 
 /***/ }),
 /* 9 */
@@ -592,46 +522,28 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactStatic = __webpack_require__(1);
 
-var _htmr = __webpack_require__(8);
-
-var _htmr2 = _interopRequireDefault(_htmr);
-
-var _MainLayout = __webpack_require__(3);
-
-var _MainLayout2 = _interopRequireDefault(_MainLayout);
-
-__webpack_require__(27);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var GITHUB_URL = "https://github.com/atsumaru/api-references";
+function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
 
 exports.default = (0, _reactStatic.withRouteData)(function (_ref) {
-  var apiList = _ref.apiList,
-      reference = _ref.reference;
+  _objectDestructuringEmpty(_ref);
+
   return _react2.default.createElement(
-    _MainLayout2.default,
-    { apiList: apiList, title: reference.title },
+    "div",
+    null,
+    _react2.default.createElement(
+      "h1",
+      null,
+      "\u30DA\u30FC\u30B8\u304C\u898B\u3064\u304B\u308A\u307E\u305B\u3093"
+    ),
     _react2.default.createElement(
       "div",
-      { className: "Reference__Header" },
-      _react2.default.createElement(
-        "h1",
-        null,
-        reference.title
-      ),
-      _react2.default.createElement(
-        "a",
-        { className: "Reference__EditButton", href: GITHUB_URL + "/blob/master/content/collections/apis/" + reference.slug + ".md" },
-        "\u7DE8\u96C6"
-      )
-    ),
-    _react2.default.createElement(
-      "p",
       null,
-      (0, _htmr2.default)(reference.description)
-    ),
-    (0, _htmr2.default)(reference.contents)
+      "\u79FB\u52D5\u3082\u3057\u304F\u306F\u524A\u9664\u3055\u308C\u305F\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059\u3002",
+      _react2.default.createElement("br", null),
+      "URL\u3084\u30D5\u30A1\u30A4\u30EB\u540D\u306B\u9593\u9055\u3044\u304C\u306A\u3044\u304B\u3001\u518D\u5EA6\u3054\u78BA\u8A8D\u304F\u3060\u3055\u3044\u3002"
+    )
   );
 });
 
@@ -650,54 +562,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactStatic = __webpack_require__(1);
-
-var _MainLayout = __webpack_require__(3);
-
-var _MainLayout2 = _interopRequireDefault(_MainLayout);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = (0, _reactStatic.withRouteData)(function (_ref) {
-  var apiList = _ref.apiList;
-  return _react2.default.createElement(
-    _MainLayout2.default,
-    { apiList: apiList, title: "\u30DA\u30FC\u30B8\u304C\u898B\u3064\u304B\u308A\u307E\u305B\u3093" },
-    _react2.default.createElement(
-      "h1",
-      null,
-      "\u30DA\u30FC\u30B8\u304C\u898B\u3064\u304B\u308A\u307E\u305B\u3093"
-    ),
-    _react2.default.createElement(
-      "div",
-      null,
-      "\u79FB\u52D5\u3082\u3057\u304F\u306F\u524A\u9664\u3055\u308C\u305F\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059\u3002",
-      _react2.default.createElement("br", null),
-      "URL\u3084\u30D5\u30A1\u30A4\u30EB\u540D\u306B\u9593\u9055\u3044\u304C\u306A\u3044\u304B\u3001\u518D\u5EA6\u3054\u78BA\u8A8D\u304F\u3060\u3055\u3044\u3002"
-    )
-  );
-});
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(12);
+var _reactDom = __webpack_require__(11);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(13);
+var _App = __webpack_require__(12);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -705,9 +574,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // Export your top level component as JSX (for static rendering)
 exports.default = _App2.default;
-
-// Render your app
-
 
 // Your top level component
 
@@ -722,13 +588,13 @@ if (typeof document !== "undefined") {
 }
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom");
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -744,17 +610,21 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactStatic = __webpack_require__(1);
 
-var _reactHotLoader = __webpack_require__(14);
+var _reactHotLoader = __webpack_require__(13);
 
-var _reactStaticRoutes = __webpack_require__(15);
+var _reactStaticRoutes = __webpack_require__(14);
 
 var _reactStaticRoutes2 = _interopRequireDefault(_reactStaticRoutes);
 
-__webpack_require__(28);
+var _MainLayout = __webpack_require__(25);
 
-__webpack_require__(29);
+var _MainLayout2 = _interopRequireDefault(_MainLayout);
 
 __webpack_require__(30);
+
+__webpack_require__(31);
+
+__webpack_require__(32);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -762,7 +632,11 @@ var App = function App() {
   return _react2.default.createElement(
     _reactStatic.Router,
     null,
-    _react2.default.createElement(_reactStaticRoutes2.default, null)
+    _react2.default.createElement(
+      _MainLayout2.default,
+      null,
+      _react2.default.createElement(_reactStaticRoutes2.default, null)
+    )
   );
 };
 
@@ -770,13 +644,13 @@ exports.default = (0, _reactHotLoader.hot)(module)(App);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-hot-loader");
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -786,15 +660,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _path2 = __webpack_require__(16);
+var _path2 = __webpack_require__(15);
 
 var _path3 = _interopRequireDefault(_path2);
 
-var _importCss2 = __webpack_require__(17);
+var _importCss2 = __webpack_require__(16);
 
 var _importCss3 = _interopRequireDefault(_importCss2);
 
-var _universalImport2 = __webpack_require__(18);
+var _universalImport2 = __webpack_require__(17);
 
 var _universalImport3 = _interopRequireDefault(_universalImport2);
 
@@ -806,9 +680,9 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(19);
+var _reactRouterDom = __webpack_require__(18);
 
-var _reactUniversalComponent = __webpack_require__(20);
+var _reactUniversalComponent = __webpack_require__(19);
 
 var _reactUniversalComponent2 = _interopRequireDefault(_reactUniversalComponent);
 
@@ -840,9 +714,9 @@ var universalOptions = {
 
 var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/containers/Home',
-  file: '/Users/manato_kato/work/github.com/atsumaru/api-references/dist/react-static-routes.js',
+  file: '/data/jenkins/workspace/publish-github.com/target/dist/react-static-routes.js',
   load: function load() {
-    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 7)), (0, _importCss3.default)('src/containers/Home', {
+    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 6)), (0, _importCss3.default)('src/containers/Home', {
       disableWarnings: true
     })]).then(function (proms) {
       return proms[0];
@@ -852,7 +726,7 @@ var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
     return _path3.default.join(__dirname, '../src/containers/Home');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(7);
+    return /*require.resolve*/(6);
   },
   chunkName: function chunkName() {
     return 'src/containers/Home';
@@ -860,9 +734,9 @@ var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/containers/Reference',
-  file: '/Users/manato_kato/work/github.com/atsumaru/api-references/dist/react-static-routes.js',
+  file: '/data/jenkins/workspace/publish-github.com/target/dist/react-static-routes.js',
   load: function load() {
-    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 9)), (0, _importCss3.default)('src/containers/Reference', {
+    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 8)), (0, _importCss3.default)('src/containers/Reference', {
       disableWarnings: true
     })]).then(function (proms) {
       return proms[0];
@@ -872,7 +746,7 @@ var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
     return _path3.default.join(__dirname, '../src/containers/Reference');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(9);
+    return /*require.resolve*/(8);
   },
   chunkName: function chunkName() {
     return 'src/containers/Reference';
@@ -880,9 +754,9 @@ var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_2 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/containers/404',
-  file: '/Users/manato_kato/work/github.com/atsumaru/api-references/dist/react-static-routes.js',
+  file: '/data/jenkins/workspace/publish-github.com/target/dist/react-static-routes.js',
   load: function load() {
-    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 10)), (0, _importCss3.default)('src/containers/404', {
+    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 9)), (0, _importCss3.default)('src/containers/404', {
       disableWarnings: true
     })]).then(function (proms) {
       return proms[0];
@@ -892,7 +766,7 @@ var t_2 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
     return _path3.default.join(__dirname, '../src/containers/404');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(10);
+    return /*require.resolve*/(9);
   },
   chunkName: function chunkName() {
     return 'src/containers/404';
@@ -979,31 +853,31 @@ exports.default = Routes;
 /* WEBPACK VAR INJECTION */}.call(exports, "/"))
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports) {
 
 module.exports = require("path");
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-plugin-universal-import/importCss");
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-plugin-universal-import/universalImport");
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-router-dom");
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1018,7 +892,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _requireUniversalModule = __webpack_require__(21);
+var _requireUniversalModule = __webpack_require__(20);
 
 Object.defineProperty(exports, 'CHUNK_NAMES', {
   enumerable: true,
@@ -1033,7 +907,7 @@ Object.defineProperty(exports, 'MODULE_IDS', {
   }
 });
 
-var _reportChunks = __webpack_require__(22);
+var _reportChunks = __webpack_require__(21);
 
 Object.defineProperty(exports, 'ReportChunks', {
   enumerable: true,
@@ -1046,17 +920,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(6);
+var _propTypes = __webpack_require__(5);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _hoistNonReactStatics = __webpack_require__(23);
+var _hoistNonReactStatics = __webpack_require__(22);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
 var _requireUniversalModule2 = _interopRequireDefault(_requireUniversalModule);
 
-var _utils = __webpack_require__(5);
+var _utils = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1350,7 +1224,7 @@ exports.default = universal;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1362,7 +1236,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.clearChunks = exports.flushModuleIds = exports.flushChunkNames = exports.MODULE_IDS = exports.CHUNK_NAMES = undefined;
 exports.default = requireUniversalModule;
 
-var _utils = __webpack_require__(5);
+var _utils = __webpack_require__(4);
 
 var CHUNK_NAMES = exports.CHUNK_NAMES = new Set();
 var MODULE_IDS = exports.MODULE_IDS = new Set();
@@ -1532,7 +1406,7 @@ var getConfig = function getConfig(isDynamic, universalConfig, options, props) {
 };
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1548,7 +1422,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(6);
+var _propTypes = __webpack_require__(5);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -1595,42 +1469,22 @@ ReportChunks.childContextTypes = {
 exports.default = ReportChunks;
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports) {
 
 module.exports = require("hoist-non-react-statics");
 
 /***/ }),
+/* 23 */
+/***/ (function(module, exports) {
+
+module.exports = require("htmr");
+
+/***/ }),
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/favicon.cdb3578c.ico";
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfoAAABACAYAAADyM7XuAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAN1wAADdcBQiibeAAAAAd0SU1FB+ELBwkPCQpe9MsAAAVPSURBVHja7d0/bxtlHAfwOycSEahDByqmorMzFejGUghKp5aKMZkRK0HNS0DlHaQi7B1ROiIoUysq9QVQ0QHiWJUYUCqBSoUEUnMPS1vFTuLz2Xfx/fl8pAxu7lzfPXa+fn7PPc/FUflCzu3jCAAoRMcpAABBDwAIegCgSnKPh98/0+sffrzyrN8b2SRk7D/0+P1vXx/7/y1de1j6MQFAUy1OsU/XaQOAelC6BwBBDwDU0WIBz5FrTD5L3cbk75/pZa4T8OmbobJvgL29vWPPX7fbreyL3tt8K3ujzQfHHtfC9TuZx/X2d59rr4q0V97jOnx+Ztn3JEU9Z5Xb6/En32Ruc3DzaquuhZpXu0/yntSjB4CWE/QAIOgBgDo6box+dAxh7BhB3jH4LP9+/17eXf4c87vfl649vKiZARD09XV2zO+eaWIA2kzpHgAEPQBQR5OU7nPN+/vw791SX/B/P4wfch+Zh38+ynnNAQC0LegZo8qL4TRVd+uPzG32Tvj3Ki+Go72ogkk+I9qrXpTuAUDQAwB1tHjM/eVzPUHZY/KjXvv456HHo2P2o/Pwp1g7v1RFrV18knmtoe24mv2+qkt71YX24lSDPnJ/eQBoLKV7ABD0AEAdHZleN7p2fd4x+xowrx4APXoAoIE9esrV1Ktb23bVrlkAUP2/A7ee5Pu4rDzrN/LzpUcPAI3u0XcWhgfl04OhQfm895uP4+EvRCHM9gVv1uer+rx6ACg16Fee/ro3S7ADkE+3292Jomht0u1DCOuDweB20a9jeXl59eDg4Est0mynXrqP43jsD0DTxXG8EUXRfo7tt3u93rkiAz5Jkrtpmt6N43hViwh6AArU7/f3QwgbOXY5F0LYFvBMYzEamVe++lm+99LzOR/A0m9ncn+Z1uxwvKpdNT3LLIOqz1AYDAa3u93u7WjyEv5akiRr05TwX5bo0zRdVTnVowfglJRdwteDZy5BH0IY+wPQFmWV8AU8evQAFfGiFJ+nHL+WJMnaPAI+hHCv0+lc1mr1cmRlvIObV4ceL1y/k7vHXnQFIJfNB8OPty6NPg4j2xuwAuYqjuONEMJHURSdm3D77V6v91O/399/GfBljsGHEO4tLCzc2N3dvae19OgByGnaEv5p9eAHg8FlId+gHj3lOulK4LxXO1ftiuK2rcFe1PG27R4BnGyaq/DTNF2rUg++an8HVlr8flpeXr6Qpul6FEXrgh6gIvKW8KsS8FQv3NM0fedwj370G1izehhZY/YAFdHv9/eTJNmI43hHwDNLuB+mRw9QIVOU8AW8cB9L0ANUTNklfAHf/HAX9AAVVlYJX8C3J9xzBX3WvPrFzR+HHj/fulLuN92bH8z2BA2ZN1/U1dptu1p+Xue5qa+z7PdPm2clFFnCF/D1lKbpL0U8jx49QEXNWsIX8ESRBXMAKmuKhXReBbyFbtCjb4FHX7+Ruc3SNeepKm49ya6CrzhNrft8TVnC3xbw9XzPXPjin1MJ+qG/NgvX7zyOouj8xE84Mmaf5aD3VdHH1Ox1AYDWmXUtfNpN6R6g4sq6nS2CHoCKKPJ2trTCoyiKbnQ6nXczx+hDHD+NQ/hrzCZnnU+A8inhM0G473Q6nZ3d3d1XU/Mygz7dunIx67tAnleR9/72R9aqH5W9dr154kAjTLGQzssS/rqz165wP8xV9wA1Ms3tbJMkWXtR+qcl4S7oAWpMCV+459lR0APUjBK+cM/1xXCKfQodkz8yjz5rTH70NW9dCiP7G5MHgBdMrwMAQQ8ACHoAoFLmMZ4davAaAUCPHgAQ9ACAoAcAivY/6RWnrHV1g5UAAAAASUVORK5CYII="
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, "@charset \"UTF-8\";\n.MainLayout {\n  display: flex;\n  flex-direction: column;\n  min-height: 100%; }\n\n.Header {\n  background-color: #252525; }\n  .Header::after {\n    content: '';\n    display: block;\n    width: 100%;\n    height: 6px;\n    background-image: linear-gradient(to right, #c30d23 20%, #f8d62d 20%, #f8d62d 40%, #00913a 40%, #00913a 60%, #046eb8 60%, #046eb8 80%, #7403b8 80%); }\n\n.Header__Nav {\n  display: flex;\n  align-items: baseline;\n  padding: .5rem 1.5rem; }\n  .Header__Nav > a {\n    color: #FFF;\n    font-weight: bold; }\n    .Header__Nav > a:nth-child(n+2) {\n      margin-left: 1em; }\n\n.Footer {\n  display: flex;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1rem 2rem;\n  color: #FFF;\n  font-size: .75rem;\n  background-color: #252525; }\n\n.Footer__Nav > a {\n  color: #FFF; }\n  .Footer__Nav > a::before {\n    content: '\\300B   '; }\n\n.MainNavigation {\n  flex-shrink: 0;\n  display: flex;\n  flex-direction: column;\n  width: 18rem;\n  padding: 1rem;\n  background-color: #f8f8f8; }\n  @media (max-width: 768px) {\n    .MainNavigation {\n      width: 100%; } }\n\n.MainNavigation__Logo {\n  text-align: right;\n  font-size: .75rem;\n  font-weight: normal;\n  margin-bottom: 2rem;\n  max-width: 18rem;\n  margin: 0 auto;\n  color: #000;\n  transition: opacity ease-in-out .2s; }\n  .MainNavigation__Logo:hover {\n    opacity: .75;\n    text-decoration: none; }\n  .MainNavigation__Logo > img {\n    display: block;\n    width: 100%; }\n\n.MainNavigation__Item {\n  display: block;\n  padding: .5rem;\n  margin-top: .25rem; }\n  .MainNavigation__Item[aria-current] {\n    font-weight: bold;\n    color: #000;\n    cursor: default; }\n    .MainNavigation__Item[aria-current]:hover {\n      text-decoration: none; }\n\n.MainLayout__Body {\n  flex-grow: 1;\n  display: flex; }\n  @media (max-width: 768px) {\n    .MainLayout__Body {\n      flex-direction: column; } }\n\n.MainSection {\n  width: 100%;\n  padding: 2rem 1.5rem 4rem; }\n  .MainSection > table {\n    max-width: 100%; }\n    .MainSection > table td:nth-child(1),\n    .MainSection > table th:nth-child(1) {\n      font-weight: bold;\n      word-break: keep-all; }\n  .MainSection .negative {\n    color: #FF5555; }\n  .MainSection.markdown-body {\n    line-height: 1.5; }\n  .MainSection.markdown-body a {\n    color: #39e; }\n  .MainSection.markdown-body h2 {\n    margin-top: 3rem; }\n  .MainSection.markdown-body h3 {\n    margin-top: 2.4rem; }\n  .MainSection.markdown-body ul li,\n  .MainSection.markdown-body ol li {\n    margin-bottom: 0.75rem; }\n  .MainSection.markdown-body img {\n    max-width: 60%;\n    max-height: 60vh; }\n    @media (max-width: 768px) {\n      .MainSection.markdown-body img {\n        max-width: 100%; } }\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
+exports = module.exports = __webpack_require__(3)(false);
 // imports
 
 
@@ -1641,22 +1495,294 @@ exports.push([module.i, ".Reference__Header {\n  display: flex;\n  justify-conte
 
 
 /***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactStatic = __webpack_require__(1);
+
+var _classnames = __webpack_require__(26);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _favicon = __webpack_require__(27);
+
+var _favicon2 = _interopRequireDefault(_favicon);
+
+var _logo = __webpack_require__(28);
+
+var _logo2 = _interopRequireDefault(_logo);
+
+__webpack_require__(29);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SITE_NAME = "RPGアツマール APIリファレンス";
+
+var Meta = function Meta(_ref) {
+  var title = _ref.title;
+
+  var titleText = (title ? title + " - " : "") + SITE_NAME;
+  var description = "RPGアツマールに投稿したゲームから利用可能なAPIのリファレンスです。";
+
+  return _react2.default.createElement(
+    _reactStatic.Head,
+    null,
+    _react2.default.createElement(
+      "title",
+      null,
+      titleText
+    ),
+    _react2.default.createElement("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }),
+    _react2.default.createElement("meta", { name: "description", content: description }),
+    _react2.default.createElement("meta", { name: "keywords", content: "RPG\u30A2\u30C4\u30DE\u30FC\u30EB,RPG\u30C4\u30AF\u30FC\u30EBMV,\u81EA\u4F5C\u30B2\u30FC\u30E0,\u30A4\u30F3\u30C7\u30A3\u30FC\u30BA\u30B2\u30FC\u30E0,\u30B2\u30FC\u30E0,\u30D5\u30EA\u30FC\u30B2\u30FC\u30E0,\u540C\u4EBA\u30B2\u30FC\u30E0,\u7121\u6599,niconico" }),
+    _react2.default.createElement("meta", { property: "og:title", content: titleText }),
+    _react2.default.createElement("meta", { property: "og:type", content: "website" }),
+    _react2.default.createElement("meta", { property: "og:url", content: "https://site.nicovideo.jp/atsumaru/declaration/" }),
+    _react2.default.createElement("meta", { property: "og:image", content: "https://site.nicovideo.jp/atsumaru/declaration/img/2018/img2.jpg" }),
+    _react2.default.createElement("meta", { property: "og:site_name", content: "RPG\u30A2\u30C4\u30DE\u30FC\u30EB" }),
+    _react2.default.createElement("meta", { property: "og:description", content: description }),
+    _react2.default.createElement("meta", { name: "twitter:card", content: "summary_large_image" }),
+    _react2.default.createElement("meta", { name: "twitter:site", content: "@nico_indiesgame" }),
+    _react2.default.createElement("link", { rel: "icon", href: _favicon2.default })
+  );
+};
+
+var Header = function Header() {
+  return _react2.default.createElement(
+    "header",
+    { className: "Header" },
+    _react2.default.createElement(
+      "nav",
+      { className: "Header__Nav" },
+      _react2.default.createElement(
+        "a",
+        { href: "http://www.nicovideo.jp/" },
+        "niconico"
+      ),
+      _react2.default.createElement(
+        "a",
+        { href: "https://game.nicovideo.jp/atsumaru/" },
+        "RPG\u30A2\u30C4\u30DE\u30FC\u30EB"
+      )
+    )
+  );
+};
+
+var Footer = function Footer() {
+  return _react2.default.createElement(
+    "footer",
+    { className: "Footer" },
+    _react2.default.createElement(
+      "nav",
+      { className: "Footer__Nav" },
+      _react2.default.createElement(
+        "a",
+        { href: "https://game.nicovideo.jp/atsumaru/" },
+        "RPG\u30A2\u30C4\u30DE\u30FC\u30EB \u306B\u623B\u308B"
+      )
+    ),
+    _react2.default.createElement(
+      "span",
+      null,
+      "\xA9DWANGO Co., Ltd."
+    )
+  );
+};
+
+var MainNavigationApiLink = function (_React$Component) {
+  _inherits(MainNavigationApiLink, _React$Component);
+
+  function MainNavigationApiLink(props, context) {
+    _classCallCheck(this, MainNavigationApiLink);
+
+    var _this = _possibleConstructorReturn(this, (MainNavigationApiLink.__proto__ || Object.getPrototypeOf(MainNavigationApiLink)).call(this, props, context));
+
+    _this.state = { isOpen: props.defaultOpen || false };
+
+    _this.onClickAngle = function (ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      _this.setState({ isOpen: !_this.state.isOpen });
+    };
+    _this.onClickLink = function () {
+      return _this.setState({ isOpen: true });
+    };
+    return _this;
+  }
+
+  _createClass(MainNavigationApiLink, [{
+    key: "render",
+    value: function render() {
+      var api = this.props.api;
+      var isOpen = this.state.isOpen;
+
+      return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+          _reactStatic.Link,
+          {
+            className: "MainNavigationItem",
+            to: "/" + api.slug,
+            title: api.description,
+            onClick: this.onClickLink,
+            exact: true
+          },
+          _react2.default.createElement(
+            "span",
+            null,
+            api.title
+          ),
+          api.children.length > 0 ? _react2.default.createElement("button", { className: "MainNavigationItem__Button", onClick: this.onClickAngle, "data-is-open": "" + isOpen }) : null
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "MainNavigationItem__Children", "aria-hidden": "" + !isOpen },
+          api.children.map(function (child) {
+            return _react2.default.createElement(_reactStatic.Link, {
+              className: (0, _classnames2.default)("MainNavigationItem", "MainNavigationItem--child"),
+              key: child.slug,
+              to: "/" + child.slug,
+              children: child.title,
+              title: child.description,
+              exact: true
+            });
+          })
+        )
+      );
+    }
+  }]);
+
+  return MainNavigationApiLink;
+}(_react2.default.Component);
+
+var MainNavigation = function MainNavigation(_ref2) {
+  var apiList = _ref2.apiList,
+      path = _ref2.path;
+  return _react2.default.createElement(
+    "nav",
+    { className: "MainNavigation" },
+    _react2.default.createElement(
+      "div",
+      { className: "MainNavigation__LogoContainer" },
+      _react2.default.createElement(
+        _reactStatic.Link,
+        { to: "/", className: "MainNavigation__Logo" },
+        _react2.default.createElement("img", { src: _logo2.default, alt: "RPG\u30A2\u30C4\u30DE\u30FC\u30EB" }),
+        "API\u30EA\u30D5\u30A1\u30EC\u30F3\u30B9"
+      )
+    ),
+    _react2.default.createElement(
+      _reactStatic.Link,
+      { className: "MainNavigationItem", to: "/", exact: true },
+      "\u6982\u8981"
+    ),
+    apiList.map(function (api) {
+      return _react2.default.createElement(MainNavigationApiLink, { key: api.slug, api: api, defaultOpen: !!path.match(api.slug) });
+    }),
+    _react2.default.createElement(
+      _reactStatic.Link,
+      { className: "MainNavigationItem", to: "http://ch.nicovideo.jp/indies-game/blomaga/ar1163608", target: "_blank", rel: "noopener" },
+      "\u65E7\u30EA\u30D5\u30A1\u30EC\u30F3\u30B9"
+    )
+  );
+};
+
+exports.default = (0, _reactStatic.withRouteData)(function (_ref3) {
+  var _ref3$apiList = _ref3.apiList,
+      apiList = _ref3$apiList === undefined ? [] : _ref3$apiList,
+      _ref3$title = _ref3.title,
+      title = _ref3$title === undefined ? "" : _ref3$title,
+      _ref3$path = _ref3.path,
+      path = _ref3$path === undefined ? "/" : _ref3$path,
+      children = _ref3.children;
+  return _react2.default.createElement(
+    "div",
+    { className: "MainLayout" },
+    _react2.default.createElement(Meta, { title: title }),
+    _react2.default.createElement(Header, null),
+    _react2.default.createElement(
+      "main",
+      { className: "MainLayout__Body" },
+      _react2.default.createElement(MainNavigation, { apiList: apiList, path: path }),
+      _react2.default.createElement(
+        "article",
+        { className: "MainSection markdown-body" },
+        children
+      )
+    ),
+    _react2.default.createElement(Footer, null)
+  );
+});
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports) {
+
+module.exports = require("classnames");
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/favicon.cdb3578c.ico";
+
+/***/ }),
 /* 28 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfoAAABACAYAAADyM7XuAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAN1wAADdcBQiibeAAAAAd0SU1FB+ELBwkPCQpe9MsAAAVPSURBVHja7d0/bxtlHAfwOycSEahDByqmorMzFejGUghKp5aKMZkRK0HNS0DlHaQi7B1ROiIoUysq9QVQ0QHiWJUYUCqBSoUEUnMPS1vFTuLz2Xfx/fl8pAxu7lzfPXa+fn7PPc/FUflCzu3jCAAoRMcpAABBDwAIegCgSnKPh98/0+sffrzyrN8b2SRk7D/0+P1vXx/7/y1de1j6MQFAUy1OsU/XaQOAelC6BwBBDwDU0WIBz5FrTD5L3cbk75/pZa4T8OmbobJvgL29vWPPX7fbreyL3tt8K3ujzQfHHtfC9TuZx/X2d59rr4q0V97jOnx+Ztn3JEU9Z5Xb6/En32Ruc3DzaquuhZpXu0/yntSjB4CWE/QAIOgBgDo6box+dAxh7BhB3jH4LP9+/17eXf4c87vfl649vKiZARD09XV2zO+eaWIA2kzpHgAEPQBQR5OU7nPN+/vw791SX/B/P4wfch+Zh38+ynnNAQC0LegZo8qL4TRVd+uPzG32Tvj3Ki+Go72ogkk+I9qrXpTuAUDQAwB1tHjM/eVzPUHZY/KjXvv456HHo2P2o/Pwp1g7v1RFrV18knmtoe24mv2+qkt71YX24lSDPnJ/eQBoLKV7ABD0AEAdHZleN7p2fd4x+xowrx4APXoAoIE9esrV1Ktb23bVrlkAUP2/A7ee5Pu4rDzrN/LzpUcPAI3u0XcWhgfl04OhQfm895uP4+EvRCHM9gVv1uer+rx6ACg16Fee/ro3S7ADkE+3292Jomht0u1DCOuDweB20a9jeXl59eDg4Est0mynXrqP43jsD0DTxXG8EUXRfo7tt3u93rkiAz5Jkrtpmt6N43hViwh6AArU7/f3QwgbOXY5F0LYFvBMYzEamVe++lm+99LzOR/A0m9ncn+Z1uxwvKpdNT3LLIOqz1AYDAa3u93u7WjyEv5akiRr05TwX5bo0zRdVTnVowfglJRdwteDZy5BH0IY+wPQFmWV8AU8evQAFfGiFJ+nHL+WJMnaPAI+hHCv0+lc1mr1cmRlvIObV4ceL1y/k7vHXnQFIJfNB8OPty6NPg4j2xuwAuYqjuONEMJHURSdm3D77V6v91O/399/GfBljsGHEO4tLCzc2N3dvae19OgByGnaEv5p9eAHg8FlId+gHj3lOulK4LxXO1ftiuK2rcFe1PG27R4BnGyaq/DTNF2rUg++an8HVlr8flpeXr6Qpul6FEXrgh6gIvKW8KsS8FQv3NM0fedwj370G1izehhZY/YAFdHv9/eTJNmI43hHwDNLuB+mRw9QIVOU8AW8cB9L0ANUTNklfAHf/HAX9AAVVlYJX8C3J9xzBX3WvPrFzR+HHj/fulLuN92bH8z2BA2ZN1/U1dptu1p+Xue5qa+z7PdPm2clFFnCF/D1lKbpL0U8jx49QEXNWsIX8ESRBXMAKmuKhXReBbyFbtCjb4FHX7+Ruc3SNeepKm49ya6CrzhNrft8TVnC3xbw9XzPXPjin1MJ+qG/NgvX7zyOouj8xE84Mmaf5aD3VdHH1Ox1AYDWmXUtfNpN6R6g4sq6nS2CHoCKKPJ2trTCoyiKbnQ6nXczx+hDHD+NQ/hrzCZnnU+A8inhM0G473Q6nZ3d3d1XU/Mygz7dunIx67tAnleR9/72R9aqH5W9dr154kAjTLGQzssS/rqz165wP8xV9wA1Ms3tbJMkWXtR+qcl4S7oAWpMCV+459lR0APUjBK+cM/1xXCKfQodkz8yjz5rTH70NW9dCiP7G5MHgBdMrwMAQQ8ACHoAoFLmMZ4davAaAUCPHgAQ9ACAoAcAivY/6RWnrHV1g5UAAAAASUVORK5CYII="
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// imports
+
+
+// module
+exports.push([module.i, "@charset \"UTF-8\";\n.MainLayout {\n  display: flex;\n  flex-direction: column;\n  min-height: 100%; }\n\n.Header {\n  background-color: #252525; }\n  .Header::after {\n    content: '';\n    display: block;\n    width: 100%;\n    height: 6px;\n    background-image: linear-gradient(to right, #c30d23 20%, #f8d62d 20%, #f8d62d 40%, #00913a 40%, #00913a 60%, #046eb8 60%, #046eb8 80%, #7403b8 80%); }\n\n.Header__Nav {\n  display: flex;\n  align-items: baseline;\n  padding: .5rem 1.5rem; }\n  .Header__Nav > a {\n    color: #FFF;\n    font-weight: bold; }\n    .Header__Nav > a:nth-child(n+2) {\n      margin-left: 1em; }\n\n.Footer {\n  display: flex;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1rem 2rem;\n  color: #FFF;\n  font-size: .75rem;\n  background-color: #252525; }\n\n.Footer__Nav > a {\n  color: #FFF; }\n  .Footer__Nav > a::before {\n    content: '\\300B   '; }\n\n.MainNavigation {\n  flex-shrink: 0;\n  display: flex;\n  flex-direction: column;\n  width: 18rem;\n  padding: 1rem 0;\n  background-color: #f8f8f8; }\n  @media (max-width: 768px) {\n    .MainNavigation {\n      width: 100%; } }\n\n.MainNavigation__LogoContainer {\n  padding: 0 1rem; }\n\n.MainNavigation__Logo {\n  display: block;\n  text-align: right;\n  font-size: .75rem;\n  font-weight: normal;\n  max-width: 18rem;\n  margin: 0 auto 1rem;\n  color: #000;\n  transition: opacity ease-in-out .2s; }\n  .MainNavigation__Logo:hover {\n    opacity: .75;\n    text-decoration: none; }\n  .MainNavigation__Logo > img {\n    display: block;\n    width: 100%; }\n\n.MainNavigationItem {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: .6rem 1.5rem;\n  transition: background-color 0.2s ease; }\n  .MainNavigationItem[aria-current] {\n    font-weight: bold;\n    color: #FFF;\n    cursor: default;\n    background-color: #39e; }\n    .MainNavigationItem[aria-current]:hover {\n      background-color: #39e;\n      text-decoration: none; }\n\n.MainNavigationItem--child {\n  padding-left: 2.5rem; }\n\n.MainNavigationItem__Button {\n  outline: 0; }\n  .MainNavigationItem__Button::after {\n    content: '';\n    display: block;\n    width: .75rem;\n    height: .75rem;\n    border-right: solid 4px currentColor;\n    border-bottom: solid 4px currentColor;\n    transform-origin: center center;\n    transform: rotate(-45deg);\n    transition: transform 0.2s ease; }\n  .MainNavigationItem__Button[data-is-open=\"true\"]::after {\n    transform: rotate(45deg) translateY(-4px); }\n\n.MainNavigationItem__Children {\n  background-color: rgba(200, 200, 192, 0.3); }\n\n.MainNavigationItem__Children[aria-hidden=\"true\"] {\n  display: none; }\n\n.MainLayout__Body {\n  flex-grow: 1;\n  display: flex; }\n  @media (max-width: 768px) {\n    .MainLayout__Body {\n      flex-direction: column; } }\n\n.MainSection {\n  width: 100%;\n  padding: 2rem 1.5rem 4rem; }\n  .MainSection > table {\n    max-width: 100%; }\n    .MainSection > table td:nth-child(1),\n    .MainSection > table th:nth-child(1) {\n      font-weight: bold;\n      word-break: keep-all; }\n  .MainSection .negative {\n    color: #FF5555; }\n  .MainSection.markdown-body {\n    line-height: 1.5; }\n  .MainSection.markdown-body a {\n    color: #39e; }\n  .MainSection.markdown-body h2 {\n    margin-top: 3rem; }\n  .MainSection.markdown-body h3 {\n    margin-top: 2.4rem; }\n  .MainSection.markdown-body ul li,\n  .MainSection.markdown-body ol li {\n    margin-bottom: 0.75rem; }\n  .MainSection.markdown-body img {\n    max-width: 60%;\n    max-height: 60vh; }\n    @media (max-width: 768px) {\n      .MainSection.markdown-body img {\n        max-width: 100%; } }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 30 */
 /***/ (function(module, exports) {
 
 module.exports = require("ress/ress.css");
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports = require("github-markdown-css/github-markdown.css");
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(4)(false);
+exports = module.exports = __webpack_require__(3)(false);
 // imports
 
 
@@ -1669,4 +1795,4 @@ exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody {\n  font-fami
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.fba7c2f6.js.map
+//# sourceMappingURL=static.ba32c8d1.js.map
