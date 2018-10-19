@@ -2,6 +2,7 @@
 title: エラーハンドリング
 slug: errors
 description: RPGアツマールのAPIが返すエラーについてのリファレンスです。
+order: 99
 ---
 
 ## 概要

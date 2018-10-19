@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, Head } from "react-static";
+import { Link, Head, withRouteData } from "react-static";
+import classNames from "classnames";
 
 import faviconUrl from "./assets/favicon.ico";
 import logoUrl from "./assets/logo.png";
@@ -51,31 +52,80 @@ const Footer = () => (
   </footer>
 );
 
-const MainNavigation = ({ apiList }) => (
-  <nav className="MainNavigation">
-    <Link to="/" className="MainNavigation__Logo">
-      <img src={logoUrl} alt="RPGアツマール" />
-      APIリファレンス
-    </Link>
+class MainNavigationApiLink extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+    this.state = { isOpen: props.defaultOpen || false };
 
-    <Link className="MainNavigation__Item" to="/" exact>概要</Link>
+    this.onClickAngle = (ev) => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      this.setState({ isOpen: !this.state.isOpen });
+    };
+    this.onClickLink = () => this.setState({ isOpen: true });
+  }
+
+  render() {
+    const { api } = this.props;
+    const { isOpen } = this.state;
+    return (
+      <div>
+        <Link
+          className="MainNavigationItem"
+          to={`/${api.slug}`}
+          title={api.description}
+          onClick={this.onClickLink}
+          exact
+        >
+          <span>{api.title}</span>
+          {api.children.length > 0 ? (
+            <button className="MainNavigationItem__Button" onClick={this.onClickAngle} data-is-open={`${isOpen}`} />
+          ) : null}
+        </Link>
+        <div className="MainNavigationItem__Children" aria-hidden={`${!isOpen}`} >
+          {api.children.map(child => (
+            <Link
+              className={classNames("MainNavigationItem", "MainNavigationItem--child")}
+              key={child.slug}
+              to={`/${child.slug}`}
+              children={child.title}
+              title={child.description}
+              exact
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+}
+
+const MainNavigation = ({ apiList, path }) => (
+  <nav className="MainNavigation">
+    <div className="MainNavigation__LogoContainer">
+      <Link to="/" className="MainNavigation__Logo">
+        <img src={logoUrl} alt="RPGアツマール" />
+        APIリファレンス
+      </Link>
+    </div>
+
+    <Link className="MainNavigationItem" to="/" exact>概要</Link>
 
     {apiList.map(api => (
-      <Link className="MainNavigation__Item" key={api.slug} to={`/${api.slug}`}>{api.title}</Link>
+      <MainNavigationApiLink key={api.slug} api={api} defaultOpen={!!path.match(api.slug)} />
     ))}
 
-    <Link className="MainNavigation__Item" to="http://ch.nicovideo.jp/indies-game/blomaga/ar1163608" target="_blank" rel="noopener">
+    <Link className="MainNavigationItem" to="http://ch.nicovideo.jp/indies-game/blomaga/ar1163608" target="_blank" rel="noopener">
       旧リファレンス
     </Link>
   </nav>
 );
 
-export default ({ title, apiList, children }) => (
+export default withRouteData(({ apiList = [], title = "", path = "/", children }) =>
   <div className="MainLayout">
     <Meta title={title} />
     <Header />
     <main className="MainLayout__Body">
-      <MainNavigation apiList={apiList} />
+      <MainNavigation apiList={apiList} path={path} />
 
       <article className="MainSection markdown-body">
         {children}
