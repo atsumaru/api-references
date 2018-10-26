@@ -2,6 +2,8 @@
 title: クエリ情報の取得
 slug: copy-query
 description: RPGアツマールでURLのquery情報を取得するにはこの機能を利用します。
+order: 21
+experimental: true
 ---
 
 ## 概要

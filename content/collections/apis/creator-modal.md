@@ -2,6 +2,8 @@
 title: 作者情報を表示する
 slug: creator-modal
 description: RPGアツマールのゲームの作者情報が記載されたダイアログを表示することができます。
+order: 22
+experimental: true
 ---
 
 ## 概要

@@ -2,6 +2,8 @@
 title: スコアボードAPIを利用する
 slug: scoreboard/api
 description: アツマールAPIを使ったスコアボードの利用方法について解説します。
+order: 3
+experimental: true
 ---
 
 ## APIを使ったスコアボードの利用方法

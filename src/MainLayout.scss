@@ -105,7 +105,6 @@
 .MainNavigationItem {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: .6rem 1.5rem;
   transition: background-color 0.2s ease;
 
@@ -124,6 +123,18 @@
 
 .MainNavigationItem--child {
   padding-left: 2.5rem;
+}
+
+.MainNavigationItem__Icon {
+  flex-shrink: 0;
+  margin-right: .25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+}
+
+.MainNavigationItem__Text {
+  flex-grow: 1;
 }
 
 .MainNavigationItem__Button {

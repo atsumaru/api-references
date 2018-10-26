@@ -2,6 +2,8 @@
 title: スコアボードプラグインを利用する
 slug: scoreboard/plugin
 description: 公式プラグインを利用した、スコアボードの利用方法について解説します。
+order: 2
+experimental: true
 ---
 
 ## 公式プラグインの利用方法
