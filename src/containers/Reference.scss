@@ -23,3 +23,27 @@
     opacity: .75;
   }
 }
+
+.Reference__Description {
+  font-size: .75rem;
+}
+
+.Reference__ExperimentalNote {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+  border: solid 2px $caution-shadow;
+  color: $caution-dark;
+  background-color: $caution-base;
+  border-radius: .5rem;
+}
+
+.Reference__ExperimentalNoteIcon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: .25rem;
+  fill: $caution-dark;
+}

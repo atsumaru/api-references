@@ -2,6 +2,8 @@
 title: スコアボードを利用する
 slug: scoreboard
 description: RPGアツマール内で動作するゲームのスコア(点数)を記録・取得できる仕組みです。
+order: 23
+experimental: true
 ---
 
 ## 概要

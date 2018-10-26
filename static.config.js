@@ -14,7 +14,7 @@ const basePath = process.env.BASE_PATH || "/api-references";
 const renderer = new marked.Renderer();
 const convertHref = href => /^\//.test(href) ? url.resolve(siteRoot, path.join(basePath + href)) : href;
 const originImageRenderer = renderer.image;
-renderer.image = (href, title, text) => originImageRenderer.apply(renderer, [ convertHref(href), title, text ]);
+renderer.image = (href, title, text) => originImageRenderer.apply(renderer, [convertHref(href), title, text]);
 
 chokidar.watch("content").on("all", () => reloadRoutes());
 
@@ -29,9 +29,9 @@ export default {
     // contents を含めるとデータが肥大化するので、除いたものを apiList とし、 navigation 用に各ページに含める
     const apiListSorted = lodash.sortBy(apis, a => a.order || 1).map(({ contents, ...rest }) => rest);
     // / を含んでいるものは子ページなので、filterしてgroupしておく
-    const apiListChildren = lodash.groupBy(apiListSorted.filter(a => /\//.test(a.slug)), a => a.slug.replace(/^([^/]+)\/.+$/, '$1'));
+    const apiListChildren = lodash.groupBy(apiListSorted.filter(a => /\//.test(a.slug)), a => a.slug.replace(/^([^/]+)\/.+$/, "$1"));
     // / を含んでない親ページに子ページをくっつけて、apiListとする
-    const apiList = apiListSorted.filter(a => !/\//.test(a.slug)).map(a => ({ ...a, children: apiListChildren[a.slug] || [] }))
+    const apiList = apiListSorted.filter(a => !/\//.test(a.slug)).map(a => ({ ...a, children: apiListChildren[a.slug] || [] }));
 
     return [
       {
@@ -67,12 +67,12 @@ export default {
   },
 
   webpack: (config, { defaultLoaders, stage }) => {
-    let loaders = [];
+    let sassLoaders = [];
 
     if (stage === "dev") {
-      loaders = [{ loader: "style-loader" }, { loader: "css-loader" }, { loader: "sass-loader" }];
+      sassLoaders = [{ loader: "style-loader" }, { loader: "css-loader" }, { loader: "sass-loader" }];
     } else {
-      loaders = [
+      sassLoaders = [
         {
           loader: "css-loader",
           options: {
@@ -89,7 +89,7 @@ export default {
 
       // Don't extract css to file during node build process
       if (stage !== "node") {
-        loaders = ExtractTextPlugin.extract({
+        sassLoaders = ExtractTextPlugin.extract({
           fallback: {
             loader: "style-loader",
             options: {
@@ -97,7 +97,7 @@ export default {
               hmr: false,
             },
           },
-          use: loaders,
+          use: sassLoaders,
         });
       }
     }
@@ -107,7 +107,24 @@ export default {
         oneOf: [
           {
             test: /\.s(a|c)ss|css$/,
-            use: loaders,
+            use: sassLoaders,
+          },
+          {
+            test: /\.svg$/,
+            use: [
+              ...defaultLoaders.jsLoader.use,
+              {
+                loader: "react-svg-loader",
+                options: {
+                  es5: true,
+                  jsx: true,
+                  svgo: {
+                    plugins: [{ removeTitle: true }],
+                    floatPrecision: 8,
+                  }
+                }
+              }
+            ]
           },
           defaultLoaders.jsLoader,
           defaultLoaders.fileLoader,

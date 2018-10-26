@@ -1,11 +1,19 @@
 import React from "react";
-import { withRouteData, Link } from "react-static";
+import { withRouteData } from "react-static";
 
 import { htmlToComponent } from "../utils/htmlToComponent";
+import FlaskIcon from "../flask.svg";
 
 import "./Reference.scss";
 
 const GITHUB_URL = "https://github.com/atsumaru/api-references";
+
+const ExperimentalNote = () => (
+  <div className="Reference__ExperimentalNote">
+    <FlaskIcon className="Reference__ExperimentalNoteIcon" />
+    <span>この機能は実験的な機能であり、将来仕様が変更される可能性があります。予めご了承ください。</span>
+  </div>
+);
 
 export default withRouteData(({ reference }) => (
   <div>
@@ -15,7 +23,8 @@ export default withRouteData(({ reference }) => (
         編集
       </a>
     </div>
-    <p>{htmlToComponent(reference.description)}</p>
+    <p className="Reference__Description">{htmlToComponent(reference.description)}</p>
+    {reference.experimental ? <ExperimentalNote /> : null}
 
     {htmlToComponent(reference.contents)}
   </div>

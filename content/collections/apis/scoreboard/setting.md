@@ -2,6 +2,8 @@
 title: スコアボード設定画面を利用する
 slug: scoreboard/setting
 description: スコアボードの設定画面の使用方法を解説します。
+order: 1
+experimental: true
 ---
 
 ## スコアボード設定画面

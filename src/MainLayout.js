@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 import faviconUrl from "./assets/favicon.ico";
 import logoUrl from "./assets/logo.png";
+import FlaskIcon from "./flask.svg";
 
 import "./MainLayout.scss";
 
@@ -77,7 +78,8 @@ class MainNavigationApiLink extends React.Component {
           onClick={this.onClickLink}
           exact
         >
-          <span>{api.title}</span>
+          {api.experimental ? <FlaskIcon className="MainNavigationItem__Icon" /> : null}
+          <span className="MainNavigationItem__Text">{api.title}</span>
           {api.children.length > 0 ? (
             <button className="MainNavigationItem__Button" onClick={this.onClickAngle} data-is-open={`${isOpen}`} />
           ) : null}
@@ -91,7 +93,7 @@ class MainNavigationApiLink extends React.Component {
               title={child.description}
               exact
             >
-              {child.title}
+              <span className="MainNavigationItem__Text">{child.title}</span>
             </Link>
           ))}
         </div>
@@ -114,10 +116,6 @@ const MainNavigation = ({ apiList, path }) => (
     {apiList.map(api => (
       <MainNavigationApiLink key={api.slug} api={api} defaultOpen={!!path.match(api.slug)} />
     ))}
-
-    <Link className="MainNavigationItem" to="http://ch.nicovideo.jp/indies-game/blomaga/ar1163608" target="_blank" rel="noopener">
-      旧リファレンス
-    </Link>
   </nav>
 );
 
