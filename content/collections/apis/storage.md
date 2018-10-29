@@ -66,8 +66,8 @@ Stringを保存するシンプルなKVS（Key-Valueストア)になっていま�
 ### サーバーセーブ削除API
 メソッド | window.RPGAtsumaru.storage.removeItem(key)
 :---|:---
-説明 | 引数のopenLink_urlにリンク先を表す特定の文字列を渡すことにより、外部リンクを記載したダイアログを表示するメソッド。<br>引数に渡す文字列の形式は `OpenLink http://example.com/` (url部分は任意のURLに置き換え)
-引数 | リンクの値を表す文字列
-戻り値 | Promise[void]
+説明 | 指定したセーブデータを削除します。<br>サーバーアクセスが発生します。
+引数 | 削除対象のセーブのキー。型はstring
+戻り値 | Thenable<void>
 リリース日 | 2016/12/27
 更新日 | 2018/10/25
