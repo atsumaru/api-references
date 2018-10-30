@@ -27,7 +27,7 @@ experimental: true
 未ログインユーザーは、ランキングの表示はできますがサーバーに保存されません。
 - 利用に際しては[ヘルプ](https://qa.nicovideo.jp/faq/show/12127)も合わせてご確認下さい。
 
-### アツマール公式での利用例
+### RPGアツマール公式での利用例
 
 例えば、RPGアツマール公式では次のゲームでこの機能を利用しています。
 
@@ -48,4 +48,3 @@ experimental: true
 - [スコアボードプラグインを利用する](/scoreboard/plugin)
 - [スコアボードAPIを利用する](/scoreboard/api)
 - [スコアボード設定画面を利用する](/scoreboard/setting)
-

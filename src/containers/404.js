@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouteData } from "react-static";
 
-export default withRouteData(({}) => (
+export default withRouteData(() => (
   <div>
     <h1>ページが見つかりません</h1>
     <div>
