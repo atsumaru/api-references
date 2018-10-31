@@ -56,7 +56,7 @@ contextfactorは「セリフ」コマンドと「選択肢」コマンドで、m
 :---|:---
 アツマール API | -
 
-## APIを利用したサーバーセーブ機能の利用
+## APIを利用したコメント機能の利用
 
 ### シーン設定API
 メソッド | window.RPGAtsumaru.comment.changeScene(sceneName)
@@ -68,7 +68,7 @@ contextfactorは「セリフ」コマンドと「選択肢」コマンドで、m
 更新日 | 2018/10/25
 
 ### シーン切り替えAPI
-メソッド | window.RPGAtsumaru.storage.setItems(items)
+メソッド | window.RPGAtsumaru.comment.resetAndChangeScene(sceneName)
 :---|:---
 説明 | <ul><li>changeSceneと違い、context(contextfactorとminorcontext)による内部状態をリセットしつつシーンを切り替える</li><li>サーバーアクセスが発生する。（ただし直近5つのsceneはキャッシュされ、再アクセスには発生しない）</li><li>ツクール製ゲームではタイトルとゲームオーバーで全員同じコメントが流れる機能のために使用しています。</li></ul>
 引数 | シーン名を表す文字列

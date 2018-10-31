@@ -1,7 +1,7 @@
 ---
 title: サーバーにセーブを保存する
 slug: storage
-description: サーバーセーブ機能を利用するにはStorageAPIを利用してください。サーバーセーブ機能は現在APIのみで利用が可能で、プラグインを通じた機能利用はできません。
+description: サーバーセーブ機能を利用するにはStorageAPIを利用してください。
 order: 12
 ---
 
