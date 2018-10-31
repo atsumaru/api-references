@@ -33,7 +33,7 @@ RPGツクールMV製でコアスクリプトv1.5.0以上のゲームの場合、
 :---|:---
 アツマール API | -
 
-## APIを利用したサーバセーブ機能の利用
+## APIを利用したボリューム機能の利用
 
 ### ボリューム取得API
 メソッド | window.RPGAtsumaru.volume.getCurrentValue()
