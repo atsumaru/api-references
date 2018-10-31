@@ -33,7 +33,7 @@ RPGツクールMV製ゲームの場合、RPGアツマールが挿入する `rpga
 :---|:---
 アツマール API | -
 
-## APIを利用したサーバーセーブ機能の利用
+## APIを利用したコントローラー機能の利用
 
 ### コントローラー入力取得API
 メソッド | window.RPGAtsumaru.controllers.defaultController.subscribe(observer)

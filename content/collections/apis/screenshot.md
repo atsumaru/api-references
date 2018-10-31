@@ -57,7 +57,7 @@ RPGアツマール公式では例えば次のゲームでこの機能を利用�
 DisplayScreenshotModal
 ```
 
-## APIを利用した外部リンク設置方法
+## APIを利用したスクリーンショットの利用方法
 
 ### スクリーンショットAPI
 メソッド | window.RPGAtsumaru.experimental.screenshot.displayModal();

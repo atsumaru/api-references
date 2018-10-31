@@ -1,7 +1,7 @@
 ---
 title: マスターボリュームの設定
 slug: volume
-description: マスターボリュームの調整を行うにはVolumeAPIを利用してください。マスターボリューム設定は現在APIのみで利用が可能で、プラグインを通じた機能利用はできません。
+description: マスターボリュームの調整を行うにはVolumeAPIを利用してください。
 order: 13
 ---
 
