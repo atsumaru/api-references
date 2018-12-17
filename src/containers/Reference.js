@@ -23,7 +23,7 @@ export default withRouteData(({ reference }) => (
         編集
       </a>
     </div>
-    <p className="Reference__Description">{htmlToComponent(reference.description)}</p>
+    {/* <p className="Reference__Description">{htmlToComponent(reference.description)}</p> */}
     {reference.experimental ? <ExperimentalNote /> : null}
 
     {htmlToComponent(reference.contents)}
