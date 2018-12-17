@@ -7,12 +7,21 @@ experimental: true
 ---
 
 ## 概要
-ゲーム内のスコアをサーバーに登録し、ランキングを表示する機能です。
+ゲーム内のスコアをサーバーに登録し、ランキングを表示する機能です。  
 ゲームをプレイするユーザの点数を取得したり、スコアボードごとに上位の点数を取得することができます。
 
 ![スコアボードの表示](/images/scoreboard_sample1.png)
 
+### なにができるのか
+
 - スコアボードはRPGアツマール内で動作する、ゲーム毎に値が記録できる仕組みです。各ゲームごとに複数個のスコアボードが利用できるので、スコアボードごとに違うスコアを記録し利用することができます。
+
+#### 利用想定／利用例
+
+例えば、RPGアツマール公式では次のゲームでこの機能を利用しています。
+- [ちおちゃんの通学路](https://game.nicovideo.jp/atsumaru/games/gm6444)
+
+## 機能詳細
 - スコアボードを利用するには、スコアボードIDを指定してスコアの登録を行い、スコアボードIDごとにスコアを取得します。
 - スコア情報はスコアボードIDごとに管理されているため、複数のランキングを利用したい場合などには、異なるスコアボードIDで情報の登録・取得を行ってください。
 スコアボードIDはデフォルト1〜10までの半角数字の連番で、API設定ページから30まで設定可能です。
@@ -27,20 +36,14 @@ experimental: true
 未ログインユーザーは、ランキングの表示はできますがサーバーに保存されません。
 - 利用に際しては[ヘルプ](https://qa.nicovideo.jp/faq/show/12127)も合わせてご確認下さい。
 
-### RPGアツマール公式での利用例
+## 利用方法
 
-例えば、RPGアツマール公式では次のゲームでこの機能を利用しています。
-
-- [ちおちゃんの通学路](https://game.nicovideo.jp/atsumaru/games/gm6444)
-
-## 設置方法
-
-スコアボードを利用するには下記2つの方法が利用できます。
+スコアボードは次の方法で利用できます。
 
 方法 | 場所
 :---|:---
-[アツマール公式プラグイン](/scoreboard/plugin) | [Github](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruScoreboardsExperimental.js)
-[アツマール API](/scoreboard/api) | -
+[公式プラグイン](/scoreboard/plugin) | [Github](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruScoreboardsExperimental.js)
+[ゲームAPI](/scoreboard/api) | 関連ドキュメントを参考に、直接APIを呼び出してください
 
 
 ## 関連ドキュメント

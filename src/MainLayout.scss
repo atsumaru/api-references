@@ -176,6 +176,7 @@
 
 .MainSection {
   width: 100%;
+  max-width: 60rem;
   padding: 2rem 1.5rem 4rem;
 
   & > table {
@@ -198,15 +199,19 @@
     color: $positive;
   }
   &.markdown-body h2 {
-    margin-top: 3rem;
+    margin-top: 3em;
   }
   &.markdown-body h3 {
-    margin-top: 2.4rem;
+    margin-top: 2em;
+  }
+
+  &.markdown-body td:nth-child(1) {
+    min-width: 7em;
   }
 
   &.markdown-body ul li,
   &.markdown-body ol li {
-    margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
   }
 
   &.markdown-body img {
