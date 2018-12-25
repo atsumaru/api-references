@@ -73,7 +73,7 @@ APIを利用したスクリーンショットの利用方法
 メソッド | window.RPGAtsumaru.experimental.screenshot.setScreenshotHandler(handler);
 :---|:---
 説明 | スクリーンショットの内容を差し替えるハンドラを登録します。複数回登録した場合は最後の関数だけ有効になります
-引数 | `() => Promise[string]` 型の関数。戻り値の文字列はjpeg形式かつ `data-url` な画像文字列
+引数 | `() => Promise<string>` 型の関数。戻り値の文字列はjpeg形式かつ `data-url` な画像文字列
 戻り値 | void
 リリース日 | 2018/11/22
 更新日 | 2018/11/22
