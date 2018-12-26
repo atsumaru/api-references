@@ -7,7 +7,6 @@
     "start": "cross-env SITE_ROOT=\"http://localhost:3000\" BASE_PATH=\"/\" react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
-    "serve": "react-static build && serve dist -p 3000",
     "lint": "eslint --fix src",
     "precommit": "lint-staged",
     "deploy": "react-static build && gh-pages -d dist -b gh-pages"
@@ -38,8 +37,7 @@
     "lint-staged": "^7.2.0",
     "node-sass": "^4.9.0",
     "react-svg-loader": "2.1.0",
-    "sass-loader": "^7.0.3",
-    "serve": "^6.1.0"
+    "sass-loader": "^7.0.3"
   },
   "lint-staged": {
     "*.{json,md}": [
