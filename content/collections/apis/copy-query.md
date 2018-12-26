@@ -62,7 +62,7 @@ CopyQuery 10 11 12
 APIを利用したquery情報取得方法
 
 ####  query情報取得API
-メソッド | window.RPGAtsumaru.experimental.query[key]
+メソッド | `window.RPGAtsumaru.experimental.query[key]`
 :---|:---
 説明 | 引数のkeyに指定した文字列のquery情報を取得します。
 引数 | query名を表す文字列

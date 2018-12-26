@@ -22,7 +22,7 @@ interface AtsumaruApiError {
 
 code一覧 | 解説
 :---|:---
-BAD_REQUEST | ゲーム側で何かしらAPIの使い方を間違えている場合のコードです
+BAD_REQUEST | ゲーム側でなんらかのAPIの使い方を間違えている場合のコードです。例えば、メソッドの引数の型を間違えている場合に発生します。
 UNAUTHORIZED | プレイヤーが[ログイン](/common/login)している必要があるAPIを、プレイヤーが非ログイン状態で使った場合のコードです
 API_CALL_LIMIT_EXCEEDED | [APIの呼び出し回数制限](/common/rate-limit) の上限に達した際に返されるコードです
 FORBIDDEN | 次のように、プレイヤーやゲームがAPIに対してアクセス権限がない場合に発生します。<ul><li>ユーザーIDを指定するAPIで、対象のユーザー情報を取得する権限がない場合(相手のユーザーのプレイヤー通信有効化がされていないなど)</li><li>ゲームIDを指定するAPIで、対象のゲーム情報を取得する権限がない場合(対象のゲームが非公開であるなど)</li></ul>
@@ -32,7 +32,7 @@ INTERNAL_SERVER_ERROR | サーバー側で何らかの問題が発生してい�
 ### コード例
 
 ```js
-window.RPGAtsumaru.experimental.scoreboards.setRecord(board_id, score)
+window.RPGAtsumaru.experimental.scoreboards.setRecord(boardId, score)
   .catch(function(err) {
     switch(err.code) {
       case "BAD_REQUEST":

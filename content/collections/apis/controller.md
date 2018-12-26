@@ -35,19 +35,19 @@ RPGツクールMV製ゲームの場合、RPGアツマールが挿入する `rpga
 APIを利用したコントローラー機能の利用
 
 #### コントローラー入力取得API
-メソッド | window.RPGAtsumaru.controllers.defaultController.subscribe(observer)
+メソッド | `window.RPGAtsumaru.controllers.defaultController.subscribe(observer: Observer)`
 :---|:---
 説明 | <ul><li>RPGアツマールのスマホ版にあるコントローラーの入力情報を取得できるAPIです。</li><li>Observer, subscriptionについてはESNextのObservableを参照してください。</li></ul>
-引数 | RPGアツマールのコントローラーの入力情報({type: string, key: string})を受け取るObserver
-戻り値 | subscription
+引数 | RPGアツマールのコントローラーの入力情報( `{type: string, key: string}` )を受け取るObserver
+戻り値 | `subscription`
 リリース日 | 2016/12/27
 更新日 | 2018/10/25
 
 #### コントローラー入力取得コールバックAPI
-メソッド | window.RPGAtsumaru.controllers.defaultController.subscribe(next)
+メソッド | `window.RPGAtsumaru.controllers.defaultController.subscribe(next: (info: {type: string, key: string}) => void)`
 :---|:---
 説明 | `window.RPGAtsumaru.controllers.defaultController.subscribe(observer)` の引数に、コールバック関数を受け付けられるようにしたものです。
-引数 | RPGアツマールのコントローラー入力情報({type: string, key: string})を受け取るコールバック
-戻り値 | subscription
+引数 | RPGアツマールのコントローラー入力情報( `{type: string, key: string}` )を受け取るコールバック
+戻り値 | `subscription`
 リリース日 | 2016/12/27
 更新日 | 2018/10/25

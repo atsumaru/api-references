@@ -65,6 +65,15 @@ experimental: true
   - グローバルシグナルはゲームあたり1,000件まで保存されます。
 
 
+##### 起こりうるエラーの種類
+名前 | 説明
+:---|:---
+[UNAUTHORIZED](/common/errors) | プレイヤーがログインしていない
+[BAD_REQUEST](/common/errors) | <ul><li>`data` に100byte以上の文字列を指定した</li><li>引数として不正な値を指定している</li></ul>
+[INTERNAL_SERVER_ERROR](/common/errors) | RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/errors) | 短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+
+
 #### グローバルシグナルの取得
 
 メソッド | `window.RPGAtsumaru.experimental.signal.getGlobalSignals()`
@@ -94,19 +103,19 @@ interface GlobalSignal {
 
 プロパティの内容は次のようになっています。
 
-プロパティ名 | 内容
+プロパティ名 | 型 | 内容
 :---|:---
-id | シグナルそれぞれでユニークなID値
-senderId | シグナルを送信したユーザーのニコニコユーザーID
-senderName | シグナルを送信したユーザーのユーザー名
-data | 送信したシグナル文字列
-createdAt | シグナルが送信された日時。すでに処理済みのシグナルを判別するために用います。
+id | `number` | シグナルそれぞれでユニークなID値
+senderId | `number` | シグナルを送信したユーザーのニコニコユーザーID
+senderName | `string` | シグナルを送信したユーザーのユーザー名
+data | `string` | 送信したシグナル文字列
+createdAt | `number` | シグナルが送信された日時(秒単位のunix timestamp)。すでに処理済みのシグナルを判別するために用います。
 
 
 ##### 戻り値の例
 
 ```js
-// window.RPGAtsumaru.experimental.storage.getGlobalSignals() を実行
+// window.RPGAtsumaru.experimental.storage.getGlobalSignals().then(function(v) { console.log(v) }) を実行
 [
   {
     createdAt: 1543397700,
@@ -126,11 +135,17 @@ createdAt | シグナルが送信された日時。すでに処理済みのシ�
 ```
 
 
+##### 起こりうるエラーの種類
+名前 | 説明
+:---|:---
+[INTERNAL_SERVER_ERROR](/common/errors) | RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/errors) | 短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+
 #### ユーザーシグナルの送信
 
 メソッド | `window.RPGAtsumaru.experimental.signal.sendSignalToUser(receiverId: number, data: string)`
 :---|:---
-説明 | ゲームのグローバルシグナルとして `data` で指定した文字列を送信します。
+説明 | ユーザーシグナルとして `receiverId` で指定したユーザーIDのユーザーに `data` で指定した文字列を送信します。
 引数 | <ul><li>`receiverId` : 送信先のニコニコユーザーIDを指定します。</li><li>`data` : シグナルとして、任意の文字列を100byte以内で送信できます。</li></ul>
 戻り値 | `Promise<void>`
 リリース日 | 2018/12/17
@@ -141,6 +156,15 @@ createdAt | シグナルが送信された日時。すでに処理済みのシ�
   - また、ゲームあたり1ユーザー10KBまでとなります。
     - ゲームからのシグナル送信によって、古いシグナルから消えていきます。
     - 他のゲームからのシグナル送信によっても消える可能性があります。
+
+##### 起こりうるエラーの種類
+名前 | 説明
+:---|:---
+[UNAUTHORIZED](/common/errors) | プレイヤーがログインしていない
+[FORBIDDEN](/common/errors) | `userId` に[プレイヤー間通信の有効化](/common/interplayer)を行っていないユーザーのIDを指定した
+[BAD_REQUEST](/common/errors) | <ul><li>`data` に100byte以上の文字列を指定した</li><li>引数として不正な値を指定している</li></ul>
+[INTERNAL_SERVER_ERROR](/common/errors) | RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/errors) | 短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
 
 
 #### ユーザーシグナルの取得
@@ -177,17 +201,17 @@ interface UserSignal {
 
 プロパティ名 | 内容
 :---|:---
-id | シグナルそれぞれでユニークなID値
-senderId | シグナルを送信したユーザーのニコニコユーザーID
-senderName | シグナルを送信したユーザーのユーザー名
-data | 送信したシグナル文字列
-createdAt | シグナルが送信された日時。すでに処理済みのシグナルを判別するために用います。
+id | `number` | シグナルそれぞれでユニークなID値
+senderId | `number` | シグナルを送信したユーザーのニコニコユーザーID
+senderName | `string` | シグナルを送信したユーザーのユーザー名
+data | `string` | 送信したシグナル文字列
+createdAt | `number` | シグナルが送信された日時(秒単位のunix timestamp)。すでに処理済みのシグナルを判別するために用います。
 
 
 ##### 戻り値の例
 
 ```js
-// window.RPGAtsumaru.experimental.signal.getUserSignals() を実行
+// window.RPGAtsumaru.experimental.signal.getUserSignals().then(function(v) { console.log(v) }) を実行
 [
   {
     createdAt: 1543397700,
@@ -205,3 +229,10 @@ createdAt | シグナルが送信された日時。すでに処理済みのシ�
   },
 ]
 ```
+
+##### 起こりうるエラーの種類
+名前 | 説明
+:---|:---
+[UNAUTHORIZED](/common/errors) | プレイヤーがログインしていない
+[INTERNAL_SERVER_ERROR](/common/errors) | RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/errors) | 短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている

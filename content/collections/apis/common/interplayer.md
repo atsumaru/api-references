@@ -64,3 +64,10 @@ APIを利用したプレイヤー間通信の有効化
 戻り値 | `Promise<void>`
 リリース日 | 2018/12/17
 更新日 | 2018/12/17
+
+##### 起こりうるエラーの種類
+名前 | 説明
+:---|:---
+[UNAUTHORIZED](/common/errors) | プレイヤーがログインしていない
+[INTERNAL_SERVER_ERROR](/common/errors) | RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/errors) | 短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
