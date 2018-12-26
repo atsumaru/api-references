@@ -43,11 +43,11 @@ experimental: true
 方法 | 場所
 :---|:---
 [公式プラグイン](/scoreboard/plugin) | [Github](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruScoreboardsExperimental.js)
-[ゲームAPI](/scoreboard/api) | 関連ドキュメントを参考に、直接APIを呼び出してください
+[ゲームAPI](/scoreboard/api) | [リファレンス](/scoreboard/api)を参考に、直接APIを呼び出してください
 
 
 ## 関連ドキュメント
 
+- [スコアボード設定画面を利用する](/scoreboard/setting)
 - [スコアボードプラグインを利用する](/scoreboard/plugin)
 - [スコアボードAPIを利用する](/scoreboard/api)
-- [スコアボード設定画面を利用する](/scoreboard/setting)
