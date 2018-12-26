@@ -38,28 +38,28 @@ RPGツクールMV製でコアスクリプトv1.5.0以上のゲームの場合、
 APIを利用したボリューム機能の利用
 
 #### ボリューム取得API
-メソッド | window.RPGAtsumaru.volume.getCurrentValue()
+メソッド | `window.RPGAtsumaru.volume.getCurrentValue()`
 :---|:---
 説明 | 現在のRPGアツマールのマスターボリューム値を取得する。
 引数 | なし
-戻り値 | 0～1の実数で表されるマスターボリューム
+戻り値 | `number` 0～1の実数で表されるマスターボリューム
 リリース日 | 2017/12/20
 更新日 | 2018/10/25
 
 #### ボリューム変更取得API
-メソッド | window.RPGAtsumaru.volume.changed.subscribe(observer)
+メソッド | `window.RPGAtsumaru.volume.changed.subscribe(observer: Observer)`
 :---|:---
 説明 | <ul><li>RPGアツマールのマスターボリューム情報の変更を取得する。</li><li>Observer, subscriptionについてはESNextのObservableを参照してください。</li></ul>
 引数 | マスターボリューム情報を受け取るObserver
-戻り値 | subscription
+戻り値 | `subscription`
 リリース日 | 2017/12/20
 更新日 | 2018/10/25
 
 #### ボリューム変更時コールバックAPI
-メソッド | window.RPGAtsumaru.volume.changed.subscribe(next)
+メソッド | `window.RPGAtsumaru.volume.changed.subscribe(next: (volume: number) => void)`
 :---|:---
-説明 | window.RPGAtsumaru.volume.changed.subscribe(observer)の引数に、コールバック関数を受け付けられるようにしたもの。
+説明 | `window.RPGAtsumaru.volume.changed.subscribe(observer)` の引数に、コールバック関数を受け付けられるようにしたもの。
 引数 | マスターボリューム情報を受け取るコールバック
-戻り値 | subscription
+戻り値 | `subscription`
 リリース日 | 2016/12/20
 更新日 | 2018/10/25

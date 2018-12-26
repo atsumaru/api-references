@@ -43,10 +43,10 @@ Stringを保存するシンプルなKVS（Key-Valueストア)になっていま�
 ゲームAPI | 以下の「APIでの利用方法」を参考に、直接APIを呼び出してください
 
 ### APIでの利用方法
-APIを利用したサーバーセーブ機能の利用
+APIを利用したサーバーセーブ機能の利用です。
 
-### サーバーセーブ全件取得API
-メソッド | window.RPGAtsumaru.storage.getItems()
+#### サーバーセーブ全件取得API
+メソッド | `window.RPGAtsumaru.storage.getItems()`
 :---|:---
 説明 | サーバーに保存されているセーブデータを全件取得します。
 引数 | なし
@@ -54,8 +54,8 @@ APIを利用したサーバーセーブ機能の利用
 リリース日 | 2016/12/27
 更新日 | 2018/10/25
 
-### サーバーセーブ保存API
-メソッド | window.RPGAtsumaru.storage.setItems(items)
+#### サーバーセーブ保存API
+メソッド | `window.RPGAtsumaru.storage.setItems(items: {key: string, value: string}[])`
 :---|:---
 説明 | 引数に指定したitemsに対応するセーブデータを保存します。<br>複数端末からのセーブ時に楽観的ロックをしています。A端末とB端末で同時にゲームをプレイしていた場合にAとBがほぼ同時にsetItems()をした場合、先にsetItems()したもののみが受理されます。後のものは一度getItems()で最新のセーブデータを取得した後で受け付けとなります。<br>サーバーアクセスが発生します。
 引数 | 更新する対象のセーブ情報。型は {key: string, value: string}[]
@@ -63,8 +63,16 @@ APIを利用したサーバーセーブ機能の利用
 リリース日 | 2016/12/27
 更新日 | 2018/10/25
 
-### サーバーセーブ削除API
-メソッド | window.RPGAtsumaru.storage.removeItem(key)
+##### 利用例
+
+```js
+window.RPGAtsumaru.storage.setItems([
+  { key: "キー名", value: JSON.stringify(someObject)}
+]);
+```
+
+#### サーバーセーブ削除API
+メソッド | `window.RPGAtsumaru.storage.removeItem(key)`
 :---|:---
 説明 | 指定したセーブデータを削除します。<br>サーバーアクセスが発生します。
 引数 | 削除対象のセーブのキー。型はstring

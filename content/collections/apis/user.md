@@ -103,7 +103,7 @@ GetRecentUsers
 ```
 
 ### APIでの利用方法
-APIを利用したユーザー情報へのアクセス
+APIを利用したユーザー情報へのアクセス方法についてです。
 
 #### 現在ゲームをプレイしているログインユーザーのユーザー情報を取得
 
@@ -115,13 +115,40 @@ APIを利用したユーザー情報へのアクセス
 メソッド | `window.RPGAtsumaru.experimental.user.getSelfInformation()`
 :---|:---
 引数 | なし
-戻り値 | `Promise<{ id: number, name: string, profile: string, twitterId: string, url: string, isPremium: boolean }>`
+戻り値 | `Promise<SelfInformation>`
 リリース日 | 2018/12/17
 更新日 | 2018/12/17
+
+##### 戻り値の型 SelfInformation について
+戻り値で取得できる `SelfInformation` は以下のような型です。
+
+```js
+interface SelfInformation {
+  id: number;
+  name: string;
+  isPremium: boolean;
+  profile: string;
+  twitterId: string;
+  url: string;
+}
+```
+
+プロパティの内容は次のようになっています。
+
+プロパティ名 | 型 | 内容
+:---|:---|:---
+id | `number` | ユーザーのニコニコユーザーID
+name | `string` | ユーザーの名前
+isPremium | `boolean` | ユーザーがニコニコのプレミアム会員かどうか
+profile | `string` | ユーザーのプロフィール文
+twitterId | `string` | ユーザーのtwitterId
+url | `string` | ユーザーのサイトURL
+
 
 ##### 戻り値の例
 
 ```js
+// window.RPGAtsumaru.experimental.user.getSelfInformation().then(function(v) { console.log(v) }) を実行
 {
   id: 64341294,
   name: "RPGアツマール公式",
@@ -132,6 +159,13 @@ APIを利用したユーザー情報へのアクセス
 }
 ```
 
+##### 起こりうるエラーの種類
+名前 | 説明
+:---|:---
+[UNAUTHORIZED](/common/errors) | プレイヤーがログインしていない
+[INTERNAL_SERVER_ERROR](/common/errors) | RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/errors) | 短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+
 #### ユーザーIDを指定して特定のユーザー情報を取得
 
 - 引数でユーザーIDを指定し、指定したユーザーの情報を取得します。
@@ -141,13 +175,38 @@ APIを利用したユーザー情報へのアクセス
 メソッド | `window.RPGAtsumaru.experimental.user.getUserInformation(userId: number)`
 :---|:---
 引数 | `userId` : ユーザー情報を取得したいユーザーのニコニコユーザーIDを自然数で指定します。
-戻り値 | `Promise<{ id: number, name: string, profile: string, twitterId: string, url: string }>`
+戻り値 | `Promise<UserInformation>`
 リリース日 | 2018/12/17
 更新日 | 2018/12/17
+
+
+##### 戻り値の型 UserInformation について
+戻り値で取得できる `UserInformation` は以下のような型です。
+
+```js
+interface UserInformation {
+  id: number;
+  name: string;
+  profile: string;
+  twitterId: string;
+  url: string;
+}
+```
+
+プロパティの内容は次のようになっています。
+
+プロパティ名 | 型 | 内容
+:---|:---|:---
+id | `number` | ユーザーのニコニコユーザーID
+name | `string` | ユーザーの名前
+profile | `string` | ユーザーのプロフィール文
+twitterId | `string` | ユーザーのtwitterId
+url | `string` | ユーザーのサイトURL
 
 ##### 戻り値の例
 
 ```js
+// window.RPGAtsumaru.experimental.user.getUserInformation(64341294).then(function(v) { console.log(v) }) を実行
 {
   id: 64341294,
   name: "RPGアツマール公式",
@@ -156,6 +215,15 @@ APIを利用したユーザー情報へのアクセス
   url: "https://game.nicovideo.jp/atsumaru/"
 }
 ```
+
+##### 起こりうるエラーの種類
+名前 | 説明
+:---|:---
+[FORBIDDEN](/common/errors) | `userId` に[プレイヤー間通信の有効化](/common/interplayer)を行っていないユーザーのIDを指定した
+[BAD_REQUEST](/common/errors) | 引数として不正な値を指定している
+[INTERNAL_SERVER_ERROR](/common/errors) | RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/errors) | 短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+
 
 #### 現在のゲームを最近プレイしたユーザーの情報の取得
 
@@ -167,13 +235,32 @@ APIを利用したユーザー情報へのアクセス
 メソッド | `window.RPGAtsumaru.experimental.user.getRecentUsers()`
 :---|:---
 引数 | なし
-戻り値 | `Promise<{ id: number, name: string }[]>`
+戻り値 | `Promise<UserIdName[]>`
 リリース日 | 2018/12/17
 更新日 | 2018/12/17
+
+##### 戻り値の型 UserIdName について
+戻り値で取得できる `UserIdName` は以下のような型です。
+
+```js
+interface UserIdName {
+  id: number;
+  name: string;
+}
+```
+
+プロパティの内容は次のようになっています。
+
+プロパティ名 | 型 | 内容
+:---|:---|:---
+id | `number` | ユーザーのニコニコユーザーID
+name | `string` | ユーザーの名前
+
 
 ##### 戻り値の例
 
 ```js
+// window.RPGAtsumaru.experimental.user.getRecentUsers().then(function(v) { console.log(v) }) を実行
 [
   {
     id: 64341294,
@@ -185,3 +272,10 @@ APIを利用したユーザー情報へのアクセス
   }
 ]
 ```
+
+##### 起こりうるエラーの種類
+名前 | 説明
+:---|:---
+[INTERNAL_SERVER_ERROR](/common/errors) | RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/errors) | 短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+

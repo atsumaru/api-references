@@ -67,7 +67,7 @@ OpenLink https://game.nicovideo.jp/atsumaru
 APIを利用した外部リンク設置方法
 
 #### 外部リンク表示API
-メソッド | window.RPGAtsumaru.popups.openLink(openLink_url)
+メソッド | `window.RPGAtsumaru.popups.openLink(openLinkUrl: string)`
 :---|:---
 説明 | 引数のopenLink_urlにリンク先を表す特定の文字列を渡すことにより、外部リンクを記載したダイアログを表示するメソッド。<br>引数に渡す文字列の形式は `OpenLink http://example.com/` (url部分は任意のURLに置き換え)
 引数 | リンクの値を表す文字列
