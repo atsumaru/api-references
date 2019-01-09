@@ -4,6 +4,7 @@ slug: signal
 description: ゲーム内で、他のユーザーと小さなデータ（信号）をやり取りするためのAPIです。
 order: 28
 experimental: true
+recommendTheory: true
 ---
 
 ## 概要

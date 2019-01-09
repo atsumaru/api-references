@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouteData } from "react-static";
+import { withRouteData, Link } from "react-static";
 
 import { htmlToComponent } from "../utils/htmlToComponent";
 import FlaskIcon from "../flask.svg";
@@ -15,6 +15,11 @@ const ExperimentalNote = () => (
   </div>
 );
 
+const Theory = () => <div>
+  <h2>前提</h2>
+  このAPIを利用する際は、APIの活用方法のヒントや使い分け方などについてまとめた<Link to="/common/theory">APIのセオリー</Link>も合わせてご参照ください。
+</div>;
+
 export default withRouteData(({ reference }) => (
   <div>
     <div className="Reference__Header">
@@ -25,6 +30,7 @@ export default withRouteData(({ reference }) => (
     </div>
     {/* <p className="Reference__Description">{htmlToComponent(reference.description)}</p> */}
     {reference.experimental ? <ExperimentalNote /> : null}
+    {reference.recommendTheory ? <Theory /> : null}
 
     {htmlToComponent(reference.contents)}
   </div>
