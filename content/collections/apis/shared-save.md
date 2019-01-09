@@ -4,6 +4,7 @@ slug: shared-save
 description: RPGアツマール内で動作する特定のサーバーセーブデータを取得するAPIです
 order: 26
 experimental: true
+recommendTheory: true
 ---
 
 ## 概要

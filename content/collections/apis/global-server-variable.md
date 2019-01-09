@@ -4,6 +4,7 @@ slug: global-server-variable
 description: RPGアツマール上で動作するグローバルサーバー変数です。
 order: 25
 experimental: true
+recommendTheory: true
 ---
 
 ## 概要

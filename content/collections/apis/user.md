@@ -4,6 +4,7 @@ slug: user
 description: プレイヤー自身のユーザー情報や、他のプレイヤーのユーザー情報にアクセスできます。
 order: 26
 experimental: true
+recommendTheory: true
 ---
 
 ## 概要
