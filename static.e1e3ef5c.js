@@ -495,6 +495,25 @@ var ExperimentalNote = function ExperimentalNote() {
   );
 };
 
+var Theory = function Theory() {
+  return _react2.default.createElement(
+    "div",
+    null,
+    _react2.default.createElement(
+      "h2",
+      null,
+      "\u524D\u63D0"
+    ),
+    "\u3053\u306EAPI\u3092\u5229\u7528\u3059\u308B\u969B\u306F\u3001API\u306E\u6D3B\u7528\u65B9\u6CD5\u306E\u30D2\u30F3\u30C8\u3084\u4F7F\u3044\u5206\u3051\u65B9\u306A\u3069\u306B\u3064\u3044\u3066\u307E\u3068\u3081\u305F",
+    _react2.default.createElement(
+      _reactStatic.Link,
+      { to: "/common/theory" },
+      "API\u306E\u30BB\u30AA\u30EA\u30FC"
+    ),
+    "\u3082\u5408\u308F\u305B\u3066\u3054\u53C2\u7167\u304F\u3060\u3055\u3044\u3002"
+  );
+};
+
 exports.default = (0, _reactStatic.withRouteData)(function (_ref) {
   var reference = _ref.reference;
   return _react2.default.createElement(
@@ -515,6 +534,7 @@ exports.default = (0, _reactStatic.withRouteData)(function (_ref) {
       )
     ),
     reference.experimental ? _react2.default.createElement(ExperimentalNote, null) : null,
+    reference.recommendTheory ? _react2.default.createElement(Theory, null) : null,
     (0, _htmlToComponent.htmlToComponent)(reference.contents)
   );
 });
@@ -1849,4 +1869,4 @@ exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody {\n  font-fami
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.36fbd030.js.map
+//# sourceMappingURL=static.e1e3ef5c.js.map
