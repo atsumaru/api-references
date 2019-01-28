@@ -36,14 +36,14 @@ RPGツクールMVにおいては、イベントコマンドごとにgposをコ�
 gpos は scene と contextfactor と minorcontext という３つのパラメーターで表現します。プログラム的に書けば以下のようになります。
 
 ```
-gpos(scene, context(contextfactor[0,-1,-2],minorcontext))
+gpos(scene, context(contextfactor[0,-1,-2]), minorcontext)
 ```
 
 scene はコメントデータ群を表しています。scene 1つあたりで最新1,000件(※変更可能性有り)で、直近5つの scene をAPI側でキャッシュします。一般的なゲームではマップや戦闘画面、メニュー画面に相当します。
 
 scene のコメントを、context の値で指定し取得することでコメントが描画されます。
-context は状態遷移マシンになっており、contextfactor を push することで状態が1つ進みます。状態は contextfactor 3つの複合キーで表されています。
-1つの状態内でさらに細かく分割する場合、たとえば「あるイベント内の時間」などを示すには minorcontext が便利です。minorcontext を push するごとに状態が細かく進み、それに応じたコメントが描画されます。
+context は状態遷移マシンになっており、contextfactor を push することで状態が1つ進みます。状態は最新の contextfactor 3つの複合キーで表されています。
+context をさらに細かく分割する場合、たとえば「あるイベント内の時間」などを示すには minorcontext が便利です。minorcontext を push するごとに状態が細かく進み、それに応じたコメントが描画されます。
 
 RPGツクールMVにおいては scene は map の id に対応します。
 contextfactor は「セリフ」コマンドと「選択肢」コマンドで、minorcontext は「ウェイト」コマンドと、コマンド内の wait に対応します。minorcontext があることで、「セリフのあとにキャラクターが移動して演技する」ような演出に対して細かくコメントができます。
@@ -83,7 +83,7 @@ APIを利用したコメント機能の利用
 #### コンテキストファクターAPI
 メソッド | `window.RPGAtsumaru.comment.pushContextFactor(factor: string)`
 :---|:---
-説明 | <ul><li>コメントシステムにContextFactorとなる値(ツクールでいうセリフと選択肢)をpushして、contextを更新する。</li><li>contextが更新されたことでgposが更新され、文脈にあわせたコメントが流れる。</li><li>また、minorcontextを初期化する。</li></ul>
+説明 | <ul><li>コメントシステムにContextFactorとなる値(ツクールでいうセリフと選択肢)をpushして、contextを更新する。</li><li>contextが更新されることでgposが更新され、文脈にあわせたコメントが流れる。</li><li>また、minorcontextを初期化する。</li></ul>
 引数 | コメントシステムにpushするコンテキストを表す文字列
 戻り値 | 無し
 リリース日 | 2016/12/27
@@ -92,7 +92,7 @@ APIを利用したコメント機能の利用
 #### マイナーコンテキストAPI
 メソッド | `window.RPGAtsumaru.comment.pushMinorContext()`
 :---|:---
-説明 | <ul><li>コメントシステムのgposを更新する。</li><li>contextが更新されたことでgposKeyが更新され、文脈にあわせたコメントが流れる。</li><li>内部的にminorcontext値を持っており、それを+1することでgposを更新している。pushContextFactorを使うと、minorcontext値は初期値に戻される。</li><li>MinorContextは「ContextFactorのさらに細かい状態」を想定している。</li><li>ツクールではエンジンにwaitがかかるような命令で使用している。</li></ul>
+説明 | <ul><li>コメントシステムのgposを更新する。</li><li>contextが更新されることでgposKeyが更新され、文脈にあわせたコメントが流れる。</li><li>内部的にminorcontext値を持っており、それを+1することでgposを更新している。pushContextFactorを使うと、minorcontext値は初期値に戻される。</li><li>MinorContextは「ContextFactorのさらに細かい状態」を想定している。</li><li>ツクールではエンジンにwaitがかかるような命令で使用している。</li></ul>
 引数 | 無し
 戻り値 | 無し
 リリース日 | 2016/12/27
