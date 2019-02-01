@@ -62,8 +62,45 @@ recommendTheory: true
 
 方法 | 場所
 :---|:---
+公式プラグイン | [Github](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruSharedSaveExperimental.js)
 ゲームAPI | 以下の「APIでの利用方法」を参考に、直接APIを呼び出してください
 
+### 公式プラグインの利用方法
+
+#### プラグイン設置方法
+
+1. プロジェクトのプラグインフォルダに [AtsumaruSharedSaveExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruSharedSaveExperimental.js) を右クリックし「保存」して設置。
+1. プロジェクトのプラグイン設定で `AtsumaruSharedSaveExperimental` プラグインをONにする。
+
+#### 共有セーブの保存
+
+自分のデータを共有セーブとして保存する場合、プラグインコマンドは次のいずれかのように指定します。（どちらでも動作は同じです）
+
+```
+SetSharedSave
+共有セーブ保存
+```
+
+プラグイン設定画面の `共有セーブの保存範囲(開始)` と `共有セーブの保存範囲(終了)` に設定した範囲のツクール変数が、自分の共有セーブデータとして保存されます。
+
+#### 共有セーブの取得
+
+他人の共有セーブを取得して変数に代入する場合、プラグインコマンドは次のいずれかのように指定します。（どちらでも動作は同じです）
+
+```
+GetSharedSave {userIdVariableId} {startVariableId}
+共有セーブ取得 {userIdVariableId} {startVariableId}
+```
+
+`{userIdVariableId}` で指定した変数からユーザーIDを読み取り、そのユーザーの共有セーブを `{startVariableId}` を先頭にして代入します。
+
+例：変数1番からユーザーIDを読み取り、そのユーザーの共有セーブを変数201番以降に展開（たとえば共有セーブの保存範囲が101-150で計50個の場合、201-250に代入）
+
+```
+共有セーブ取得 1 201
+```
+
+ただし、読み取る相手が[プレイヤー間通信の有効化](/common/interplayer)をしていないと、共有セーブを取得できないことにご注意ください。
 
 ### APIでの利用方法
 
