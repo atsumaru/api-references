@@ -434,7 +434,7 @@ var _htmr2 = _interopRequireDefault(_htmr);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /* eslint-disable jsx-a11y/heading-has-content */
-var htmlToComponent = exports.htmlToComponent = function htmlToComponent(html) {
+var htmlToComponent = exports.htmlToComponent = function htmlToComponent(html, experimentalNote) {
   return (0, _htmr2.default)(html.replace(/&lt;/g, "&amp;lt;") /* htmrが二重unescapeしてしまうバグが有るため... */, {
     transform: {
       a: function a(props) {
@@ -448,7 +448,8 @@ var htmlToComponent = exports.htmlToComponent = function htmlToComponent(html) {
       },
       h3: function h3(props) {
         return _react2.default.createElement("h3", _extends({}, props, { id: ("" + props.children).replace(/\s+/, "-") }));
-      }
+      },
+      "experimental-note": experimentalNote
     }
   });
 };
@@ -535,7 +536,7 @@ exports.default = (0, _reactStatic.withRouteData)(function (_ref) {
     ),
     reference.experimental ? _react2.default.createElement(ExperimentalNote, null) : null,
     reference.recommendTheory ? _react2.default.createElement(Theory, null) : null,
-    (0, _htmlToComponent.htmlToComponent)(reference.contents)
+    (0, _htmlToComponent.htmlToComponent)(reference.contents, ExperimentalNote)
   );
 });
 
@@ -1869,4 +1870,4 @@ exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody {\n  font-fami
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.e1e3ef5c.js.map
+//# sourceMappingURL=static.cd8ef8ae.js.map
