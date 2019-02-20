@@ -32,6 +32,6 @@ export default withRouteData(({ reference }) => (
     {reference.experimental ? <ExperimentalNote /> : null}
     {reference.recommendTheory ? <Theory /> : null}
 
-    {htmlToComponent(reference.contents)}
+    {htmlToComponent(reference.contents, ExperimentalNote)}
   </div>
 ));
