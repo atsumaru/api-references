@@ -157,3 +157,15 @@ gamePos updated.
   texts: hoge/fuga/piyo
   increment: 1
 ```
+
+#### シーンコメント取得API
+
+<experimental-note></experimantal-note>
+
+メソッド | `window.RPGAtsumaru.experimental.comment.getSceneComments(sceneName: string)`
+:---|:---
+説明 | シーン名を指定してそのシーンのコメントをまるごと取得します。
+引数 | シーン名を表す文字列
+戻り値 | `Promise<{ content: string, command: string, context: string }>`
+リリース日 | 2019/00/00
+更新日 | 2019/00/00
