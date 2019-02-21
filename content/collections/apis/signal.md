@@ -48,8 +48,76 @@ recommendTheory: true
 
 方法 | 場所
 :---|:---
+公式プラグイン | <ul><li>[グローバルシグナル](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruGlobalSignalExperimental.js)</li><li>[ユーザーシグナル](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruUserSignalExperimental.js)</li></ul>
 ゲームAPI | 以下の「APIでの利用方法」を参考に、直接APIを呼び出してください
 
+### 公式プラグインの利用方法
+
+#### グローバルシグナルプラグインの設置方法
+
+1. プロジェクトのプラグインフォルダに [AtsumaruGlobalSignalExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruGlobalSignalExperimental.js) を右クリックし「保存」して設置。
+1. プロジェクトのプラグイン設定で `AtsumaruGlobalSignalExperimental` プラグインをONにする。
+1. プラグイン設定画面で、取得したグローバルシグナルの収納先変数を設定する。
+
+#### グローバルシグナルの送信
+
+変数の値をグローバルシグナルとして送信する場合、プラグインコマンドは次のいずれかのように指定します。（どちらでも動作は同じです）
+
+```
+SendGlobalSignal {signalDataVariableId}
+グローバルシグナル送信 {signalDataVariableId}
+```
+
+変数{signalDataVariableId}からデータを読み取り、グローバルシグナルとして送信します。
+
+#### グローバルシグナルの取得
+
+グローバルシグナルを取得して変数に代入する場合、プラグインコマンドは次のいずれかのように指定します。（どちらでも動作は同じです）
+
+```
+GetGlobalSignal
+グローバルシグナル取得
+```
+
+まだ取得していないグローバルシグナルの中で最も古いものを一件読み込み、プラグイン設定で指定した変数に代入します。また、取得後に今回取得したものを含めた残りのシグナルの個数が「残シグナル数」にセットされます。
+
+- 残シグナル数が0だった場合は、サーバーに未取得のシグナルがなかったため、シグナルデータと送信者のユーザーID/名前には0がセットされています。
+- 残シグナル数が0または1だった場合は、次に取得コマンドを実行するときに新たなシグナルの受信を試みます。(2以上の場合はすでに受信したデータを返すため、新たに受信はしません)
+  - この際、短期間の連続受信にはプラグインで制限をかけているため、時間がかかることがあります。
+  - そのため、取得コマンドの待ち時間を短くしたい場合は、残シグナル数が0または1のときは次の取得コマンドの実行までに１０秒以上の時間を空けてください。
+
+#### ユーザーシグナルプラグインの設置方法
+
+1. プロジェクトのプラグインフォルダに [AtsumaruUserSignalExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruUserSignalExperimental.js) を右クリックし「保存」して設置。
+1. プロジェクトのプラグイン設定で `AtsumaruUserSignalExperimental` プラグインをONにする。
+1. プラグイン設定画面で、取得したユーザーシグナルの収納先変数を設定する。
+
+#### ユーザーシグナルの送信
+
+変数の値をユーザーシグナルとして送信する場合、プラグインコマンドは次のいずれかのように指定します。（どちらでも動作は同じです）
+
+```
+SendUserSignal {signalDataVariableId} {userIdVariableId}
+ユーザーシグナル送信 {signalDataVariableId} {userIdVariableId}
+```
+
+変数{signalDataVariableId}からデータを読み取り、それをシグナルとします。変数{userIdVariableId}からユーザーIDを読み取り、そのIDのユーザーにシグナルを送信します。
+
+#### ユーザーシグナルの取得
+
+ユーザーシグナルを取得して変数に代入する場合、プラグインコマンドは次のいずれかのように指定します。（どちらでも動作は同じです）
+
+```
+GetUserSignal
+ユーザーシグナル取得
+```
+
+まだ取得していないユーザーシグナルの中で最も古いものを一件読み込み、プラグイン設定で指定した変数に代入します。また、取得後に今回取得したものを含めた残りのシグナルの個数が「残シグナル数」にセットされます。
+
+- 残シグナル数が0だった場合は、サーバーに未取得のシグナルがなかったため、シグナルデータと送信者のユーザーID/名前には0がセットされています。
+- 残シグナル数が0または1だった場合は、次に取得コマンドを実行するときに新たなシグナルの受信を試みます。(2以上の場合はすでに受信したデータを返すため、新たに受信はしません)
+  - この際、短期間の連続受信にはプラグインで制限をかけているため、時間がかかることがあります。
+  - そのため、取得コマンドの待ち時間を短くしたい場合は、残シグナル数が0または1のときは次の取得コマンドの実行までに１０秒以上の時間を空けてください。
 
 ### APIでの利用方法
 
