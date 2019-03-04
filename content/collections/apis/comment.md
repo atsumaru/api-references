@@ -111,16 +111,16 @@ APIを利用したコメント機能の利用
 メソッド | `window.RPGAtsumaru.comment.cameOut.subscribe(observer: Observer)`
 :---|:---
 説明 | <ul><li>ゲーム画面に流れるコメントを取得できるAPIです。</li><li>表示前のコメントは取得できません。</li><li>Observer, subscriptionについてはESNextのObservableを参照してください。</li></ul>
-引数 | RPGアツマールのコメント情報( `{command: string, content: string}[]` )を受け取るObserver
+引数 | RPGアツマールのコメント情報( `{ command: string, comment: string }[]` )を受け取るObserver
 戻り値 | `subscription`
 リリース日 | 2017/07/27
 更新日 | 2018/11/25
 
 #### 表示コメント取得コールバックAPI
-メソッド | `window.RPGAtsumaru.comment.cameOut.subscribe(next: (comment: {command: string, content: string}[]) => void)`
+メソッド | `window.RPGAtsumaru.comment.cameOut.subscribe(next: (comment: { command: string, comment: string }[]) => void)`
 :---|:---
 説明 | `window.RPGAtsumaru.comment.cameOut.subscribe(observer)` の引数に、コールバック関数を受け付けられるようにしたものです。
-引数 | RPGアツマールのコメント情報( `{command: string, content: string}[]` )を受け取るコールバック
+引数 | RPGアツマールのコメント情報( `{ command: string, comment: string }[]` )を受け取るコールバック
 戻り値 | `subscription`
 リリース日 | 2017/07/27
 更新日 | 2018/11/25
@@ -129,16 +129,16 @@ APIを利用したコメント機能の利用
 メソッド | `window.RPGAtsumaru.comment.posted.subscribe(observer: Observer)`
 :---|:---
 説明 | <ul><li>ユーザが投稿したコメント情報を取得できるAPIです。</li><li>Observer, subscriptionについてはESNextのObservableを参照してください。</li></ul>
-引数 | RPGアツマールのコメント情報( `{command: string, content: string}` )を受け取るObserver
+引数 | RPGアツマールのコメント情報( `{ command: string, comment: string }` )を受け取るObserver
 戻り値 | `subscription`
 リリース日 | 2017/07/27
 更新日 | 2018/11/25
 
 #### 入力コメント取得コールバックAPI
-メソッド | `window.RPGAtsumaru.comment.posted.subscribe(next: (comment: {command: string, content: string}) => void)`
+メソッド | `window.RPGAtsumaru.comment.posted.subscribe(next: (comment: { command: string, comment: string }) => void)`
 :---|:---
 説明 | `window.RPGAtsumaru.comment.posted.subscribe(observer)` の引数に、コールバック関数を受け付けられるようにしたものです。
-引数 | RPGアツマールのコメント情報( `{command: string, content: string}` )を受け取るコールバック
+引数 | RPGアツマールのコメント情報( `{ command: string, comment: string }` )を受け取るコールバック
 戻り値 | `subscription`
 リリース日 | 2017/07/27
 更新日 | 2018/11/25
@@ -166,6 +166,6 @@ gamePos updated.
 :---|:---
 説明 | シーン名を指定してそのシーンのコメントをまるごと取得します。
 引数 | シーン名を表す文字列
-戻り値 | `Promise<{ content: string, command: string, context: string }>`
+戻り値 | `Promise<{ command: string, comment: string, context: string }>`
 リリース日 | 2019/02/20
 更新日 | 2019/02/20
