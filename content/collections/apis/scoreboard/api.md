@@ -59,12 +59,14 @@ interface ScoreboardData {
   ranking: Array<{
     rank: number,
     score: number,
-    userName: string
+    userName: string,
+    userId: number
   }>,
   myBestRecord: null | {
     rank: number,
     score: number,
-    userName: string
+    userName: string,
+    userId: number
   },
   boardId: number,
   boardName: string
@@ -84,11 +86,13 @@ myRecord.isNewRecord | `boolean` | 今回の自己レコードが自己新記録
 myBestRecord | `object &#124; null` | 自己ベスト記録。ログインしていないと必ずnullになる
 myBestRecord.rank | `number` | 自己ベスト記録のランキング順位
 myBestRecord.userName | `string` | 自己ベスト記録のユーザ名
+myBestRecord.userId | `number` | 自己ベスト記録のユーザーID
 myBestRecord.score | `number` | 自己ベスト記録のスコア
 ranking | `array` | ランキングデータ
 ranking.length | `number` | ランキングデータの長さ
 ranking[n].rank | `number` | n+1番目のランキング
 ranking[n].userName | `string` | n+1番目のランクのユーザ名
+ranking[n].userId | `number` | n+1番目のランクのユーザーID
 ranking[n].score | `number` | n+1番目のランクのスコア
 
 ### 戻り値の例
@@ -105,23 +109,27 @@ ranking[n].score | `number` | n+1番目のランクのスコア
     {
       "rank": 1,
       "score": 1000,
-      "userName": "atsumalion"
+      "userName": "atsumalion",
+      "userId": 123456
     },
     {
       "rank": 2,
       "score": 500,
-      "userName": "atsumatiger"
+      "userName": "atsumatiger",
+      "userId": 123457
     },
     {
       "rank": 3,
       "score": 100,
-      "userName": "atsumagorilla"
+      "userName": "atsumagorilla",
+      "userId": 123458
     }
   ],
   "myBestRecord": {
     "rank": 1,
     "score": 1000,
-    "userName": "atsumalion"
+    "userName": "atsumalion",
+    "userId": 123456
   },
   "boardId": 1,
   "boardName": "スコアボードの名前"
