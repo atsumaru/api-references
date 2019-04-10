@@ -24,7 +24,7 @@ export default {
   devBasePath: "/",
 
   getRoutes: async () => {
-    const { apis, overview, changelog } = await jdown("content", { renderer });
+    const { apis, overview, changelog } = await jdown("content", { markdown: {renderer} });
 
     // contents を含めるとデータが肥大化するので、除いたものを apiList とし、 navigation 用に各ページに含める
     const apiListSorted = lodash.sortBy(apis, a => a.order || 1).map(({ contents, ...rest }) => rest);
