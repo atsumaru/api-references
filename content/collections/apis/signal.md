@@ -27,10 +27,11 @@ recommendTheory: true
 
 例えば、次のサンプルゲームではグローバルシグナルを利用し、他ユーザーのプレイ状況を表示しています。
 - [【ゲームAPIサンプル】プレイローグ（グローバルシグナルAPI・グローバルサーバー変数API）](https://game.nicovideo.jp/atsumaru/games/gm9292)
-
+ - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#PlayLog)
 
 また、こちらのサンプルゲームでは、ユーザーシグナルを利用して、スライムのバトル結果を送信しています。（スライムの情報は[共有セーブ](/shared-save)を[最近プレイしたユーザー](/user)から取得しています）
 - [【ゲームAPIサンプル】スライムバトラー（ユーザーシグナルAPI・共有セーブAPI）](https://game.nicovideo.jp/atsumaru/games/gm9294)
+ - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#SlimeBattler)
 
 ## 機能詳細
  - シグナルとは、最大100byteの任意の文字データです。

@@ -23,6 +23,7 @@ recommendTheory: true
 
 例えば、次のサンプルゲームではこの機能を利用し、ボスのHPにグローバルサーバー変数を設定しています。
 - [【ゲームAPIサンプル】レイドボス（グローバルサーバー変数API）](https://game.nicovideo.jp/atsumaru/games/gm9226)
+ - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#RaidBoss)
 
 ## 機能詳細
  - グローバルサーバー変数を利用するには、**[グローバルサーバー変数設定画面](/global-server-variable/setting) から変数自体の設定と、対応するトリガーの設定が必要** です。
