@@ -33,10 +33,13 @@ RPGアツマールを使ったことのあるniconicoユーザーの情報を取
 
 例えば、次のサンプルゲームではこの機能を利用し、フォームに入力されたuseridのユーザー情報を表示しています。ただし、[プレイヤー間通信の有効化](/common/interplayer)が必要なため、このゲームをプレイしたことがあるユーザーの情報のみになります。
 - [【ゲームAPIサンプル】ユーザー情報取得できるくん（ユーザー情報取得API）](https://game.nicovideo.jp/atsumaru/games/gm9289)
+ - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#getUserInformation)
 
 また、こちらのサンプルでは、最近プレイしたユーザーの情報を利用しています。
 - [【ゲームAPIサンプル】AsyncProfile（ユーザー情報取得API・共有セーブAPI）](https://game.nicovideo.jp/atsumaru/games/gm9291)
+ - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#AsyncProfile)
 - [【ゲームAPIサンプル】スライムバトラー（ユーザーシグナルAPI・共有セーブAPI）](https://game.nicovideo.jp/atsumaru/games/gm9294)
+ - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#SlimeBattler)
 
 ## 利用方法
 
@@ -279,4 +282,3 @@ name | `string` | ユーザーの名前
 :---|:---
 [INTERNAL_SERVER_ERROR](/common/errors) | RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
 [API_CALL_LIMIT_EXCEEDED](/common/errors) | 短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
-

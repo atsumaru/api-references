@@ -26,10 +26,11 @@ recommendTheory: true
 
 例えば、次のサンプルゲームではこの機能を利用し、選択したアバターと一言メッセージを共有セーブに保存しています。
 - [【ゲームAPIサンプル】AsyncProfile（ユーザー情報取得API・共有セーブAPI）](https://game.nicovideo.jp/atsumaru/games/gm9291)
+ - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#AsyncProfile)
 
 また、こちらのサンプルゲームでは、作成したスライムの情報を共有セーブに保存し、ほかのユーザーの作成したスライムと戦わせています。（バトルの結果は、[ユーザーシグナル](/signal)で送信しています）
 - [【ゲームAPIサンプル】スライムバトラー（ユーザーシグナルAPI・共有セーブAPI）](https://game.nicovideo.jp/atsumaru/games/gm9294)
-
+ - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#SlimeBattler)
 
 ## 機能詳細
 
