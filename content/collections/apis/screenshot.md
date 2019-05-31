@@ -46,7 +46,7 @@ RPGアツマール公式プラグイン | [Github](https://github.com/atsumaru/m
 
 公式プラグインで外部リンクを設置するには以下のようにします。
 
-1. プロジェクトのプラグインフォルダに [AtsumaruScreenshotExperimental.js](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruScreenshotExperimental.js) を右クリックし「保存」して設置
+1. プロジェクトのプラグインフォルダに [AtsumaruScreenshotExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruScreenshotExperimental.js) を右クリックし「保存」して設置
 1. プロジェクトのプラグイン設定で `AtsumaruScreenshotExperimental` プラグインをONにする。
 
 #### スクリーンショット撮影＆モーダル表示
@@ -144,8 +144,8 @@ APIを利用したスクリーンショットの利用方法
 説明 | スクリーンショットAPIやカメラボタンでモーダルを表示したときに、最初に表示されているツイート内容を差し替えます
 引数 | `tweetSettings` : 差し替えるツイート内容を指定します。
 戻り値 | `void`
-リリース日 | 2019/05/??
-更新日 | 2019/05/??
+リリース日 | 2019/05/31
+更新日 | 2019/05/31
 
 ##### 引数の型 TweetSettings について
 引数に指定できる `TweetSettings` は以下のような型です。

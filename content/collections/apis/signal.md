@@ -49,7 +49,7 @@ recommendTheory: true
 
 方法 | 場所
 :---|:---
-公式プラグイン | <ul><li>[グローバルシグナル](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruGlobalSignalExperimental.js)</li><li>[ユーザーシグナル](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruUserSignalExperimental.js)</li></ul>
+公式プラグイン | <ul><li>[グローバルシグナル](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruGlobalSignalExperimental.js)</li><li>[ユーザーシグナル](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruUserSignalExperimental.js)</li></ul>
 ゲームAPI | 以下の「APIでの利用方法」を参考に、直接APIを呼び出してください
 
 ### 公式プラグインの利用方法
