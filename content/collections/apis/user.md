@@ -47,7 +47,7 @@ RPGアツマールを使ったことのあるniconicoユーザーの情報を取
 
 方法 | 場所
 :---|:---
-公式プラグイン | <ul><li>[現在ゲームをプレイしているログインユーザーのユーザー情報を取得](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruGetSelfInformationExperimental.js)</li><li>[ユーザーIDを指定して特定のユーザー情報を取得](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruGetUserInformationExperimental.js)</li><li>[現在のゲームを最近プレイしたユーザーの情報の取得](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruGetRecentUsersExperimental.js)</li></ul>
+公式プラグイン | <ul><li>[現在ゲームをプレイしているログインユーザーのユーザー情報を取得](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruGetSelfInformationExperimental.js)</li><li>[ユーザーIDを指定して特定のユーザー情報を取得](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruGetUserInformationExperimental.js)</li><li>[現在のゲームを最近プレイしたユーザーの情報の取得](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruGetRecentUsersExperimental.js)</li></ul>
 ゲームAPI | 以下の「APIでの利用方法」を参考に、直接APIを呼び出してください
 
 ### 公式プラグインの利用方法
