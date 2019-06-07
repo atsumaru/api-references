@@ -23,6 +23,10 @@ experimental: true
 - 他のゲームから [外部リンク](/popup) 経由で開いてもらうことによる、ゲーム間連携
 - [スクリーンショット撮影](/screenshot)時にクエリを付加しておき、Twitterからアクセスした時に特殊動作
 
+例えば、次のサンプルゲームではツイート文章の変更機能を利用し、クエリパラメータに福笑いの状態を設定しています。
+- [【ゲームAPIサンプル】福笑いリレー](https://game.nicovideo.jp/atsumaru/games/gm11139)
+  - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#Tweetquery)
+
 ## 利用方法
 
 クエリ情報の取得は次の方法で利用できます。

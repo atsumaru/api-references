@@ -80,3 +80,12 @@ order: 1
 |URL|https://game.nicovideo.jp/atsumaru/games/gm9294|
 |利用API|[ユーザーシグナルAPI](/signal)、[共有セーブAPI](/shared-save)|
 |ダウンロード|**[免責事項を確認の上、ダウンロードする](http://dl.cdn.nimg.jp/atsumaru/atsumaru/projects/api-sample-games/2019/04/01/AtsumaruSample_SlimeBattler.zip)**
+
+### Tweetquery
+
+|ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm11139" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm11139">【ゲームAPIサンプル】福笑いリレー</a></iframe>|
+|:---|---|
+|タイトル|【ゲームAPIサンプル】福笑いリレー|
+|URL|https://game.nicovideo.jp/atsumaru/games/gm11139|
+|利用API|[スクショツイートAPI](/screenshot)、[クエリ情報取得API](/copy-query)|
+|ダウンロード|**[免責事項を確認の上、ダウンロードする](http://dl.cdn.nimg.jp/atsumaru/atsumaru/projects/api-sample-games/2019/06/06/AtsumaruSample_Tweetquery.zip)**
