@@ -2,8 +2,8 @@
   "errors": [],
   "warnings": [],
   "version": "3.12.0",
-  "hash": "29204fc118b8d9d7f0aa",
-  "time": 4686,
+  "hash": "2f70b55aedc5d157681e",
+  "time": 4659,
   "publicPath": "https://atsumaru.github.io/api-references/",
   "assetsByChunkName": {
     "src/containers/Reference": [
@@ -19,10 +19,10 @@
       "templates/src/containers/404.4f34e829.js.map"
     ],
     "main": [
-      "main.c5055e2c.js",
-      "styles.29204fc1.css",
-      "main.c5055e2c.js.map",
-      "styles.29204fc1.css.map"
+      "main.6f22dd1d.js",
+      "styles.2f70b55a.css",
+      "main.6f22dd1d.js.map",
+      "styles.2f70b55a.css.map"
     ],
     "bootstrap": [
       "bootstrap.2b8316a9.js",
@@ -31,7 +31,7 @@
   },
   "assets": [
     {
-      "name": "styles.29204fc1.css",
+      "name": "styles.2f70b55a.css",
       "size": 17830,
       "chunks": [
         3
@@ -71,8 +71,8 @@
       "emitted": true
     },
     {
-      "name": "main.c5055e2c.js",
-      "size": 282628,
+      "name": "main.6f22dd1d.js",
+      "size": 283054,
       "chunks": [
         3
       ],
@@ -138,8 +138,8 @@
       "emitted": true
     },
     {
-      "name": "main.c5055e2c.js.map",
-      "size": 1488695,
+      "name": "main.6f22dd1d.js.map",
+      "size": 1489992,
       "chunks": [
         3
       ],
@@ -149,7 +149,7 @@
       "emitted": true
     },
     {
-      "name": "styles.29204fc1.css.map",
+      "name": "styles.2f70b55a.css.map",
       "size": 96,
       "chunks": [
         3
@@ -181,10 +181,10 @@
       "assets": [
         "bootstrap.2b8316a9.js",
         "bootstrap.2b8316a9.js.map",
-        "main.c5055e2c.js",
-        "styles.29204fc1.css",
-        "main.c5055e2c.js.map",
-        "styles.29204fc1.css.map"
+        "main.6f22dd1d.js",
+        "styles.2f70b55a.css",
+        "main.6f22dd1d.js.map",
+        "styles.2f70b55a.css.map"
       ],
       "isOverSizeLimit": true
     }
@@ -648,17 +648,17 @@
       "initial": true,
       "entry": false,
       "extraAsync": false,
-      "size": 516700,
+      "size": 517205,
       "names": [
         "main"
       ],
       "files": [
-        "main.c5055e2c.js",
-        "styles.29204fc1.css",
-        "main.c5055e2c.js.map",
-        "styles.29204fc1.css.map"
+        "main.6f22dd1d.js",
+        "styles.2f70b55a.css",
+        "main.6f22dd1d.js.map",
+        "styles.2f70b55a.css.map"
       ],
-      "hash": "c5055e2c8cdc793f8460",
+      "hash": "6f22dd1dd469c06e737e",
       "parents": [
         4
       ],
@@ -6840,7 +6840,7 @@
           "name": "./node_modules/react-hot-loader/index.js",
           "index": 115,
           "index2": 114,
-          "size": 1232,
+          "size": 1271,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -6870,7 +6870,7 @@
           "providedExports": null,
           "optimizationBailout": [],
           "depth": 2,
-          "source": "'use strict';\n\nif (process.env.NODE_ENV === 'production') {\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else if (process.env.NODE_ENV === 'test') {\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else if (typeof window === 'undefined') {\n  // this is just server environment\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else if (!module.hot) {\n  console.error('React-Hot-Loader: Hot Module Replacement is not enabled');\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else {\n  var evalAllowed = false;\n  try {\n    eval('evalAllowed = true');\n  } catch (e) {\n    // eval not allowed due to CSP\n  }\n\n  // RHL needs setPrototypeOf to operate Component inheritance, and eval to patch methods\n  var jsFeaturesPresent = !!Object.setPrototypeOf;\n\n  if (!jsFeaturesPresent || !evalAllowed) {\n    // we are not in prod mode, but RHL could not be activated\n    console.warn('React-Hot-Loader is not supported in this environment.');\n    module.exports = require('./dist/react-hot-loader.production.min.js');\n  } else {\n    module.exports = window.reactHotLoaderGlobal = require('./dist/react-hot-loader.development.js');\n  }\n}\n"
+          "source": "'use strict';\n\nif (process.env.NODE_ENV === 'production') {\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else if (process.env.NODE_ENV === 'test') {\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else if (typeof window === 'undefined') {\n  // this is just server environment\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else if (!module.hot) {\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n  module.exports.AppContainer.warnAboutHMRDisabled = true;\n  module.exports.hot.shouldWrapWithAppContainer = true;\n} else {\n  var evalAllowed = false;\n  try {\n    eval('evalAllowed = true');\n  } catch (e) {\n    // eval not allowed due to CSP\n  }\n\n  // RHL needs setPrototypeOf to operate Component inheritance, and eval to patch methods\n  var jsFeaturesPresent = !!Object.setPrototypeOf;\n\n  if (!jsFeaturesPresent || !evalAllowed) {\n    // we are not in prod mode, but RHL could not be activated\n    console.warn('React-Hot-Loader is not supported in this environment.');\n    module.exports = require('./dist/react-hot-loader.production.min.js');\n  } else {\n    module.exports = window.reactHotLoaderGlobal = require('./dist/react-hot-loader.development.js');\n  }\n}\n"
         },
         {
           "id": 122,
@@ -6878,7 +6878,7 @@
           "name": "./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js",
           "index": 116,
           "index2": 113,
-          "size": 637,
+          "size": 1103,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -6908,7 +6908,7 @@
           "providedExports": null,
           "optimizationBailout": [],
           "depth": 3,
-          "source": "\"use strict\";function _interopDefault(e){return e&&\"object\"==typeof e&&\"default\"in e?e.default:e}Object.defineProperty(exports,\"__esModule\",{value:!0});var React=_interopDefault(require(\"react\"));function AppContainer(e){return React.Children.only(e.children)}var hot_prod=function(){return function(e){return e}},areComponentsEqual=function(e,n){return e===n},setConfig=function(){},cold=function(e){return e},configureComponent=function(){};exports.AppContainer=AppContainer,exports.hot=hot_prod,exports.areComponentsEqual=areComponentsEqual,exports.setConfig=setConfig,exports.cold=cold,exports.configureComponent=configureComponent;\n"
+          "source": "\"use strict\";function _interopDefault(e){return e&&\"object\"==typeof e&&\"default\"in e?e.default:e}Object.defineProperty(exports,\"__esModule\",{value:!0});var React=_interopDefault(require(\"react\"));function AppContainer(e){return AppContainer.warnAboutHMRDisabled&&(AppContainer.warnAboutHMRDisabled=!0,console.error(\"React-Hot-Loader: misconfiguration detected, using production version in not production environment.\"),console.error(\"React-Hot-Loader: Hot Module Replacement is not enabled.\")),React.Children.only(e.children)}AppContainer.warnAboutHMRDisabled=!1;var hot=function e(){return e.shouldWrapWithAppContainer?function(e){return function(n){return React.createElement(AppContainer,null,React.createElement(e,n))}}:function(e){return e}};hot.shouldWrapWithAppContainer=!1;var areComponentsEqual=function(e,n){return e===n},setConfig=function(){},cold=function(e){return e},configureComponent=function(){};exports.AppContainer=AppContainer,exports.hot=hot,exports.areComponentsEqual=areComponentsEqual,exports.setConfig=setConfig,exports.cold=cold,exports.configureComponent=configureComponent;\n"
         },
         {
           "id": 123,
@@ -13760,7 +13760,7 @@
       "name": "./node_modules/react-hot-loader/index.js",
       "index": 115,
       "index2": 114,
-      "size": 1232,
+      "size": 1271,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -13790,7 +13790,7 @@
       "providedExports": null,
       "optimizationBailout": [],
       "depth": 2,
-      "source": "'use strict';\n\nif (process.env.NODE_ENV === 'production') {\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else if (process.env.NODE_ENV === 'test') {\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else if (typeof window === 'undefined') {\n  // this is just server environment\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else if (!module.hot) {\n  console.error('React-Hot-Loader: Hot Module Replacement is not enabled');\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else {\n  var evalAllowed = false;\n  try {\n    eval('evalAllowed = true');\n  } catch (e) {\n    // eval not allowed due to CSP\n  }\n\n  // RHL needs setPrototypeOf to operate Component inheritance, and eval to patch methods\n  var jsFeaturesPresent = !!Object.setPrototypeOf;\n\n  if (!jsFeaturesPresent || !evalAllowed) {\n    // we are not in prod mode, but RHL could not be activated\n    console.warn('React-Hot-Loader is not supported in this environment.');\n    module.exports = require('./dist/react-hot-loader.production.min.js');\n  } else {\n    module.exports = window.reactHotLoaderGlobal = require('./dist/react-hot-loader.development.js');\n  }\n}\n"
+      "source": "'use strict';\n\nif (process.env.NODE_ENV === 'production') {\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else if (process.env.NODE_ENV === 'test') {\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else if (typeof window === 'undefined') {\n  // this is just server environment\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n} else if (!module.hot) {\n  module.exports = require('./dist/react-hot-loader.production.min.js');\n  module.exports.AppContainer.warnAboutHMRDisabled = true;\n  module.exports.hot.shouldWrapWithAppContainer = true;\n} else {\n  var evalAllowed = false;\n  try {\n    eval('evalAllowed = true');\n  } catch (e) {\n    // eval not allowed due to CSP\n  }\n\n  // RHL needs setPrototypeOf to operate Component inheritance, and eval to patch methods\n  var jsFeaturesPresent = !!Object.setPrototypeOf;\n\n  if (!jsFeaturesPresent || !evalAllowed) {\n    // we are not in prod mode, but RHL could not be activated\n    console.warn('React-Hot-Loader is not supported in this environment.');\n    module.exports = require('./dist/react-hot-loader.production.min.js');\n  } else {\n    module.exports = window.reactHotLoaderGlobal = require('./dist/react-hot-loader.development.js');\n  }\n}\n"
     },
     {
       "id": 122,
@@ -13798,7 +13798,7 @@
       "name": "./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js",
       "index": 116,
       "index2": 113,
-      "size": 637,
+      "size": 1103,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -13828,7 +13828,7 @@
       "providedExports": null,
       "optimizationBailout": [],
       "depth": 3,
-      "source": "\"use strict\";function _interopDefault(e){return e&&\"object\"==typeof e&&\"default\"in e?e.default:e}Object.defineProperty(exports,\"__esModule\",{value:!0});var React=_interopDefault(require(\"react\"));function AppContainer(e){return React.Children.only(e.children)}var hot_prod=function(){return function(e){return e}},areComponentsEqual=function(e,n){return e===n},setConfig=function(){},cold=function(e){return e},configureComponent=function(){};exports.AppContainer=AppContainer,exports.hot=hot_prod,exports.areComponentsEqual=areComponentsEqual,exports.setConfig=setConfig,exports.cold=cold,exports.configureComponent=configureComponent;\n"
+      "source": "\"use strict\";function _interopDefault(e){return e&&\"object\"==typeof e&&\"default\"in e?e.default:e}Object.defineProperty(exports,\"__esModule\",{value:!0});var React=_interopDefault(require(\"react\"));function AppContainer(e){return AppContainer.warnAboutHMRDisabled&&(AppContainer.warnAboutHMRDisabled=!0,console.error(\"React-Hot-Loader: misconfiguration detected, using production version in not production environment.\"),console.error(\"React-Hot-Loader: Hot Module Replacement is not enabled.\")),React.Children.only(e.children)}AppContainer.warnAboutHMRDisabled=!1;var hot=function e(){return e.shouldWrapWithAppContainer?function(e){return function(n){return React.createElement(AppContainer,null,React.createElement(e,n))}}:function(e){return e}};hot.shouldWrapWithAppContainer=!1;var areComponentsEqual=function(e,n){return e===n},setConfig=function(){},cold=function(e){return e},configureComponent=function(){};exports.AppContainer=AppContainer,exports.hot=hot,exports.areComponentsEqual=areComponentsEqual,exports.setConfig=setConfig,exports.cold=cold,exports.configureComponent=configureComponent;\n"
     },
     {
       "id": 123,
