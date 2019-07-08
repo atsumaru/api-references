@@ -15,6 +15,7 @@ experimental: true
  ![API設定](/images/api_setting.png)  
 
  ![グローバルサーバー変数設定](/images/global-server-variable/setting.png)
+ <a href="/images/global-server-variable/setting.png" target="_blank">拡大表示</a>
 
 ## グローバルサーバー変数の設定項目について
 

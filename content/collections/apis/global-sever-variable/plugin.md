@@ -61,7 +61,7 @@ GetGlobalServerVariableByName {globalServerVariableName}
 名前でグローバルサーバー変数取得 文字列変数1
 ```
 
-![グローバルサーバー変数取得](/images/global-server-variable/plugin_command_get.png)
+![グローバルサーバー変数取得](/images/global-server-variable/plugin_command_get_byname.jpg)
 
 
 ## トリガー発動
@@ -133,7 +133,7 @@ TriggerCallByName {globalServerVariableName} {triggerName}
 - 実行に失敗すると、プラグインの設定で指定した変数に「エラーメッセージ」が代入されます。
 
 
-![トリガー発動](/images/global-server-variable/plugin_command_trigger.png)
+![トリガー発動](/images/global-server-variable/plugin_command_trigger_byname.jpg)
 
 
 ### 「最大値・最小値の範囲で増減」トリガーの実行
