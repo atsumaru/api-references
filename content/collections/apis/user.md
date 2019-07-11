@@ -14,11 +14,12 @@ RPGアツマールを使ったことのあるniconicoユーザーの情報を取
 
 ### なにができるのか
 
-次の3種類の取得方法を提供しています。
+次の4種類の取得方法を提供しています。
 
-- 現在ゲームをプレイしているログインユーザーのユーザー情報を取得
+- プレイヤー自身のユーザー情報を取得
 - ユーザーIDを指定して特定のユーザー情報を取得
-- 現在のゲームを最近プレイしたユーザーの情報の取得
+- 現在のゲームを最近プレイしたユーザーの情報を取得
+- オンライン人数を取得
 
 ただし、他人のユーザー情報を取得するには、そのユーザーが [プレイヤー間通信の有効化](/common/interplayer) を先にしている必要があります。
 
@@ -47,12 +48,17 @@ RPGアツマールを使ったことのあるniconicoユーザーの情報を取
 
 方法 | 場所
 :---|:---
-公式プラグイン | <ul><li>[現在ゲームをプレイしているログインユーザーのユーザー情報を取得](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruGetSelfInformationExperimental.js)</li><li>[ユーザーIDを指定して特定のユーザー情報を取得](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruGetUserInformationExperimental.js)</li><li>[現在のゲームを最近プレイしたユーザーの情報の取得](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruGetRecentUsersExperimental.js)</li></ul>
+公式プラグイン | <ul><li>[プレイヤー自身のユーザー情報を取得](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruGetSelfInformationExperimental.js)</li><li>[ユーザーIDを指定して特定のユーザー情報を取得](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruGetUserInformationExperimental.js)</li><li>[現在のゲームを最近プレイしたユーザーの情報を取得](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruGetRecentUsersExperimental.js)</li><li>[オンライン人数を取得](https://github.com/atsumaru/mv-plugins/blob/master/plugins/AtsumaruGetActiveUserCountExperimental.js)</li></ul>
 ゲームAPI | 以下の「APIでの利用方法」を参考に、直接APIを呼び出してください
 
 ### 公式プラグインの利用方法
 
-#### 現在ゲームをプレイしているログインユーザーのユーザー情報を取得
+#### プレイヤー自身のユーザー情報を取得
+
+- 現在のユーザーの情報を取得します。
+- ユーザーがプレミアム会員かどうかも取得できます。
+- プレイしているユーザーが[ログイン](/common/login)している必要があります。ログインしてない場合にエラーを返すため、それでユーザーのログイン状態を判別することができます。
+- このAPIは[APIの呼び出し回数制限](/common/rate-limit)の対象です。
 
 ##### プラグイン設置方法
 
@@ -72,6 +78,10 @@ GetSelfInformation
 
 #### ユーザーIDを指定して特定のユーザー情報を取得
 
+- 引数でユーザーIDを指定し、指定したユーザーの情報を取得します。
+- 指定したIDのユーザーが[プレイヤー間通信の有効化](/common/interplayer)をしている必要があります。
+- このAPIは[APIの呼び出し回数制限](/common/rate-limit)の対象です。
+
 ##### プラグイン設置方法
 
 1. プロジェクトのプラグインフォルダに [AtsumaruGetUserInformationExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruGetUserInformationExperimental.js) を右クリックし「保存」して設置。
@@ -88,7 +98,12 @@ GetUserInformation <userIdVariableId>
 特定ユーザー取得 <userIdVariableId>
 ```
 
-#### 現在のゲームを最近プレイしたユーザーの情報の取得
+#### 現在のゲームを最近プレイしたユーザーの情報を取得
+
+- [プレイヤー間通信の有効化](/common/interplayer)をしているユーザーを、最近現在のゲームをプレイした順番に取得します。
+- このAPIで取得できるユーザーは、 [プレイヤー間通信の有効化](/common/interplayer) を有効化しているユーザーのみです。
+  - ゲーム内で有効に使うために、まずゲーム内で有効化APIを呼び出すようにすると良いでしょう。
+- このAPIは[APIの呼び出し回数制限](/common/rate-limit)の対象です。
 
 ##### プラグイン設置方法
 
@@ -106,13 +121,36 @@ GetRecentUsers
 最新ユーザー取得
 ```
 
+#### オンライン人数を取得
+
+- 今から1～60分前までの間にこのゲームをプレイしたログインユーザーの人数を取得します。
+- このAPIは[APIの呼び出し回数制限](/common/rate-limit)の対象です。
+
+##### プラグイン設置方法
+
+1. プロジェクトのプラグインフォルダに [AtsumaruGetActiveUserCountExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruGetActiveUserCountExperimental.js) を右クリックし「保存」して設置
+1. プロジェクトのプラグイン設定で `AtsumaruGetActiveUserCountExperimental` プラグインをONにする。
+1. プラグイン設定画面で、取得したユーザーの人数を収納する変数のIDを指定する。
+
+
+##### 利用方法
+
+プラグインコマンドは次のいずれかのように指定します。（どちらでも動作は同じです）
+
+```
+GetActiveUserCount <minutes>
+オンライン人数取得 <minutes>
+```
+
+&lt;minutes&gt;には1～60までの数値を指定し、今から&lt;minutes&gt;分前までの間にこのゲームをプレイしたログインユーザーの人数を取得します。
+
 ### APIでの利用方法
 APIを利用したユーザー情報へのアクセス方法についてです。
 
-#### 現在ゲームをプレイしているログインユーザーのユーザー情報を取得
+#### プレイヤー自身のユーザー情報を取得
 
 - 現在のユーザーの情報を取得します。
-- 指定したユーザーがプレミアム会員かどうかも取得できます。
+- ユーザーがプレミアム会員かどうかも取得できます。
 - プレイしているユーザーが[ログイン](/common/login)している必要があります。ログインしてない場合にエラーを返すため、それでユーザーのログイン状態を判別することができます。
 - このAPIは[APIの呼び出し回数制限](/common/rate-limit)の対象です。
 
@@ -229,7 +267,7 @@ url | `string` | ユーザーのサイトURL
 [API_CALL_LIMIT_EXCEEDED](/common/errors) | 短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
 
 
-#### 現在のゲームを最近プレイしたユーザーの情報の取得
+#### 現在のゲームを最近プレイしたユーザーの情報を取得
 
 - [プレイヤー間通信の有効化](/common/interplayer)をしているユーザーを、最近現在のゲームをプレイした順番に取得します。
 - このAPIで取得できるユーザーは、 [プレイヤー間通信の有効化](/common/interplayer) を有効化しているユーザーのみです。
@@ -280,5 +318,31 @@ name | `string` | ユーザーの名前
 ##### 起こりうるエラーの種類
 名前 | 説明
 :---|:---
+[INTERNAL_SERVER_ERROR](/common/errors) | RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/errors) | 短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+
+#### オンライン人数を取得
+
+- 今から1～60分前までの間にこのゲームをプレイしたログインユーザーの人数を取得します。
+- このAPIは[APIの呼び出し回数制限](/common/rate-limit)の対象です。
+
+メソッド | `window.RPGAtsumaru.experimental.user.getActiveUserCount(minutes: number)`
+:---|:---
+引数 | `minutes` : 現在から何分前までのプレイ人数を取得するかを1～60までの整数で指定します。
+戻り値 | `Promise<number>`
+リリース日 | 2019/07/11
+更新日 | 2019/07/11
+
+##### 戻り値の例
+
+```js
+// window.RPGAtsumaru.experimental.user.getActiveUserCount(1).then(function(v) { console.log(v) }) を実行
+3
+```
+
+##### 起こりうるエラーの種類
+名前 | 説明
+:---|:---
+[BAD_REQUEST](/common/errors) | `minutes` に1～60までの整数以外を指定した
 [INTERNAL_SERVER_ERROR](/common/errors) | RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
 [API_CALL_LIMIT_EXCEEDED](/common/errors) | 短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
