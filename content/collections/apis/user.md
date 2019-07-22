@@ -2,7 +2,7 @@
 title: ユーザー情報にアクセスする
 slug: user
 description: プレイヤー自身のユーザー情報や、他のプレイヤーのユーザー情報にアクセスできます。
-order: 26
+order: 27
 experimental: true
 recommendTheory: true
 ---
