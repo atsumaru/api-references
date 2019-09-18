@@ -186,7 +186,7 @@ createdAt | `number` | シグナルが送信された日時(秒単位のunix tim
 ##### 戻り値の例
 
 ```js
-// window.RPGAtsumaru.experimental.storage.getGlobalSignals().then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.experimental.signal.getGlobalSignals().then(function(v) { console.log(v) }) を実行
 [
   {
     createdAt: 1543397700,
