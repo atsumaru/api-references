@@ -1,5 +1,5 @@
 ---
-title: ゲーム制作向け素材
+title: RPGアツマールが配布するゲーム制作向け素材をダウンロードする
 slug: download/materials
 description: ゲーム制作向け素材を配布しています。
 order: 2

@@ -1,5 +1,5 @@
 ---
-title: プラグイン
+title: RPGアツマール公式プラグインをダウンロードする
 slug: download/plugins
 description:
 order: 3

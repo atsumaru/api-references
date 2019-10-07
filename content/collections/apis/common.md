@@ -25,3 +25,8 @@ order: -999
 
 ゲーム制作ツールに依存しないJavaScript(TypeScript)を使用したゲームプロジェクトのコードサンプルとして[game-code-sample](https://github.com/atsumaru/game-code-sample)を用意しています。
 game-code-sampleの実際の動作はRPGアツマール上にアップロードされた[【サンプル】game-code-sample](https://game.nicovideo.jp/atsumaru/games/gm9765?key=82e2a11047e0)にて確認することができます。
+
+## デバッグツール
+
+アツマールAPIを用いたゲームのデバッグをローカルで行うための Atsumaru Debugger というツールを用意しています。
+詳しくは [解説ページ](/download/atsumaru-debugger) をご覧ください。
