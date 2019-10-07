@@ -1,5 +1,5 @@
 ---
-title: コアスクリプト
+title: コミュニティ版コアスクリプトをダウンロードする
 slug: download/corescript
 description:
 order: 4
