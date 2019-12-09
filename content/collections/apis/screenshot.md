@@ -9,7 +9,7 @@ experimental: true
 ## 概要
 RPGアツマールで遊んでいるゲームのスクリーンショットを撮影してTwitterにシェアするためのモーダルを起動できる機能です。  
 このモーダルは、RPGアツマールのプレイヤーでスクリーンショットボタン ( ![スクリーンショットボタン](/images/screenshot_button.png) ) を押したときに表示されるものと同じものです。  
-この機能を実行したタイミングで、RPGツクールMVの機能でスクリーンショットが撮影され、シェア時の文章（この内容もある程度ゲーム側から変更できます）などを入力できるモーダルが表示されます。
+この機能を実行したタイミングで、RPGツクールMVの機能でスクリーンショットが撮影され、シェア時の文章（この内容もある程度ゲーム側から変更できます）などを入力できるモーダルが表示されます。さらに、実際にツイートしたかどうかも取得できます。
 また、RPGツクールMV以外のツールの場合は、シェアする画像が用意できれば、スクリーンショットボタンを押したときの挙動を変更するAPI（スクリーンショット画像差し替えAPI）を利用して、スクリーンショットのシェアに対応することができます。
 
 
@@ -63,6 +63,8 @@ RPGアツマール公式プラグイン | [Github](https://github.com/atsumaru/m
 DisplayScreenshotModal
 スクリーンショットモーダル表示
 ```
+
+このとき、プラグイン設定画面でプラグインパラメータ「ツイートしたか」に変数を設定していると、ツイートした場合はその変数に1が、ツイートしていない場合は0が代入されます。
 
 #### ツイート文章の変更
 
@@ -129,9 +131,34 @@ APIを利用したスクリーンショットの利用方法
 :---|:---
 説明 | このメソッドを呼び出した時点でのスクリーンショットを撮影し、Twitterに投稿するモーダルを表示します
 引数 | なし
-戻り値 | `Promise<void>`
+戻り値 | `Promise<ScreenshotModalResults>`
 リリース日 | 2018/10/01
-更新日 | 2018/10/01
+更新日 | 2019/12/01
+
+##### 戻り値の型 ScreenshotModalResults について
+
+戻り値で取得できる `ScreenshotModalResults` は以下のような型です。
+
+```js
+interface ScreenshotModalResults {
+    tweeted: boolean
+}
+```
+
+プロパティの内容は次のようになっています。
+
+プロパティ名 | 型 | 内容
+:---|:---|:---
+tweeted | `boolean` | このAPIで表示したモーダルから実際にツイートしたかどうか
+
+##### 戻り値の例
+
+```js
+// window.RPGAtsumaru.experimental.screenshot.displayModal().then(function(v) { console.log(v) }) を実行
+{
+    tweeted: true
+}
+```
 
 #### スクリーンショット画像差し替えAPI
 メソッド | `window.RPGAtsumaru.experimental.screenshot.setScreenshotHandler(handler: () => Promise<string>)`
