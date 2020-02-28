@@ -11,7 +11,7 @@ npm install
 ## build & run server
 
 ```sh
-npm run start # localhost:3000でドキュメントが起動します
+npm run start # localhost:3000でドキュメントが起動します。
 ```
 
 ## RPGアツマール ゲームAPIリファレンスに不備が見つかったら
