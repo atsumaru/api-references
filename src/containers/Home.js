@@ -7,11 +7,11 @@ export default withRouteData(({ apiList, overview, changelog }) => (
   <div>
     {htmlToComponent(overview.contents)}
 
-    <h2>提供機能一覧</h2>
+    <h2>提供ドキュメント</h2>
     <table>
       <thead>
         <tr>
-          <th>API</th>
+          <th>ドキュメント</th>
           <th>概要</th>
         </tr>
       </thead>
