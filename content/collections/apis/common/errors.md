@@ -4,7 +4,6 @@ slug: common/error
 description: RPGアツマールのゲームAPIが返すエラーについて
 order: 4
 navi: 共通事項
-experimental: 
 ---
   
 ## 概要
@@ -33,7 +32,7 @@ interface AtsumaruApiError {
   
 ## コード例
 ```js
-window.RPGAtsumaru.experimental.scoreboards.setRecord(boardId, score)
+window.RPGAtsumaru.scoreboards.setRecord(boardId, score)
     .catch(function(err) {
         switch(err.code) {
             case "BAD_REQUEST":

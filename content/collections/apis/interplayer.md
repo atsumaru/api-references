@@ -4,7 +4,6 @@ slug: interplayer
 description: 特定のプレイヤー間でデータをやり取りできるAPIに必要なプレイヤー間通信の有効化について
 order: 1
 navi: 機能解説
-experimental: 
 ---
     
 ## 概要

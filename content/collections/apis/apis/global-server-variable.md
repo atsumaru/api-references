@@ -4,7 +4,6 @@ slug: apis/global-server-variable
 description: 「グローバルサーバー変数」のAPIでの利用方法
 order: 13
 navi: APIでの利用方法
-experimental: true
 ---
     
 ## 目次
@@ -20,7 +19,7 @@ experimental: true
 ### グローバルサーバー変数取得
  - グローバルサーバー変数のIDを指定し、現在値、最大値、最小値、変数名を取得します。
     
-メソッド |`window.RPGAtsumaru.experimental.globalServerVariable.getGlobalServerVariable(globalServerVariableId: number)`
+メソッド |`window.RPGAtsumaru.globalServerVariable.getGlobalServerVariable(globalServerVariableId: number)`
 :---|:---
 説明| 引数に指定した globalServerVariableId のグローバルサーバー変数の情報を取得する
 引数|グローバルサーバー変数ID (自然数) ※[グローバルサーバー変数設定画面](/global-server-variable/setting)で設定
@@ -50,7 +49,7 @@ interface GlobalServerVariableData {
 #### 戻り値の例
     
 ```js
-// window.RPGAtsumaru.experimental.globalServerVariable.getGlobalServerVariable(1).then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.globalServerVariable.getGlobalServerVariable(1).then(function(v) { console.log(v) }) を実行
 {
     "name": "レイドボスHP",
     "maxValue": 10000,
@@ -72,7 +71,7 @@ interface GlobalServerVariableData {
  - 指定したIDのユーザーが[プレイヤー間通信の有効化](/common/interplayer)をしている必要があります。
  - このAPIは[APIの呼び出し回数制限](/common/rate-limit)の対象です。
     
-メソッド |`window.RPGAtsumaru.experimental.globalServerVariable.getGlobalServerVariableByName(globalServerVariableName: string)`
+メソッド |`window.RPGAtsumaru.globalServerVariable.getGlobalServerVariableByName(globalServerVariableName: string)`
 :---|:---
 説明|引数に指定した globalServerVariableName のグローバルサーバー変数の情報を取得する
 引数|グローバルサーバー変数名 (文字列) 
@@ -102,7 +101,7 @@ interface GlobalServerVariableData {
 #### 戻り値の例
     
 ```js
-// window.RPGAtsumaru.experimental.globalServerVariable.getGlobalServerVariableByName("変数1").then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.globalServerVariable.getGlobalServerVariableByName("変数1").then(function(v) { console.log(v) }) を実行
 {
     "name": "変数1",
     "maxValue": 0,
@@ -122,7 +121,7 @@ interface GlobalServerVariableData {
 ### トリガー発動
  - あらかじめ設定したトリガーIDを指定して、グローバルサーバー変数の値を変化させます。
     
-メソッド | `window.RPGAtsumaru.experimental.globalServerVariable.triggerCall(triggerId: number, value?: number &#124 string)`
+メソッド | `window.RPGAtsumaru.globalServerVariable.triggerCall(triggerId: number, value?: number &#124 string)`
 :---|:---
 説明|引数に指定したtriggeridのトリガーを発動させる
 引数|<ul><li>`triggerId`: トリガーID (自然数) ※[グローバルサーバー変数設定画面](/global-server-variable/setting)で設定</li><li>`value`: 変数を増減させる値/変数に設定する値 (「最大値・最小値の範囲で増減」トリガーと「値を代入」の場合のみ指定可能)</li></ul>
@@ -134,13 +133,13 @@ interface GlobalServerVariableData {
     
 ```js
 // 1番トリガーの実行(1番トリガーはvalueが不要なトリガー)
-window.RPGAtsumaru.experimental.globalServerVariable.triggerCall(1)
+window.RPGAtsumaru.globalServerVariable.triggerCall(1)
     .then(function() { /* 後続処理 */ })
 // 2番トリガーの実行を実行して、変数の値に777加算する(2番トリガーは数値変数に付いた「ゲーム内で増減値を指定して実行」トリガー)
-    window.RPGAtsumaru.experimental.globalServerVariable.triggerCall(2, 777)
+    window.RPGAtsumaru.globalServerVariable.triggerCall(2, 777)
 .then(function() { /* 後続処理 */ })
     // 3番トリガーの実行を実行して、変数に「ぬるぽ」という文字列を代入する(3番トリガーは文字変数に付いた「ゲーム内で設定値を指定して実行」トリガー)
-window.RPGAtsumaru.experimental.globalServerVariable.triggerCall(3, "ぬるぽ")
+window.RPGAtsumaru.globalServerVariable.triggerCall(3, "ぬるぽ")
     .then(function() { /* 後続処理 */ })
 ```
     
@@ -155,7 +154,7 @@ window.RPGAtsumaru.experimental.globalServerVariable.triggerCall(3, "ぬるぽ")
 ### トリガー発動(名前指定型)
  - あらかじめ設定した変数名とトリガー名を指定して、グローバルサーバー変数の値を変化させます。
     
-メソッド | `window.RPGAtsumaru.experimental.globalServerVariable.triggerCallByName(globalServerVariableName:string, triggerName: string, value?: number &#124 string)`
+メソッド | `window.RPGAtsumaru.globalServerVariable.triggerCallByName(globalServerVariableName:string, triggerName: string, value?: number &#124 string)`
 :---|:---
 説明|引数に指定した変数名とトリガー名のトリガーを発動させる
 引数|<ul><li>`globalServerVariableName`: グローバルサーバ変数名 ※[グローバルサーバー変数設定画面](/global-server-variable/setting)で設定</li><li>`triggerName`: トリガー名 ※[グローバルサーバー変数設定画面](/global-server-variable/setting)で設定</li><li>`value`: 変数を増減させる値/変数に設定する値 (「最大値・最小値の範囲で増減」トリガーと「値を代入」の場合のみ指定可能)</li></ul>
@@ -167,13 +166,13 @@ window.RPGAtsumaru.experimental.globalServerVariable.triggerCall(3, "ぬるぽ")
     
 ```js
 // 1番トリガーの実行(1番トリガーはvalueが不要なトリガー)
-window.RPGAtsumaru.experimental.globalServerVariable.triggerCallByName("数値変数1", "増減値指定済み1")
+window.RPGAtsumaru.globalServerVariable.triggerCallByName("数値変数1", "増減値指定済み1")
     .then(function() { /* 後続処理 */ })
 // 2番トリガーの実行を実行して、変数の値に777加算する(2番トリガーは数値変数に付いた「最大値・最小値の範囲で増減」トリガー
-    window.RPGAtsumaru.experimental.globalServerVariable.triggerCallByName("数値変数2", "可算トリガー1", 777)
+    window.RPGAtsumaru.globalServerVariable.triggerCallByName("数値変数2", "可算トリガー1", 777)
 .then(function() { /* 後続処理 */ })
     // 3番トリガーの実行を実行して、変数に「ぬるぽ」という文字列を代入する(3番トリガーは文字変数に付いた「値を代入」トリガー)
-window.RPGAtsumaru.experimental.globalServerVariable.triggerCallByName("文字列変数1", "代入トリガー1", "ぬるぽ")
+window.RPGAtsumaru.globalServerVariable.triggerCallByName("文字列変数1", "代入トリガー1", "ぬるぽ")
     .then(function() { /* 後続処理 */ })
 ```
     
@@ -188,7 +187,7 @@ window.RPGAtsumaru.experimental.globalServerVariable.triggerCallByName("文字�
 ### グローバルサーバー変数一括取得
  - ゲームに定義されているグローバルサーバー変数とトリガーの情報をすべて取得します。
     
-メソッド |`window.RPGAtsumaru.experimental.globalServerVariable.getAllGlobalServerVariables()`
+メソッド |`window.RPGAtsumaru.globalServerVariable.getAllGlobalServerVariables()`
 :---|:---
 説明|グローバルサーバー変数とトリガーの情報をすべて取得する
 引数|`Promise<GlobalServerVariableDefinition[]>`
@@ -239,7 +238,7 @@ interface GlobalServerVariableTrigger {
 #### 戻り値の例
     
 ```js
-// window.RPGAtsumaru.experimental.globalServerVariable.getAllGlobalServerVariables().then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.globalServerVariable.getAllGlobalServerVariables().then(function(v) { console.log(v) }) を実行
 [
     {
     "name": "スコア",

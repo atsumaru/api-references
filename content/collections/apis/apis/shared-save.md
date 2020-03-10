@@ -4,14 +4,13 @@ slug: apis/shared-save
 description: 「共有セーブ」のAPIでの利用方法
 order: 14
 navi: APIでの利用方法
-experimental: true
 ---
     
 ## APIでの利用方法
     
 ### 共有セーブの取得
   
-メソッド |`window.RPGAtsumaru.experimental.storage.getSharedItems(userIds: number[], gameId?: number)`
+メソッド |`window.RPGAtsumaru.storage.getSharedItems(userIds: number[], gameId?: number)`
 :---|:---
 説明|指定したユーザの `Atsumaru Shared` というキーで保存したセーブデータを取得する。
 引数|<ul><li>`userIds` : 共有セーブを取得したいユーザーのニコニコユーザーIDの配列を自然数で、最大100件まで指定します。</li><li>`gameId` : 現在プレイ中のゲーム以外からセーブデータを取得する場合、ゲームのIDを自然数で指定します。</li></ul>
@@ -38,7 +37,7 @@ interface SharedSaveItems {
 #### 戻り値の例
     
 ```js
-// window.RPGAtsumaru.experimental.storage.getSharedItems([123, 456, 789]).then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.storage.getSharedItems([123, 456, 789]).then(function(v) { console.log(v) }) を実行
 {
     123: "ユーザー123の共有データ",
     456: "ユーザー456の共有データ"

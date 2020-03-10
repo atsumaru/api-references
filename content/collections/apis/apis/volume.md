@@ -4,7 +4,6 @@ slug: apis/volume
 description: 「マスターボリューム」のAPIでの利用方法
 order: 3
 navi: APIでの利用方法
-experimental: 
 ---
     
 ## APIでの利用方法

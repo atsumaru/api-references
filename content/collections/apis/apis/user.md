@@ -4,7 +4,6 @@ slug: apis/user
 description: 「ユーザー情報取得」のAPIでの利用方法
 order: 12
 navi: APIでの利用方法
-experimental: true
 ---
     
 ## 目次
@@ -20,7 +19,7 @@ experimental: true
  - プレイしているユーザーが[ログイン](/common/login)している必要があります。ログインしてない場合にエラーを返すため、それでユーザーのログイン状態を判別することができます。
  - このAPIは[APIの呼び出し回数制限](/common/rate-limit)の対象です。
     
-メソッド |`window.RPGAtsumaru.experimental.user.getSelfInformation()`
+メソッド |`window.RPGAtsumaru.user.getSelfInformation()`
 :---|:---
 引数|なし
 戻り値|`Promise<SelfInformation>`
@@ -53,7 +52,7 @@ interface SelfInformation {
 #### 戻り値の例
     
 ```js
-// window.RPGAtsumaru.experimental.user.getSelfInformation().then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.user.getSelfInformation().then(function(v) { console.log(v) }) を実行
 {
     id: 64341294,
     name: "RPGアツマール公式",
@@ -77,7 +76,7 @@ interface SelfInformation {
  - 指定したIDのユーザーが[プレイヤー間通信の有効化](/common/interplayer)をしている必要があります。
  - このAPIは[APIの呼び出し回数制限](/common/rate-limit)の対象です。
     
-メソッド |`window.RPGAtsumaru.experimental.user.getUserInformation(userId: number)`
+メソッド |`window.RPGAtsumaru.user.getUserInformation(userId: number)`
 :---|:---
 説明|`userId` : ユーザー情報を取得したいユーザーのニコニコユーザーIDを自然数で指定します。
 引数|なし <!-- `offsetAdId` : この引数に広告ID(nicoadId)を指定すると、最新からではなく指定したIDの次の広告から順に最大30件まで取得します -->
@@ -109,7 +108,7 @@ interface UserInformation {
 #### 戻り値の例
     
 ```js
-// window.RPGAtsumaru.experimental.user.getUserInformation(64341294).then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.user.getUserInformation(64341294).then(function(v) { console.log(v) }) を実行
 {
     id: 64341294,
     name: "RPGアツマール公式",
@@ -134,7 +133,7 @@ interface UserInformation {
  - ゲーム内で有効に使うために、まずゲーム内で有効化APIを呼び出すようにすると良いでしょう。
  - このAPIは[APIの呼び出し回数制限](/common/rate-limit)の対象です。
     
-メソッド |`window.RPGAtsumaru.experimental.user.getRecentUsers()`
+メソッド |`window.RPGAtsumaru.user.getRecentUsers()`
 :---|:---
 引数|なし
 戻り値|`Promise<UserIdName[]>`
@@ -160,7 +159,7 @@ interface UserIdName {
 #### 戻り値の例
     
 ```js
-// window.RPGAtsumaru.experimental.user.getRecentUsers().then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.user.getRecentUsers().then(function(v) { console.log(v) }) を実行
 [
         {
         id: 64341294,
@@ -184,7 +183,7 @@ interface UserIdName {
  - 今から1～60分前までの間にこのゲームをプレイしたログインユーザーの人数を取得します。
  - このAPIは[APIの呼び出し回数制限](/common/rate-limit)の対象です。
     
-メソッド |`window.RPGAtsumaru.experimental.user.getActiveUserCount(minutes: number)`
+メソッド |`window.RPGAtsumaru.user.getActiveUserCount(minutes: number)`
 :---|:---
 引数|`minutes` : 現在から何分前までのプレイ人数を取得するかを1～60までの整数で指定します。
 戻り値|`Promise<number>`
@@ -192,7 +191,7 @@ interface UserIdName {
 #### 戻り値の例
     
 ```js
-// window.RPGAtsumaru.experimental.user.getActiveUserCount(1).then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.user.getActiveUserCount(1).then(function(v) { console.log(v) }) を実行
 3
 ```
     

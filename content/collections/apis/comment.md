@@ -4,7 +4,6 @@ slug: comment
 description: ユーザー同士でゲーム体験を共有できるコメント機能について
 order: 6
 navi: 機能解説
-experimental: 
 ---
     
 ## 概要

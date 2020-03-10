@@ -4,7 +4,6 @@ slug: plugins/popup
 description: 「外部リンク表示」のプラグインでの利用方法
 order: 4
 navi: プラグインでの利用方法
-experimental: 
 ---
     
 ## 目次

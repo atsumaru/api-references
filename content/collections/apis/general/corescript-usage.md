@@ -4,7 +4,6 @@ slug: general/corescript-usage
 description: RPGツクールMVのコアスクリプトの更新方法
 order: 2
 navi: 一般ドキュメント
-experimental: 
 ---
     
 ## 概要

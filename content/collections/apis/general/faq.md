@@ -4,7 +4,6 @@ slug: general/faq
 description: RPGアツマール ゲームAPI の FAQ
 order: 4
 navi: 一般ドキュメント
-experimental: 
 ---
   
 ## 概要

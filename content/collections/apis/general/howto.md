@@ -4,7 +4,6 @@ slug: general/howto
 description: 目的から機能をみつけられる逆引き索引
 order: 1
 navi: 一般ドキュメント
-experimental: 
 ---
   
 ## 概要

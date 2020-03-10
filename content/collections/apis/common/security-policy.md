@@ -4,7 +4,6 @@ slug: common/security-policy
 description: RPGアツマールのセキュリティ上の制限について
 order: 5
 navi: 共通事項
-experimental: 
 ---
   
 （本稿は以前の[ブロマガ記事](https://ch.nicovideo.jp/indies-game/blomaga/ar1152126)を再編集したものです）

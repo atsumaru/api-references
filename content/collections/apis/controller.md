@@ -4,7 +4,6 @@ slug: controller
 description: バーチャルコントローラーからの入力を受け取る機能について
 order: 2
 navi: 機能解説
-experimental: 
 ---
     
 ## 概要

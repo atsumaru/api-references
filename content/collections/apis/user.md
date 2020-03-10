@@ -4,7 +4,6 @@ slug: user
 description: プレイヤー自身のユーザー情報や、他のプレイヤーのユーザー情報を取得する機能について
 order: 12
 navi: 機能解説
-experimental: true
 ---
     
 ## 概要

@@ -4,7 +4,6 @@ slug: creator-modal
 description: ゲームの作者情報を表示する機能について
 order: 10
 navi: 機能解説
-experimental: true
 ---
     
 ## 概要

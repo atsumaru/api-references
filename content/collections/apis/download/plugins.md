@@ -4,7 +4,6 @@ slug: download/plugins
 description: RPGアツマール製RPGツクールMV向けプラグインのダウンロード
 order: 3
 navi: リソース
-experimental: 
 ---
     
 ## 概要

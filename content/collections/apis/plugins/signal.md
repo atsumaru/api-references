@@ -4,7 +4,6 @@ slug: plugins/signal
 description: 「シグナル」のプラグインでの利用方法
 order: 11
 navi: プラグインでの利用方法
-experimental: true
 ---
     
 ## 目次
@@ -17,7 +16,7 @@ experimental: true
     
 ### プラグインの利用方法
 プラグインでシグナルを利用するには以下のようにします。
-1. プラグインのダウンロード：[AtsumaruGlobalSignalExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruGlobalSignalExperimental.js) を右クリックで「名前をつけて保存」してダウンロード
+1. プラグインのダウンロード：[AtsumaruGlobalSignal.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruGlobalSignal.js) を右クリックで「名前をつけて保存」してダウンロード
 1. プロジェクトに追加：ダウンロードしたファイルをプロジェクトのプラグインフォルダに設置
 1. 有効化：プロジェクトのプラグイン設定でプラグインをONにする
 1. 設定：プラグイン設定で、取得した情報を収納する変数のIDを指定する。
@@ -55,7 +54,7 @@ GetGlobalSignal
     
 ### プラグインの利用方法
 プラグインでを利用するには以下のようにします。
-1. プラグインのダウンロード：[AtsumaruUserSignalExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruUserSignalExperimental.js) を右クリックで「名前をつけて保存」してダウンロード
+1. プラグインのダウンロード：[AtsumaruUserSignal.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruUserSignal.js) を右クリックで「名前をつけて保存」してダウンロード
 1. プロジェクトに追加：ダウンロードしたファイルをプロジェクトのプラグインフォルダに設置
 1. 有効化：プロジェクトのプラグイン設定でプラグインをONにする
 1. 設定：プラグイン設定で、取得した情報を収納する変数のIDを指定する。

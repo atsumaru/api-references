@@ -4,7 +4,6 @@ slug: general/plugin-usage
 description: RPGツクールMVのプラグインの導入方法
 order: 3
 navi: 一般ドキュメント
-experimental: 
 ---
     
 ## 概要

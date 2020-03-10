@@ -4,7 +4,6 @@ slug: apis/comment
 description: 「コメント」のAPIでの利用方法
 order: 6
 navi: APIでの利用方法
-experimental: 
 ---
     
 ## 目次
@@ -110,9 +109,7 @@ gamePos updated.
     
 ### シーンコメント取得API
     
-<experimental-note></experimantal-note>
-    
-メソッド |`window.RPGAtsumaru.experimental.comment.getSceneComments(sceneName: string)`
+メソッド |`window.RPGAtsumaru.comment.getSceneComments(sceneName: string)`
 :---|:---
 説明|シーン名を指定してそのシーンのコメントをまるごと取得します。
 引数|シーン名を表す文字列

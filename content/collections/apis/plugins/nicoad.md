@@ -4,12 +4,11 @@ slug: plugins/nicoad
 description: 「ニコニ広告情報取得」のプラグインでの利用方法
 order: 7
 navi: プラグインでの利用方法
-experimental: true
 ---
     
 ## プラグインの利用方法
 プラグインでニコニ広告情報取得を利用するには以下のようにします。
-1. プラグインのダウンロード：[AtsumaruNiconicoukokuExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruNiconicoukokuExperimental.js) を右クリックで「名前をつけて保存」してダウンロード
+1. プラグインのダウンロード：[AtsumaruNiconicoukoku.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruNiconicoukoku.js) を右クリックで「名前をつけて保存」してダウンロード
 1. プロジェクトに追加：ダウンロードしたファイルをプロジェクトのプラグインフォルダに設置
 1. 有効化：プロジェクトのプラグイン設定でプラグインをONにする
     

@@ -4,7 +4,6 @@ slug: apis/screenshot
 description: 「スクリーンショットのシェア」のAPIでの利用方法
 order: 4
 navi: APIでの利用方法
-experimental: true
 ---
     
 ## 目次
@@ -14,7 +13,7 @@ experimental: true
 ## APIでの利用方法
 ### スクリーンショットAPI
     
-メソッド |`window.RPGAtsumaru.experimental.screenshot.displayModal()`
+メソッド |`window.RPGAtsumaru.screenshot.displayModal()`
 :---|:---
 説明|このメソッドを呼び出した時点でのスクリーンショットを撮影し、Twitterに投稿するモーダルを表示します
 引数|なし
@@ -37,7 +36,7 @@ tweeted|`boolean`|このAPIで表示したモーダルから実際にツイー�
 #### 戻り値の例
 戻り値で取得できる `ScreenshotModalResults` は以下のような型です。
 ```js
-// window.RPGAtsumaru.experimental.screenshot.displayModal().then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.screenshot.displayModal().then(function(v) { console.log(v) }) を実行
 {
     tweeted: true
 }
@@ -45,7 +44,7 @@ tweeted|`boolean`|このAPIで表示したモーダルから実際にツイー�
     
 ### ツイート内容差し替えAPI
     
-メソッド |`window.RPGAtsumaru.experimental.screenshot.setTweetMessage(tweetSettings: TweetSettings \| null)`
+メソッド |`window.RPGAtsumaru.screenshot.setTweetMessage(tweetSettings: TweetSettings \| null)`
 :---|:---
 説明|スクリーンショットAPIやカメラボタンでモーダルを表示したときに、最初に表示されているツイート内容を差し替えます
 引数|`tweetSettings` : 差し替えるツイート内容を指定します。
@@ -81,7 +80,7 @@ param1 - param9|`string`|ゲームURLにクエリを付加します。[クエリ
     
 そこで次のようなJavaScriptを実行してみます。
 ```js
-window.RPGAtsumaru.experimental.screenshot.setTweetMessage({
+window.RPGAtsumaru.screenshot.setTweetMessage({
     tweetText: 'このユーザーの運勢は【大吉】でした。あなたも占ってみませんか？ #占い',
     param1: 'superlucky',
     param5: 'twitter'

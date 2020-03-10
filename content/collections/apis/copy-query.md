@@ -4,7 +4,6 @@ slug: copy-query
 description: URLクエリ情報を取得する機能について
 order: 9
 navi: 機能解説
-experimental: true
 ---
     
 ## 概要

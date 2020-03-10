@@ -4,7 +4,6 @@ slug: download/materials
 description: ゲーム制作向け素材のダウンロード
 order: 2
 navi: リソース
-experimental: 
 ---
     
 ## 概要

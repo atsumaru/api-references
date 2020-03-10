@@ -4,7 +4,6 @@ slug: scoreboard
 description: ゲームのスコア（点数）を記録・取得する機能について
 order: 7
 navi: 機能解説
-experimental: true
 ---
     
 ## 概要

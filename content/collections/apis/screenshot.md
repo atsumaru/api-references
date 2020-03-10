@@ -4,7 +4,6 @@ slug: screenshot
 description: ゲームのスクリーンショットを撮影し、Twitterに投稿することができる機能について
 order: 4
 navi: 機能解説
-experimental: true
 ---
     
 ## 概要

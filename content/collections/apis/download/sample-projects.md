@@ -4,7 +4,6 @@ slug: download/sample-projects
 description: サンプルゲームプロジェクトファイルのダウンロード
 order: 1
 navi: リソース
-experimental: 
 ---
     
 ## 概要

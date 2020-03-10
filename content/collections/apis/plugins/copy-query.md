@@ -4,12 +4,11 @@ slug: plugins/copy-query
 description: 「クエリ情報取得」のプラグインでの利用方法
 order: 5
 navi: プラグインでの利用方法
-experimental: true
 ---
     
 ## プラグインの利用方法
 プラグインでクエリ情報取得を利用するには以下のようにします。
-1. プラグインのダウンロード：[AtsumaruQueryExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruQueryExperimental.js) を右クリックで「名前をつけて保存」してダウンロード
+1. プラグインのダウンロード：[AtsumaruQuery.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruQuery.js) を右クリックで「名前をつけて保存」してダウンロード
 1. プロジェクトに追加：ダウンロードしたファイルをプロジェクトのプラグインフォルダに設置
 1. 有効化：プロジェクトのプラグイン設定でプラグインをONにする
     

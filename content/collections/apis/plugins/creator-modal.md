@@ -4,12 +4,11 @@ slug: plugins/creator-modal
 description: 「作者情報表示」のプラグインでの利用方法
 order: 6
 navi: プラグインでの利用方法
-experimental: true
 ---
     
 ## プラグインの利用方法
 プラグインで作者情報表示を利用するには以下のようにします。
-1. プラグインのダウンロード：[AtsumaruCreatorInformationModalExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruCreatorInformationModalExperimental.js) を右クリックで「名前をつけて保存」してダウンロード
+1. プラグインのダウンロード：[AtsumaruCreatorInformationModal.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruCreatorInformationModal.js) を右クリックで「名前をつけて保存」してダウンロード
 1. プロジェクトに追加：ダウンロードしたファイルをプロジェクトのプラグインフォルダに設置
 1. 有効化：プロジェクトのプラグイン設定でプラグインをONにする
     
