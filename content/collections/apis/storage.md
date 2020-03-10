@@ -4,7 +4,6 @@ slug: storage
 description: ゲーム内のデータをセーブしたり、セーブしたデータを取得できる機能について
 order: 5
 navi: 機能解説
-experimental: 
 ---
     
 ## 概要

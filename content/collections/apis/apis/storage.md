@@ -4,7 +4,6 @@ slug: apis/storage
 description: 「サーバーセーブ」のAPIでの利用方法
 order: 5
 navi: APIでの利用方法
-experimental: 
 ---
     
 ## 目次

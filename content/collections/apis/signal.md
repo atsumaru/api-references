@@ -4,7 +4,6 @@ slug: signal
 description: プレイヤー間でデータ（信号）をやり取りできる機能について
 order: 15
 navi: 機能解説
-experimental: true
 ---
     
 ## 概要

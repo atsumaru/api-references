@@ -4,7 +4,6 @@ slug: apis/nicoad
 description: 「ニコニ広告情報取得」のAPIでの利用方法
 order: 11
 navi: APIでの利用方法
-experimental: true
 ---
     
 ## 目次
@@ -15,7 +14,7 @@ experimental: true
 ## APIでの利用方法
 ### ニコニ広告ポイント取得
     
-メソッド |`window.RPGAtsumaru.experimental.nicoad.getPoints()`
+メソッド |`window.RPGAtsumaru.nicoad.getPoints()`
 :---|:---
 説明|このゲームに対して、合計何ポイント広告されたかを取得できます
 引数|なし
@@ -43,7 +42,7 @@ interface NicoadPoints {
 戻り値で取得できる `NicoadPoints` は以下のような型です。
     
 ```js
-// window.RPGAtsumaru.experimental.nicoad.getPoints().then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.nicoad.getPoints().then(function(v) { console.log(v) }) を実行
 {
     activePoint: 3000,
     totalPoint: 10000
@@ -58,7 +57,7 @@ interface NicoadPoints {
     
 ### ニコニ広告履歴取得
     
-メソッド |`window.RPGAtsumaru.experimental.nicoad.getHistories()`
+メソッド |`window.RPGAtsumaru.nicoad.getHistories()`
 :---|:---
 説明|このゲームに対してのニコニ広告の履歴を、最新のものから順に最大30件まで取得します
 引数|なし <!-- `offsetAdId` : この引数に広告ID(nicoadId)を指定すると、最新からではなく指定したIDの次の広告から順に最大30件まで取得します -->
@@ -103,7 +102,7 @@ nterface NicoadHistories {
 戻り値で取得できる `NicoadPoints` は以下のような型です。
     
 ```js
-// window.RPGAtsumaru.experimental.nicoad.getHistories().then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.nicoad.getHistories().then(function(v) { console.log(v) }) を実行
 {
     remainingCount: 0,
     serverTime: 1534570000,
@@ -137,7 +136,7 @@ nterface NicoadHistories {
     
 ### ニコニ広告貢献度ランキング取得
     
-メソッド |`window.RPGAtsumaru.experimental.nicoad.getRanking()`
+メソッド |`window.RPGAtsumaru.nicoad.getRanking()`
 :---|:---
 説明|このゲームに対してのニコニ広告の貢献度ランキングを、最大30位まで取得します
 引数|なし
@@ -169,7 +168,7 @@ type NicoadRanking = {
 戻り値で取得できる `NicoadPoints` は以下のような型です。
     
 ```js
-// window.RPGAtsumaru.experimental.nicoad.getRanking().then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.nicoad.getRanking().then(function(v) { console.log(v) }) を実行
 [
         {
         advertiserName: "RPGアツマール開発チーム",

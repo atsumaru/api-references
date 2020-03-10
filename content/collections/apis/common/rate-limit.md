@@ -4,7 +4,6 @@ slug: common/rate-limit
 description: RPGアツマールのAPIの呼び出し回数の制限について
 order: 2
 navi: 共通事項
-experimental: 
 ---
     
 ## 呼び出し回数制限とは

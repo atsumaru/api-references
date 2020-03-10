@@ -4,7 +4,6 @@ slug: apis/interplayer
 description: 「プレイヤー間通信の有効化」のAPIでの利用方法
 order: 1
 navi: APIでの利用方法
-experimental: 
 ---
     
 ## APIでの利用方法
@@ -12,7 +11,7 @@ experimental:
  - このAPIの利用には[ログイン](/common/login)が必須です。
  - このAPIは[APIの呼び出し回数制限](/common/rate-limit)の対象です。
     
-メソッド |`RPGAtsumaru.experimental.interplayer.enable()`
+メソッド |`RPGAtsumaru.interplayer.enable()`
 :---|:---
 引数|なし
 戻り値|`Promise<void>`

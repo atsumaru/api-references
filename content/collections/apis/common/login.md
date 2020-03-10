@@ -4,7 +4,6 @@ slug: common/login
 description: niconicoログインがRPGアツマールのAPIに及ぼす影響について
 order: 1
 navi: 共通事項
-experimental: 
 ---
   
 ## niconicoログインについて

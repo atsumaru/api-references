@@ -4,7 +4,6 @@ import classNames from "classnames";
 
 import faviconUrl from "./assets/favicon.ico";
 import logoUrl from "./assets/logo.png";
-import FlaskIcon from "./flask.svg";
 
 import "./MainLayout.scss";
 
@@ -78,7 +77,6 @@ class MainNavigationApiLink extends React.Component {
           onClick={this.onClickLink}
           exact
         >
-          {api.experimental ? <FlaskIcon className="MainNavigationItem__Icon" /> : null}
           <span className="MainNavigationItem__Text">{api.title}</span>
           {api.children.length > 0 ? (
             <button className="MainNavigationItem__Button" onClick={this.onClickAngle} data-is-open={`${isOpen}`} />

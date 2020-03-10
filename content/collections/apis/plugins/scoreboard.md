@@ -4,7 +4,6 @@ slug: plugins/scoreboard
 description: 「スコアボード」のプラグインでの利用方法
 order: 3
 navi: プラグインでの利用方法
-experimental: true
 ---
     
 ## 目次
@@ -16,7 +15,7 @@ experimental: true
     
 ## プラグインの利用方法
 プラグインでスコアボードを利用するには以下のようにします。
-1. プラグインのダウンロード：[AtsumaruScoreboardsExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruScoreboardsExperimental.js) を右クリックで「名前をつけて保存」してダウンロード
+1. プラグインのダウンロード：[AtsumaruScoreboards.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruScoreboards.js) を右クリックで「名前をつけて保存」してダウンロード
 1. プロジェクトに追加：ダウンロードしたファイルをプロジェクトのプラグインフォルダに設置
 1. 有効化：プロジェクトのプラグイン設定でプラグインをONにする
     

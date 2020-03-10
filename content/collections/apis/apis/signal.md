@@ -4,7 +4,6 @@ slug: apis/signal
 description: 「シグナル」のAPIでの利用方法
 order: 15
 navi: APIでの利用方法
-experimental: true
 ---
     
 ## 目次
@@ -17,7 +16,7 @@ experimental: true
     
 ### グローバルシグナルの送信
     
-メソッド |`window.RPGAtsumaru.experimental.signal.sendSignalToGlobal(data: string)`
+メソッド |`window.RPGAtsumaru.signal.sendSignalToGlobal(data: string)`
 :---|:---
 説明|ゲームのグローバルシグナルとして `data` で指定した文字列を送信します。
 引数|`data` : シグナルとして、任意の文字列を100byte以内で送信できます。
@@ -36,7 +35,7 @@ experimental: true
     
 ### グローバルシグナルの取得
     
-メソッド |`window.RPGAtsumaru.experimental.signal.getGlobalSignals()`
+メソッド |`window.RPGAtsumaru.signal.getGlobalSignals()`
 :---|:---
 説明|送信されたゲームのグローバルシグナルを取得します。
 引数|なし
@@ -70,7 +69,7 @@ interface GlobalSignal {
 #### 戻り値の例
     
 ```js
-// window.RPGAtsumaru.experimental.signal.getGlobalSignals().then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.signal.getGlobalSignals().then(function(v) { console.log(v) }) を実行
 [
   {
     createdAt: 1543397700,
@@ -100,7 +99,7 @@ interface GlobalSignal {
 
 ### ユーザーシグナルの送信
     
-メソッド |`window.RPGAtsumaru.experimental.signal.sendSignalToUser(receiverId: number, data: string)`
+メソッド |`window.RPGAtsumaru.signal.sendSignalToUser(receiverId: number, data: string)`
 :---|:---
 説明|ユーザーシグナルとして `receiverId` で指定したユーザーIDのユーザーに `data` で指定した文字列を送信します。
 引数|<ul><li>`receiverId` : 送信先のニコニコユーザーIDを指定します。</li><li>`data` : シグナルとして、任意の文字列を100byte以内で送信できます。</li></ul>
@@ -123,7 +122,7 @@ interface GlobalSignal {
     
 ### ユーザーシグナルの取得
     
-メソッド |`window.RPGAtsumaru.experimental.signal.getUserSignals()`
+メソッド |`window.RPGAtsumaru.signal.getUserSignals()`
 :---|:---
 説明|プレイしているユーザーのユーザーシグナルを取得します。
 引数|なし
@@ -159,7 +158,7 @@ interface UserSignal {
 #### 戻り値の例
     
 ```js
-// window.RPGAtsumaru.experimental.signal.getUserSignals().then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.signal.getUserSignals().then(function(v) { console.log(v) }) を実行
 [
   {
     createdAt: 1543397700,

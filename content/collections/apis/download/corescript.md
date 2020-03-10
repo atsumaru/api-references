@@ -4,7 +4,6 @@ slug: download/corescript
 description: コミュニティ版コアスクリプトのダウンロード
 order: 4
 navi: リソース
-experimental: 
 ---
   
 ## 概要

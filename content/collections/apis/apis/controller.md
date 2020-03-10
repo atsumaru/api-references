@@ -4,7 +4,6 @@ slug: apis/controller
 description: 「コントローラー」のAPIでの利用方法
 order: 2
 navi: APIでの利用方法
-experimental: 
 ---
     
 ## APIでの利用方法

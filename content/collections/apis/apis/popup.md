@@ -4,7 +4,6 @@ slug: apis/popup
 description: 「外部リンク表示」のAPIでの利用方法
 order: 8
 navi: APIでの利用方法
-experimental: 
 ---
     
 ## APIでの利用方法

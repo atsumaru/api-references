@@ -4,13 +4,12 @@ slug: apis/copy-query
 description: 「クエリ情報取得」のAPIでの利用方法
 order: 9
 navi: APIでの利用方法
-experimental: true
 ---
     
 ## APIでの利用方法
 ### クエリ情報取得API
     
-メソッド |`window.RPGAtsumaru.experimental.query[key]`
+メソッド |`window.RPGAtsumaru.query[key]`
 :---|:---
 説明|引数のkeyに指定した文字列のquery情報を取得します。
 引数| query名を表す文字列

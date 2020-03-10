@@ -4,7 +4,6 @@ slug: global-server-variable
 description: プレイヤー共通の変数を扱えるグローバルサーバー変数機能について
 order: 13
 navi: 機能解説
-experimental: true
 ---
     
 ## 概要

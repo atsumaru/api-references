@@ -4,7 +4,6 @@ slug: common/theory
 description: 一部のAPIのおすすめの使い方や、使い分け方について
 order: 3
 navi: 共通事項
-experimental: 
 ---
     
 ## API全般のセオリー

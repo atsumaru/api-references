@@ -4,7 +4,6 @@ slug: popup
 description: 外部リンク表示機能について
 order: 8
 navi: 機能解説
-experimental: 
 ---
     
 ## 概要

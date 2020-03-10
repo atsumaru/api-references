@@ -4,7 +4,6 @@ slug: apis/scoreboard
 description: 「スコアボード」のAPIでの利用方法
 order: 7
 navi: APIでの利用方法
-experimental: true
 ---
     
 ## 目次
@@ -15,7 +14,7 @@ experimental: true
 ## APIでの利用方法
 ### スコアボードへの記録
     
-メソッド |`window.RPGAtsumaru.experimental.scoreboards.setRecord(boardId: number, score: number)`
+メソッド |`window.RPGAtsumaru.scoreboards.setRecord(boardId: number, score: number)`
 :---|:---
 説明|引数の `boardId` を指定することによりスコアを記録するスコアボードを指定。<br>第2引数のscoreでスコアを指定し、記録するスコアの点数を記録。
 引数|<ul><li>スコアボードID(デフォルトは1〜10までの整数)</li><li>記録するスコアの点数。スコアの値としてRPGアツマールがサポートしている範囲は `-999,999,999,999,999` ～ `+999,999,999,999,999` です。</li></ul>
@@ -30,7 +29,7 @@ experimental: true
     
 ### スコアボードを表示する
     
-メソッド |`window.RPGAtsumaru.experimental.scoreboards.display(boardId: number)`
+メソッド |`window.RPGAtsumaru.scoreboards.display(boardId: number)`
 :---|:---
 説明|引数の `boardId` を指定することによりスコアを記録するスコアボードを指定してスコアボード表示
 引数|スコアボードID(デフォルトは1〜10までの整数)
@@ -38,7 +37,7 @@ experimental: true
     
 ### スコアボードからデータを読み込み
     
-メソッド |`window.RPGAtsumaru.experimental.scoreboards.getRecords(boardId: number)`
+メソッド |`window.RPGAtsumaru.scoreboards.getRecords(boardId: number)`
 :---|:---
 説明|引数の `boardId` を指定することによりスコアボードの情報を取得
 引数|スコアボードID(デフォルトは1〜10までの整数)
@@ -96,7 +95,7 @@ interface ScoreboardData {
 #### 戻り値の例
     
 ```js
-// window.RPGAtsumaru.experimental.scoreboards.getRecords(1).then(function(v) { console.log(v) }) を実行
+// window.RPGAtsumaru.scoreboards.getRecords(1).then(function(v) { console.log(v) }) を実行
 {
     "myRecord": {
         "isNewRecord": false,

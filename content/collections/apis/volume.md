@@ -4,7 +4,6 @@ slug: volume
 description: マスターボリュームの調整をする機能について
 order: 3
 navi: 機能解説
-experimental: 
 ---
     
 ## 概要

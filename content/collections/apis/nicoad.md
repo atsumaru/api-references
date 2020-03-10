@@ -4,7 +4,6 @@ slug: nicoad
 description: プレイ中のゲームのニコニ広告情報を取得する機能について
 order: 11
 navi: 機能解説
-experimental: true
 ---
     
 ## 概要

@@ -4,7 +4,6 @@ slug: shared-save
 description: 特定のサーバーセーブデータを取得する機能について
 order: 14
 navi: 機能解説
-experimental: true
 ---
     
 ## 概要

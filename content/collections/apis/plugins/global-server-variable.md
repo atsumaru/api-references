@@ -4,7 +4,6 @@ slug: plugins/global-server-variable
 description: 「グローバルサーバー変数」のプラグインでの利用方法
 order: 9
 navi: プラグインでの利用方法
-experimental: true
 ---
     
 ## 目次
@@ -19,7 +18,7 @@ experimental: true
     
 ## プラグインの利用方法
 プラグインでグローバルサーバー変数を利用するには以下のようにします。
-1. プラグインのダウンロード：[AtsumaruGlobalServerVariableExperimental.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruGlobalServerVariableExperimental.js) を右クリックで「名前をつけて保存」してダウンロード
+1. プラグインのダウンロード：[AtsumaruGlobalServerVariable.js](https://raw.githubusercontent.com/atsumaru/mv-plugins/master/plugins/AtsumaruGlobalServerVariable.js) を右クリックで「名前をつけて保存」してダウンロード
 1. プロジェクトに追加：ダウンロードしたファイルをプロジェクトのプラグインフォルダに設置
 1. 有効化：プロジェクトのプラグイン設定でプラグインをONにする
 1. 設定：プラグイン設定で、取得した情報を収納する変数のIDを指定する。

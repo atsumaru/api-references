@@ -4,7 +4,6 @@ slug: download/atsumaru-debugger
 description: APIデバッグツールのダウンロード
 order: 5
 navi: リソース
-experimental: 
 ---
     
 ## 概要
