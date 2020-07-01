@@ -45,7 +45,8 @@ URL|https://game.nicovideo.jp/atsumaru/games/gm9226
 ダウンロード|**[免責事項を確認の上、ダウンロードする](http://dl.cdn.nimg.jp/atsumaru/atsumaru/projects/api-sample-games/2019/04/01/AtsumaruSample_RaidBoss.zip)**
     
 ### getUserInformation
-ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm9289" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm9289">【ゲームAPIサンプル】ユーザー情報取得できるくん（ユーザー情報取得API）</a>
+
+ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm9289" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm9289">【ゲームAPIサンプル】ユーザー情報取得できるくん（ユーザー情報取得API）</a></iframe>
 :---|:---
 タイトル|【ゲームAPIサンプル】ユーザー情報取得できるくん
 URL|https://game.nicovideo.jp/atsumaru/games/gm9289
