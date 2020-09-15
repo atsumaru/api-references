@@ -4,6 +4,7 @@ slug: apis/nicoad
 description: 「ニコニ広告情報取得」のAPIでの利用方法
 order: 11
 navi: APIでの利用方法
+experimental: true
 ---
     
 ## 目次
@@ -47,13 +48,14 @@ interface NicoadPoints {
     activePoint: 3000,
     totalPoint: 10000
 }
-    
+```
+
 #### 起こりうるエラーの種類
     
 名前|説明
 :---|:---
-[INTERNAL_SERVER_ERROR](/common/errors)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
-[API_CALL_LIMIT_EXCEEDED](/common/errors) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
     
 ### ニコニ広告履歴取得
     
@@ -68,7 +70,7 @@ interface NicoadPoints {
 戻り値で取得できる `NicoadHistories` は以下のような型です。
     
 ```js
-nterface NicoadHistories {
+interface NicoadHistories {
     activePoint: number;
     remainingCount: number;
     serverTime: number;
@@ -125,14 +127,14 @@ nterface NicoadHistories {
     }
     ]
 }
-    ```
+```
     
 #### 起こりうるエラーの種類
     
 名前|説明
 :---|:---
-[INTERNAL_SERVER_ERROR](/common/errors)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
-[API_CALL_LIMIT_EXCEEDED](/common/errors) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
     
 ### ニコニ広告貢献度ランキング取得
     
@@ -186,8 +188,8 @@ type NicoadRanking = {
     
 名前|説明
 :---|:---
-[INTERNAL_SERVER_ERROR](/common/errors)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
-[API_CALL_LIMIT_EXCEEDED](/common/errors) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
     
 ## 関連ドキュメント
     
@@ -197,4 +199,4 @@ type NicoadRanking = {
 プラグインでの利用方法|[ニコニ広告情報取得](/plugins/nicoad)|RPGツクールMVユーザー向け
     
 ## 最終更新日
- - 2020/02/28
+ - 2020/09/15

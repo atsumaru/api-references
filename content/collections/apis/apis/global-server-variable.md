@@ -62,9 +62,9 @@ interface GlobalServerVariableData {
     
 名前|説明
 :---|:---
-[BAD_REQUEST](/common/errors)|<ul><li>指定したグローバルサーバー変数IDがそのゲームのものではない</li><li>引数として不正な値を指定している</li></ul>
-[INTERNAL_SERVER_ERROR](/common/errors)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/errors)|短時間にRPGアツマール ゲームAPIを利用しすぎて、一時的に利用を制限されている
+[BAD_REQUEST](/common/error)|<ul><li>指定したグローバルサーバー変数IDがそのゲームのものではない</li><li>引数として不正な値を指定している</li></ul>
+[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にRPGアツマール ゲームAPIを利用しすぎて、一時的に利用を制限されている
     
 ### グローバルサーバー変数取得(名前指定型)
  - グローバルサーバー変数の変数名を指定し、現在値、最大値、最小値、変数名を取得します。
@@ -114,9 +114,9 @@ interface GlobalServerVariableData {
     
 名前|説明
 :---|:---
-[BAD_REQUEST](/common/errors)|<ul><li>指定したグローバルサーバー変数名が見つからない</li><li>指定したグローバルサーバー変数名が複数存在する</li><li>引数として不正な値を指定している</li></ul>
-[INTERNAL_SERVER_ERROR](/common/errors)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/errors)|短時間にRPGアツマール ゲームAPIを利用しすぎて、一時的に利用を制限されている
+[BAD_REQUEST](/common/error)|<ul><li>指定したグローバルサーバー変数名が見つからない</li><li>指定したグローバルサーバー変数名が複数存在する</li><li>引数として不正な値を指定している</li></ul>
+[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にRPGアツマール ゲームAPIを利用しすぎて、一時的に利用を制限されている
     
 ### トリガー発動
  - あらかじめ設定したトリガーIDを指定して、グローバルサーバー変数の値を変化させます。
@@ -147,9 +147,9 @@ window.RPGAtsumaru.globalServerVariable.triggerCall(3, "ぬるぽ")
     
 名前|説明
 :---|:---
-[BAD_REQUEST](/common/errors)|<ul><li>指定したトリガーIDがそのゲームのものではない</li><li>「固定値を増減」トリガーで `value` を指定した</li><li>「最大値・最小値の範囲で増減」トリガーで `value` を省略した</li><li>引数として不正な値を指定している</li></ul>
-[INTERNAL_SERVER_ERROR](/common/errors)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/errors)|短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[BAD_REQUEST](/common/error)|<ul><li>指定したトリガーIDがそのゲームのものではない</li><li>「固定値を増減」トリガーで `value` を指定した</li><li>「最大値・最小値の範囲で増減」トリガーで `value` を省略した</li><li>引数として不正な値を指定している</li></ul>
+[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
     
 ### トリガー発動(名前指定型)
  - あらかじめ設定した変数名とトリガー名を指定して、グローバルサーバー変数の値を変化させます。
@@ -180,9 +180,9 @@ window.RPGAtsumaru.globalServerVariable.triggerCallByName("文字列変数1", "�
     
 名前|説明
 :---|:---
-[BAD_REQUEST](/common/errors)|<ul><li>指定したグローバルサーバ変数名が見当たらないか複数存在</li><li>指定したトリガー名が見当たらないか複数存在</li><li>「固定値を増減」トリガーで `value` を指定した</li><li>「最大値・最小値の範囲で増減」トリガーで `value` を省略した</li><li>引数として不正な値を指定している</li></ul>
-[INTERNAL_SERVER_ERROR](/common/errors)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/errors)|短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[BAD_REQUEST](/common/error)|<ul><li>指定したグローバルサーバ変数名が見当たらないか複数存在</li><li>指定したトリガー名が見当たらないか複数存在</li><li>「固定値を増減」トリガーで `value` を指定した</li><li>「最大値・最小値の範囲で増減」トリガーで `value` を省略した</li><li>引数として不正な値を指定している</li></ul>
+[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
     
 ### グローバルサーバー変数一括取得
  - ゲームに定義されているグローバルサーバー変数とトリガーの情報をすべて取得します。
@@ -278,8 +278,8 @@ interface GlobalServerVariableTrigger {
     
 名前|説明
 :---|:---
-[INTERNAL_SERVER_ERROR](/common/errors)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
-[API_CALL_LIMIT_EXCEEDED](/common/errors) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
     
 ## 関連ドキュメント
     
