@@ -4,6 +4,7 @@ slug: signal
 description: プレイヤー間でデータ（信号）をやり取りできる機能について
 order: 15
 navi: 機能解説
+experimental: true
 ---
     
 ## 概要
@@ -28,7 +29,7 @@ navi: 機能解説
  - [【ゲームAPIサンプル】プレイローグ（グローバルシグナルAPI・グローバルサーバー変数API）](https://game.nicovideo.jp/atsumaru/games/gm9292)
     - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#PlayLog)
     
-また、こちらのサンプルゲームでは、ユーザーシグナルを利用して、スライムのバトル結果を送信しています。（スライムの情報は[14](/)を[12](/)から取得しています）
+また、こちらのサンプルゲームでは、ユーザーシグナルを利用して、スライムのバトル結果を送信しています。（スライムの情報は[共有セーブ](/shared-save)を[ユーザー情報取得](/user)から取得しています）
  - [【ゲームAPIサンプル】スライムバトラー（ユーザーシグナルAPI・共有セーブAPI）](https://game.nicovideo.jp/atsumaru/games/gm9294)
     - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#SlimeBattler)
     
@@ -52,4 +53,4 @@ API|APIでの利用方法の「[シグナル](/apis/signal)」項を参考に、
 
     
 ## 最終更新日
- - 2020/02/28
+ - 2020/09/15

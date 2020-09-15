@@ -49,10 +49,10 @@ interface SharedSaveItems {
     
 名前|説明
 :---|:---
-[BAD_REQUEST](/common/errors)|<ul><li>指定したグローバルサーバー変数IDがそのゲームのものではない</li><li>引数として不正な値を指定している</li></ul>
-[FORBIDDEN](/common/errors)|`gameId` にアクセス不能なゲームのIDを指定した場合
-[INTERNAL_SERVER_ERROR](/common/errors)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/errors)|短時間にRPGアツマール ゲームAPIを利用しすぎて、一時的に利用を制限されている
+[BAD_REQUEST](/common/error)|<ul><li>指定したグローバルサーバー変数IDがそのゲームのものではない</li><li>引数として不正な値を指定している</li></ul>
+[FORBIDDEN](/common/error)|`gameId` にアクセス不能なゲームのIDを指定した場合
+[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にRPGアツマール ゲームAPIを利用しすぎて、一時的に利用を制限されている
     
 ## 関連ドキュメント
     

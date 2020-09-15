@@ -24,8 +24,8 @@ navi: APIでの利用方法
     
 名前|説明
 :---|:---
-[BAD_REQUEST](/common/errors) |<ul><li>`bordId` に[スコアボード設定画面](/scoreboard/api)で設定している範囲外の値を指定した</li><li>引数として不正な値を指定している</li></ul>
-[INTERNAL_SERVER_ERROR](/common/errors)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[BAD_REQUEST](/common/error) |<ul><li>`bordId` に[スコアボード設定画面](/scoreboard/api)で設定している範囲外の値を指定した</li><li>引数として不正な値を指定している</li></ul>
+[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
     
 ### スコアボードを表示する
     
@@ -136,8 +136,8 @@ interface ScoreboardData {
     
 名前|説明
 :---|:---
-[BAD_REQUEST](/common/errors) |<ul><li>`boardId` に[スコアボード設定画面](/scoreboard/api)で設定している範囲外の値を指定した</li><li>引数として不正な値を指定している</li></ul>
-[INTERNAL_SERVER_ERROR](/common/errors)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[BAD_REQUEST](/common/error) |<ul><li>`boardId` に[スコアボード設定画面](/scoreboard/api)で設定している範囲外の値を指定した</li><li>引数として不正な値を指定している</li></ul>
+[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
     
 ## 関連ドキュメント
     
