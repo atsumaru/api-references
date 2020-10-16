@@ -3,7 +3,7 @@
   "warnings": [],
   "version": "3.12.0",
   "hash": "1a634a8809ede9ab9fdc",
-  "time": 8814,
+  "time": 8451,
   "publicPath": "https://atsumaru.github.io/api-references/",
   "assetsByChunkName": {
     "src/containers/Reference": [
