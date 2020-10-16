@@ -286,7 +286,7 @@ interface GlobalServerVariableTrigger {
 ドキュメント|リンク|備考
 :---|:---|:---
 機能解説|[グローバルサーバー変数](/global-server-variable)|機能概要や全般的な解説
-プラグインでの利用方法|[グローバルサーバー変数](/plugins/global-server-variable)|RPGツクールMVユーザー向け
+プラグインでの利用方法|[プラグインでの利用方法](/plugins)|RPGツクールシリーズユーザー向け
     
 ## 最終更新日
  - 2020/02/28

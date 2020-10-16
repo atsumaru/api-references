@@ -101,7 +101,7 @@ window.RPGAtsumaru.screenshot.setTweetMessage({
 ドキュメント|リンク|備考
 :---|:---|:---
 機能解説|[スクリーンショットのシェア](/screenshot)|機能概要や全般的な解説
-プラグインでの利用方法|[スクリーンショットのシェア](/plugins/screenshot)|RPGツクールMVユーザー向け
+プラグインでの利用方法|[プラグインでの利用方法](/plugins)|RPGツクールシリーズユーザー向け
     
 ## 最終更新日
  - 2020/02/28
