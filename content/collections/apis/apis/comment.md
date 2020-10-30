@@ -40,7 +40,7 @@ navi: APIでの利用方法
     
 メソッド |`window.RPGAtsumaru.comment.pushContextFactor(factor: string)`
 :---|:---
-説明|<ul><li>コメントシステムにContextFactorとなる値(ツクールでいうセリフと選択肢)をpushして、contextを更新する。</li><li>contextが更新されることでgposが更新され、文脈にあわせたコメントが流れる。</li><li>また、minorcontextを初期化する。</li></ul>
+説明|<ul><li>コメントシステムにContextFactorとなる値(ツクールでいうセリフと選択肢)をpushして、contextを更新する。</li><li>contextが更新されることでgposが更新され、文脈にあわせたコメントが流れる。</li><li>また、minorcontextを初期化する。</li><li>**gpos v2では無効なため、利用非推奨**</li></ul>
 引数|コメントシステムにpushするコンテキストを表す文字列
 戻り値|なし
     
@@ -48,7 +48,7 @@ navi: APIでの利用方法
     
 メソッド |`window.RPGAtsumaru.comment.pushMinorContext()`
 :---|:---
-説明|<ul><li>コメントシステムのgposを更新する。</li><li>contextが更新されることでgposKeyが更新され、文脈にあわせたコメントが流れる。</li><li>内部的にminorcontext値を持っており、それを+1することでgposを更新している。pushContextFactorを使うと、minorcontext値は初期値に戻される。</li><li>MinorContextは「ContextFactorのさらに細かい状態」を想定している。</li><li>ツクールではエンジンにwaitがかかるような命令で使用している。</li></ul>
+説明|<ul><li>コメントシステムのgposを更新する。</li><li>contextが更新されることでgposKeyが更新され、文脈にあわせたコメントが流れる。</li><li>内部的にminorcontext値を持っており、それを+1することでgposを更新している。pushContextFactorを使うと、minorcontext値は初期値に戻される。</li><li>MinorContextは「ContextFactorのさらに細かい状態」を想定している。</li><li>ツクールではエンジンにwaitがかかるような命令で使用している。</li><li>**gpos v2では無効なため、利用非推奨**</li></ul>
 引数|なし
 戻り値|なし
     
@@ -101,12 +101,24 @@ navi: APIでの利用方法
 戻り値|
     
 #### verboseモードAPIのコンソールの出力例
+
+gpos v1の場合
+
 ```
 gamePos updated.
     texts: hoge/fuga/piyo
     increment: 1
 ```
-    
+
+gpos v2の場合
+
+```
+gpos v2 updated.
+	scene: map1
+	context: v2/MapEvent1/page1/%E3%81%93%E3%81%AF
+	context(decoded): v2/MapEvent1/page1/こは
+```
+
 ### シーンコメント取得API
     
 メソッド |`window.RPGAtsumaru.comment.getSceneComments(sceneName: string)`
@@ -122,4 +134,4 @@ gamePos updated.
 機能解説|[コメント](/comment)|機能概要や全般的な解説
     
 ## 最終更新日
- - 2020/02/28
+ - 2020/10/30
