@@ -18,6 +18,7 @@ navi: APIでの利用方法
  - [入力コメント取得コールバックAPI](#入力コメント取得コールバックAPI)
  - [verboseモードAPI](#verboseモードAPI)
  - [シーンコメント取得API](#シーンコメント取得API)
+ - [gposモード設定API](#gposモード設定API)
     
 ## APIでの利用方法
 ### シーン設定API
@@ -126,6 +127,14 @@ gpos v2 updated.
 説明|シーン名を指定してそのシーンのコメントをまるごと取得します。
 引数|シーン名を表す文字列
 戻り値|`Promise<{ command: string, comment: string, context: string }>`
+
+### gposモード設定API
+    
+メソッド |`window.RPGAtsumaru.comment.changeAutoGposMode(mode: string)`
+:---|:---
+説明|`v1` `v2` を指定するとgpos v1, v2に変更します。 `none` でgposの自動設定自体を無効にできます
+引数|モードを表す文字列。 `v1` `v2` `none` のどれか一つ
+戻り値|
     
 ## 関連ドキュメント
 
@@ -134,4 +143,4 @@ gpos v2 updated.
 機能解説|[コメント](/comment)|機能概要や全般的な解説
     
 ## 最終更新日
- - 2020/10/30
+ - 2020/11/16
