@@ -70,9 +70,7 @@ RPGツクールMVが動作しているレイヤです。コメント描画もこ
 しかし、窮屈なゲーム制作環境を提供したいわけではありません。
   
 ですので、ユーザーの安全に影響しない限定的な制限解除については、前向きに検討していきたいとおもっています。性質上どうしても時間がかかるものではあるのですが、一緒に良い環境を作れたらと考えています。
-  
-[Twitter](https://twitter.com/nico_indiesgame)やchatなどでご意見いただけますと幸いです。
-  
+
 ## 参考
  - CSP (Content Security Policy) - Web セキュリティ | MDN
  - https://developer.mozilla.org/ja/docs/Web/Security/CSP
