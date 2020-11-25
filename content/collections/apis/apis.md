@@ -25,6 +25,7 @@ RPGツクールMV以外の他ゲームエンジンや、より高度な利用を
  - [グローバルサーバー変数](/apis/global-server-variable)
  - [共有セーブ](/apis/shared-save)
  - [シグナル](/apis/signal)
+ - [ギフト](/apis/gift)
     
 ## 最終更新日
  - 2020/02/28
