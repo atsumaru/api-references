@@ -3,7 +3,7 @@
   "warnings": [],
   "version": "3.12.0",
   "hash": "1a634a8809ede9ab9fdc",
-  "time": 8642,
+  "time": 11592,
   "publicPath": "https://atsumaru.github.io/api-references/",
   "assetsByChunkName": {
     "src/containers/Reference": [
@@ -1937,9 +1937,9 @@
             3
           ],
           "assets": [],
-          "issuer": "/home/nicogame/jenkins/workspace/publish-github.com/target/node_modules/react-static/lib/client/components/Prefetch.js",
-          "issuerId": 108,
-          "issuerName": "./node_modules/react-static/lib/client/components/Prefetch.js",
+          "issuer": "/home/nicogame/jenkins/workspace/publish-github.com/target/node_modules/react-static/lib/client/components/SiteData.js",
+          "issuerId": 105,
+          "issuerName": "./node_modules/react-static/lib/client/components/SiteData.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -8629,9 +8629,9 @@
         3
       ],
       "assets": [],
-      "issuer": "/home/nicogame/jenkins/workspace/publish-github.com/target/node_modules/react-static/lib/client/components/Prefetch.js",
-      "issuerId": 108,
-      "issuerName": "./node_modules/react-static/lib/client/components/Prefetch.js",
+      "issuer": "/home/nicogame/jenkins/workspace/publish-github.com/target/node_modules/react-static/lib/client/components/SiteData.js",
+      "issuerId": 105,
+      "issuerName": "./node_modules/react-static/lib/client/components/SiteData.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
