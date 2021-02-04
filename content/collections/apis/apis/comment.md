@@ -64,7 +64,7 @@ navi: APIでの利用方法
 メソッド |`window.RPGAtsumaru.comment.cameOut.subscribe(next: (comment: CameoutComments) => void)`
 :---|:---
 説明|<ul><li>ゲーム画面に今まさに流れるコメントをリアルタイムで取得できるAPIです。</li><li>表示前のコメントは取得できません。</li><li>このAPIでは[ギフト](/gift)についてもコメントの一種として取り扱うため、一緒くたに取得できます。</li></ul>
-引数|RPGアツマールのコメント情報( `CameoutComments` )を受け取るコールバック関数
+引数|ゲームアツマールのコメント情報( `CameoutComments` )を受け取るコールバック関数
 戻り値|`subscription` .unsubscribe(); 呼び出しにより、コールバック関数を解除できます
 
 #### コメントの型 CameoutComments について
@@ -148,7 +148,7 @@ subscription.unsubscribe();
 メソッド |`window.RPGAtsumaru.comment.posted.subscribe(next: (comment: PostedComment) => void)`
 :---|:---
 説明|<ul><li>このユーザーが今まさに投稿したコメント情報をリアルタイムで取得できるAPIです。</li><li>あくまで投稿時（コメントが黄色い枠で囲まれているとき）に取得できるAPIです。本人の投稿であっても、後に同じシーンに再訪した際は前述の表示コメントAPIの方に流れます。</li><li>このAPIでは[ギフト](/gift)についてもコメントの一種として取り扱うため、一緒くたに取得できます。</li></ul>
-引数|RPGアツマールのコメント情報( `PostedComment` )を受け取るコールバック関数
+引数|ゲームアツマールのコメント情報( `PostedComment` )を受け取るコールバック関数
 戻り値|`subscription` .unsubscribe(); 呼び出しにより、コールバック関数を解除できます
 
 #### コメントの型 PostedComments について

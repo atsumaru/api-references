@@ -13,9 +13,9 @@ navi: 一般ドキュメント
 **必ず元のゲームファイルを別の場所に保存（バックアップ）するか、コピーした別フォルダ上で実施してください。**
 
 ## アップデート手順
-###  1. 「RPGアツマール版コアスクリプト」フォルダから、「fonts」「js」「index.html」をコピーする
+###  1. 「ゲームアツマール版コアスクリプト」フォルダから、「fonts」「js」「index.html」をコピーする
     
-ダウンロードした「RPGアツマール版コアスクリプト」のzipを解凍し、フォルダ内の「fonts」「js」「index.html」をコピーしてください。（右クリックメニューや、Windowsは[Ctrl]+[c]、MacOSは[command]+[c]でコピーできます）
+ダウンロードした「ゲームアツマール版コアスクリプト」のzipを解凍し、フォルダ内の「fonts」「js」「index.html」をコピーしてください。（右クリックメニューや、Windowsは[Ctrl]+[c]、MacOSは[command]+[c]でコピーできます）
     
 ![guide 1](/images/download/corescript_guide1.png)
     

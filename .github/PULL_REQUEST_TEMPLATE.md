@@ -1,5 +1,5 @@
 <!--
-RPGアツマールへの pull request ありがとうございます！
+ゲームアツマールへの pull request ありがとうございます！
 
 pull request を提出する前に、以下のガイドラインを確認してください。
 https://github.com/atsumaru/api-references/blob/master/CONTRIBUTING.md

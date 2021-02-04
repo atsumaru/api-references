@@ -84,7 +84,7 @@ param1 - param9|`string`|ゲームURLにクエリを付加します。[クエリ
     
 #### 引数の例
 「ゲーム情報編集」の「スクショツイート文言設定」が `占いゲーム` で、ゲームIDが `gm1234` の場合、そのままモーダルを開くと以下のツイート内容になります。
->占いゲーム #gm1234 #RPGアツマール https://game.nicovideo.jp/atsumaru/games/gm1234?link=share_twitter_sc
+>占いゲーム #gm1234 #ゲームアツマール https://game.nicovideo.jp/atsumaru/games/gm1234?link=share_twitter_sc
     
 そこで次のようなJavaScriptを実行してみます。
 ```js
@@ -96,10 +96,10 @@ window.RPGAtsumaru.screenshot.setTweetMessage({
 ```
     
 すると、以下のように先頭の文章が `tweetText` の内容となり、ゲームURLに `param1 - param9` のうち指定したクエリが付加されます。
->このユーザーの運勢は【大吉】でした。あなたも占ってみませんか？ #占い #gm1234 #RPGアツマール https://game.nicovideo.jp/atsumaru/games/gm1234?link=share_twitter_sc&amp;param1=superlucky&amp;param5=twitter
+>このユーザーの運勢は【大吉】でした。あなたも占ってみませんか？ #占い #gm1234 #ゲームアツマール https://game.nicovideo.jp/atsumaru/games/gm1234?link=share_twitter_sc&amp;param1=superlucky&amp;param5=twitter
     
 #### 備考
- - ハッシュタグ `#(ゲームID) #RPGアツマール` とゲームURLが自動的に必ず付加されます。
+ - ハッシュタグ `#(ゲームID) #ゲームアツマール` とゲームURLが自動的に必ず付加されます。
  - 上の例の `#占い` のように `#` を用いた文章を含めれば、独自にハッシュタグを付加することができます。
  - 引数にnullを指定すると最初の文章（上の例では `占いゲーム` ）に戻り、クエリもすべて外されます。
  - あくまで最初にツイート欄に表示される内容なので、ここからさらにユーザーの手によりツイート内容を自由に編集できます。

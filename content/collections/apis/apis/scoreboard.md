@@ -17,7 +17,7 @@ navi: APIでの利用方法
 メソッド |`window.RPGAtsumaru.scoreboards.setRecord(boardId: number, score: number)`
 :---|:---
 説明|引数の `boardId` を指定することによりスコアを記録するスコアボードを指定。<br>第2引数のscoreでスコアを指定し、記録するスコアの点数を記録。
-引数|<ul><li>スコアボードID(デフォルトは1〜10までの整数)</li><li>記録するスコアの点数。スコアの値としてRPGアツマールがサポートしている範囲は `-999,999,999,999,999` ～ `+999,999,999,999,999` です。</li></ul>
+引数|<ul><li>スコアボードID(デフォルトは1〜10までの整数)</li><li>記録するスコアの点数。スコアの値としてゲームアツマールがサポートしている範囲は `-999,999,999,999,999` ～ `+999,999,999,999,999` です。</li></ul>
 戻り値|`Promise<void>`
     
 #### 起こりうるエラーの種類
@@ -25,7 +25,7 @@ navi: APIでの利用方法
 名前|説明
 :---|:---
 [BAD_REQUEST](/common/error) |<ul><li>`bordId` に[スコアボード設定画面](/scoreboard/api)で設定している範囲外の値を指定した</li><li>引数として不正な値を指定している</li></ul>
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
     
 ### スコアボードを表示する
     
@@ -137,7 +137,7 @@ interface ScoreboardData {
 名前|説明
 :---|:---
 [BAD_REQUEST](/common/error) |<ul><li>`boardId` に[スコアボード設定画面](/scoreboard/api)で設定している範囲外の値を指定した</li><li>引数として不正な値を指定している</li></ul>
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
     
 ## 関連ドキュメント
     

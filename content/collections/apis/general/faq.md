@@ -1,13 +1,13 @@
 ---
 title: FAQ
 slug: general/faq
-description: RPGアツマール ゲームAPI の FAQ
+description: アツマールAPI の FAQ
 order: 4
 navi: 一般ドキュメント
 ---
   
 ## 概要
-RPGアツマール ゲームAPIに関するFAQを掲載しています。
+アツマールAPIに関するFAQを掲載しています。
   
 サービスのヘルプ、FAQも合わせてご確認ください。
   

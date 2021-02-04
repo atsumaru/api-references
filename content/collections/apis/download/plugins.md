@@ -1,7 +1,7 @@
 ---
-title: RPGアツマール公式プラグイン
+title: ゲームアツマール公式プラグイン
 slug: download/plugins
-description: RPGアツマール製RPGツクールMV向けプラグインのダウンロード
+description: ゲームアツマール製RPGツクールMV向けプラグインのダウンロード
 order: 3
 navi: リソース
 ---
@@ -9,8 +9,8 @@ navi: リソース
 ## 概要
 ここでは、RPGツクールMV用プラグインの配布情報をまとめています。利用に際しては、必ず各規約をご確認ください。
     
-## ゲームAPIプラグイン
- - RPGアツマール ゲームAPIを利用しやすくするプラグインとなります。
+## アツマールAPIプラグイン
+ - アツマールAPIを利用しやすくするプラグインとなります。
  - 以下のページにまとまっています。
  - https://github.com/atsumaru/mv-plugins#mv-plugins
     

@@ -11,7 +11,7 @@ navi: APIでの利用方法
     
 メソッド |`window.RPGAtsumaru.volume.getCurrentValue()`
 :---|:---
-説明|現在のRPGアツマールのマスターボリューム値を取得する。
+説明|現在のゲームアツマールのマスターボリューム値を取得する。
 引数|なし
 戻り値|`number` 0～1の実数で表されるマスターボリューム
     
@@ -19,7 +19,7 @@ navi: APIでの利用方法
     
 メソッド |`window.RPGAtsumaru.volume.changed.subscribe(observer: Observer)`
 :---|:---
-説明|<ul><li>RPGアツマールのマスターボリューム情報の変更を取得する。</li><li>Observer, subscriptionについてはESNextのObservableを参照してください。</li></ul>
+説明|<ul><li>ゲームアツマールのマスターボリューム情報の変更を取得する。</li><li>Observer, subscriptionについてはESNextのObservableを参照してください。</li></ul>
 引数|マスターボリューム情報を受け取るObserver
 戻り値|`subscription`
     

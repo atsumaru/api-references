@@ -7,23 +7,23 @@ import logoUrl from "./assets/logo.png";
 
 import "./MainLayout.scss";
 
-const SITE_NAME = "RPGアツマール APIリファレンス";
+const SITE_NAME = "ゲームアツマール APIリファレンス";
 
 const Meta = ({title}) => {
   const titleText = (title ? `${title} - ` : "") + SITE_NAME;
-  const description = "RPGアツマールに投稿したゲームから利用可能なAPIのリファレンスです。";
+  const description = "ゲームアツマールに投稿したゲームから利用可能なAPIのリファレンスです。";
 
   return (
     <Head>
       <title>{titleText}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content={description} />
-      <meta name="keywords" content="RPGアツマール,RPGツクールMV,自作ゲーム,インディーズゲーム,ゲーム,フリーゲーム,同人ゲーム,無料,niconico" />
+      <meta name="keywords" content="ゲームアツマール,RPGツクールMV,自作ゲーム,インディーズゲーム,ゲーム,フリーゲーム,同人ゲーム,無料,ニコニコ" />
       <meta property="og:title" content={titleText} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://site.nicovideo.jp/atsumaru/declaration/" />
       <meta property="og:image" content="https://site.nicovideo.jp/atsumaru/declaration/img/2018/img2.jpg" />
-      <meta property="og:site_name"  content="RPGアツマール" />
+      <meta property="og:site_name"  content="ゲームアツマール" />
       <meta property="og:description" content={description} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@nico_indiesgame" />
@@ -35,8 +35,8 @@ const Meta = ({title}) => {
 const Header = () => (
   <header className="Header">
     <nav className="Header__Nav">
-      <a href="http://www.nicovideo.jp/">niconico</a>
-      <a href="https://game.nicovideo.jp/atsumaru/">RPGアツマール</a>
+      <a href="http://www.nicovideo.jp/">ニコニコ</a>
+      <a href="https://game.nicovideo.jp/atsumaru/">ゲームアツマール</a>
     </nav>
   </header>
 );
@@ -44,7 +44,7 @@ const Header = () => (
 const Footer = () => (
   <footer className="Footer">
     <nav className="Footer__Nav">
-      <a href="https://game.nicovideo.jp/atsumaru/">RPGアツマール に戻る</a>
+      <a href="https://game.nicovideo.jp/atsumaru/">ゲームアツマール に戻る</a>
     </nav>
     <span>
       ©DWANGO Co., Ltd.
@@ -104,7 +104,7 @@ const MainNavigation = ({ apiList, path }) => (
   <nav className="MainNavigation">
     <div className="MainNavigation__LogoContainer">
       <Link to="/" className="MainNavigation__Logo">
-        <img src={logoUrl} alt="RPGアツマール" />
+        <img src={logoUrl} alt="ゲームアツマール" />
         APIリファレンス
       </Link>
     </div>

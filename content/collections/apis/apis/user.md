@@ -55,7 +55,7 @@ interface SelfInformation {
 // window.RPGAtsumaru.user.getSelfInformation().then(function(v) { console.log(v) }) を実行
 {
     id: 64341294,
-    name: "RPGアツマール公式",
+    name: "ゲームアツマール公式",
     profile: "やあ！ 僕はアツマライオン！\nみんなでゲームを作って遊んで楽しもうよ！",
     twitterId: "nico_indiesgame",
     url: "https://game.nicovideo.jp/atsumaru/",
@@ -68,8 +68,8 @@ interface SelfInformation {
 名前|説明
 :---|:---
 [UNAUTHORIZED](/common/error) |プレイヤーがログインしていない
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
-[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
     
 ### ユーザーIDを指定して特定のユーザー情報を取得
  - 引数でユーザーIDを指定し、指定したユーザーの情報を取得します。
@@ -111,7 +111,7 @@ interface UserInformation {
 // window.RPGAtsumaru.user.getUserInformation(64341294).then(function(v) { console.log(v) }) を実行
 {
     id: 64341294,
-    name: "RPGアツマール公式",
+    name: "ゲームアツマール公式",
     profile: "やあ！ 僕はアツマライオン！\nみんなでゲームを作って遊んで楽しもうよ！",
     twitterId: "nico_indiesgame",
     url: "https://game.nicovideo.jp/atsumaru/"
@@ -124,8 +124,8 @@ interface UserInformation {
 :---|:---
 [FORBIDDEN](/common/error)|`userId` に[プレイヤー間通信の有効化](/common/interplayer)を行っていないユーザーのIDを指定した
 [BAD_REQUEST](/common/error)|引数として不正な値を指定している
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
     
 ### 現在のゲームを最近プレイしたユーザーの情報を取得
  - [プレイヤー間通信の有効化](/common/interplayer)をしているユーザーを、最近現在のゲームをプレイした順番に取得します。
@@ -163,7 +163,7 @@ interface UserIdName {
 [
         {
         id: 64341294,
-        name: "RPGアツマール公式"
+        name: "ゲームアツマール公式"
         },
         {
         id: 63008093,
@@ -176,8 +176,8 @@ interface UserIdName {
     
 名前|説明
 :---|:---
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
-[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
     
 ### オンライン人数を取得
  - 今から1～60分前までの間にこのゲームをプレイしたログインユーザーの人数を取得します。
@@ -200,8 +200,8 @@ interface UserIdName {
 名前|説明
 :---|:---
 [BAD_REQUEST](/common/error)|`minutes` に1～60までの整数以外を指定した
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
-[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
     
 ## 関連ドキュメント
     

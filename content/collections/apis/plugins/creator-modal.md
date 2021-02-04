@@ -24,7 +24,7 @@ DisplayCreatorInformationModal <niconicoUserId>
 ```
 作者情報ダイアログ表示 <niconicoUserId>
 ```
-`<niconicoUserId>` 部分は省略可能で、省略した場合はプラグインを設置しているゲームの作者自信の情報が表示されます。自分以外の作者情報を表示したい場合は、`<niconicoUserId>` にniconicoユーザーIDを指定することも可能です。
+`<niconicoUserId>` 部分は省略可能で、省略した場合はプラグインを設置しているゲームの作者自信の情報が表示されます。自分以外の作者情報を表示したい場合は、`<niconicoUserId>` にニコニコユーザーIDを指定することも可能です。
     
 #### 例：現在のゲームの作者情報(=自分の作者情報)を表示する
 ```
@@ -35,7 +35,7 @@ DisplayCreatorInformationModal
 作者情報ダイアログ表示
 ```
     
-#### 例：niconicoユーザーID 64341294 のユーザーの作者情報を表示する
+#### 例：ニコニコユーザーID 64341294 のユーザーの作者情報を表示する
 ```
 DisplayCreatorInformationModal 64341294
 ```

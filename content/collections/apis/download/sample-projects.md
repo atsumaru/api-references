@@ -7,7 +7,7 @@ navi: リソース
 ---
     
 ## 概要
-ここでは、RPGアツマール ゲームAPI の活用を促す目的で、RPGアツマール開発チームで制作したサンプルゲームの『RPGツクールMV』用プロジェクトファイルを配布しています。利用に際しては、必ず規約をご確認ください。
+ここでは、アツマールAPI の活用を促す目的で、ゲームアツマール開発チームで制作したサンプルゲームの『RPGツクールMV』用プロジェクトファイルを配布しています。利用に際しては、必ず規約をご確認ください。
     
 ### サポートについて
 不具合などについては、サポートへお問い合わせください。
@@ -37,27 +37,27 @@ RPGツクールMV用プロジェクトファイル（以下「本データ」）
     
 ### RaidBoss
     
-ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm9226" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm9226">【ゲームAPIサンプル】レイドボス（グローバルサーバー変数API）</a></iframe>
+ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm9226" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm9226">【アツマールAPIサンプル】レイドボス（グローバルサーバー変数API）</a></iframe>
 :---|:---
-タイトル|【ゲームAPIサンプル】レイドボス
+タイトル|【アツマールAPIサンプル】レイドボス
 URL|https://game.nicovideo.jp/atsumaru/games/gm9226
 利用API|[global-server-variable](/global-server-variable)
 ダウンロード|**[免責事項を確認の上、ダウンロードする](http://dl.cdn.nimg.jp/atsumaru/atsumaru/projects/api-sample-games/2019/04/01/AtsumaruSample_RaidBoss.zip)**
     
 ### getUserInformation
 
-ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm9289" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm9289">【ゲームAPIサンプル】ユーザー情報取得できるくん（ユーザー情報取得API）</a></iframe>
+ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm9289" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm9289">【アツマールAPIサンプル】ユーザー情報取得できるくん（ユーザー情報取得API）</a></iframe>
 :---|:---
-タイトル|【ゲームAPIサンプル】ユーザー情報取得できるくん
+タイトル|【アツマールAPIサンプル】ユーザー情報取得できるくん
 URL|https://game.nicovideo.jp/atsumaru/games/gm9289
 利用API|[user](/user)
 ダウンロード|**[免責事項を確認の上、ダウンロードする](http://dl.cdn.nimg.jp/atsumaru/atsumaru/projects/api-sample-games/2019/04/01/AtsumaruSample_getUserInformation.zip)**
     
 ### AsyncProfile
     
-ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm9291" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm9291">【ゲームAPIサンプル】AsyncProfile（ユーザー情報取得API・共有セーブAPI）</a></iframe>
+ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm9291" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm9291">【アツマールAPIサンプル】AsyncProfile（ユーザー情報取得API・共有セーブAPI）</a></iframe>
 :---|:---
-タイトル|【ゲームAPIサンプル】AsyncProfile
+タイトル|【アツマールAPIサンプル】AsyncProfile
 URL|https://game.nicovideo.jp/atsumaru/games/gm9291
 利用API|[user](/user)
 利用API|[shared-save](/shared-save)
@@ -65,9 +65,9 @@ URL|https://game.nicovideo.jp/atsumaru/games/gm9291
     
 ### PlayLog
     
-ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm9292" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm9292">【ゲームAPIサンプル】プレイローグ（グローバルシグナルAPI・グローバルサーバー変数API）</a></iframe>
+ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm9292" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm9292">【アツマールAPIサンプル】プレイローグ（グローバルシグナルAPI・グローバルサーバー変数API）</a></iframe>
 :---|:---
-タイトル|【ゲームAPIサンプル】プレイローグ
+タイトル|【アツマールAPIサンプル】プレイローグ
 URL|https://game.nicovideo.jp/atsumaru/games/gm9292
 利用API|[signal](/signal)
 利用API|[global-server-variable](/global-server-variable)
@@ -75,9 +75,9 @@ URL|https://game.nicovideo.jp/atsumaru/games/gm9292
     
 ### SlimeBattler
     
-ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm9294" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm9294">【ゲームAPIサンプル】スライムバトラー（ユーザーシグナルAPI・共有セーブAPI）</a></iframe>
+ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm9294" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm9294">【アツマールAPIサンプル】スライムバトラー（ユーザーシグナルAPI・共有セーブAPI）</a></iframe>
 :---|:---
-タイトル|【ゲームAPIサンプル】スライムバトラー
+タイトル|【アツマールAPIサンプル】スライムバトラー
 URL|https://game.nicovideo.jp/atsumaru/games/gm9294
 利用API|[signal](/signal)
 利用API|[shared-save](/shared-save)
@@ -85,9 +85,9 @@ URL|https://game.nicovideo.jp/atsumaru/games/gm9294
     
 ### Tweetquery
     
-ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm11139" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm11139">【ゲームAPIサンプル】福笑いリレー</a></iframe>
+ゲーム情報|<iframe src="https://game.nicovideo.jp/atsumaru/externals/thumb/gm11139" scrolling="no" style="border:0;width:312px;height:176px" frameborder="0"><a target="_blank" rel="noopener" href="https://game.nicovideo.jp/atsumaru/games/gm11139">【アツマールAPIサンプル】福笑いリレー</a></iframe>
 :---|:---
-タイトル|【ゲームAPIサンプル】福笑いリレー
+タイトル|【アツマールAPIサンプル】福笑いリレー
 URL|https://game.nicovideo.jp/atsumaru/games/gm11139
 利用API|[screenshot](/screenshot)
 利用API|[copy-query](/copy-query)
