@@ -30,8 +30,8 @@ navi: APIでの利用方法
 :---|:---
 [UNAUTHORIZED](/common/error)|プレイヤーがログインしていない
 [BAD_REQUEST](/common/error)|<ul><li>`data` に100byte以上の文字列を指定した</li><li>引数として不正な値を指定している</li></ul>
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にRPGアツマール ゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
     
 ### グローバルシグナルの取得
     
@@ -92,8 +92,8 @@ interface GlobalSignal {
     
 名前|説明
 :---|:---
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にRPGアツマール ゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
     
 ## ユーザーシグナル
 
@@ -117,8 +117,8 @@ interface GlobalSignal {
 [UNAUTHORIZED](/common/error)|プレイヤーがログインしていない
 [FORBIDDEN](/common/error) |`userId` に[プレイヤー間通信の有効化](/common/interplayer)を行っていないユーザーのIDを指定した
 [BAD_REQUEST](/common/error)|<ul><li>`data` に100byte以上の文字列を指定した</li><li>引数として不正な値を指定している</li></ul>
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にRPGアツマール ゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
     
 ### ユーザーシグナルの取得
     
@@ -182,8 +182,8 @@ interface UserSignal {
 名前|説明
 :---|:---
 [UNAUTHORIZED](/common/error) |プレイヤーがログインしていない
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にRPGアツマール ゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error)|短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
     
 ## 関連ドキュメント
     

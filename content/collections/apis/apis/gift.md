@@ -45,8 +45,8 @@ navi: APIでの利用方法
     
 名前|説明
 :---|:---
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
 
 ### ギフト自己ポイント取得
     
@@ -87,8 +87,8 @@ interface GiftMyPoints {
 名前|説明
 :---|:---
 [UNAUTHORIZED](/common/error)|プレイヤーがログインしていない
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
     
 ### ギフト履歴取得
     
@@ -151,7 +151,7 @@ type GiftHistories = {
     {
         sceneName: "map1",
         context: "v2/MapEvent1/page1/%E3%81%93%E3%81%AF",
-        userName: "RPGアツマール開発チーム",
+        userName: "ゲームアツマール開発チーム",
         point: 10000,
         command: "",
         comment: "",
@@ -166,8 +166,8 @@ type GiftHistories = {
     
 名前|説明
 :---|:---
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
     
 ### ギフトランキング取得
     
@@ -203,7 +203,7 @@ type GiftRanking = {
 // window.RPGAtsumaru.gift.getRanking().then(function(v) { console.log(v) }) を実行
 [
     {
-        userName: "RPGアツマール開発チーム",
+        userName: "ゲームアツマール開発チーム",
         point: 30000
     },
     {
@@ -216,8 +216,8 @@ type GiftRanking = {
     
 名前|説明
 :---|:---
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
-[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールのサービス側で何らかの問題が発生しているか、または通信に失敗した
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
 
 ### 表示ギフト取得
 

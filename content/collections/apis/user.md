@@ -7,7 +7,7 @@ navi: 機能解説
 ---
     
 ## 概要
-RPGアツマールを使ったことのあるniconicoユーザーの情報を取得できる機能です。
+ゲームアツマールを使ったことのあるニコニコユーザーの情報を取得できる機能です。
     
 ## なにができるのか
 
@@ -26,13 +26,13 @@ RPGアツマールを使ったことのあるniconicoユーザーの情報を取
  - 最近プレイしたユーザーの情報を取得し、すれちがい通信のような機能を実装する
     
 例えば、次のサンプルゲームではこの機能を利用し、フォームに入力されたuseridのユーザー情報を表示しています。ただし、[プレイヤー間通信の有効化](/common/interplayer)が必要なため、このゲームをプレイしたことがあるユーザーの情報のみになります。
- - [【ゲームAPIサンプル】ユーザー情報取得できるくん（ユーザー情報取得API）](https://game.nicovideo.jp/atsumaru/games/gm9289)
+ - [【アツマールAPIサンプル】ユーザー情報取得できるくん（ユーザー情報取得API）](https://game.nicovideo.jp/atsumaru/games/gm9289)
     - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#getUserInformation)
     
 また、こちらのサンプルでは、最近プレイしたユーザーの情報を利用しています。
- - [【ゲームAPIサンプル】AsyncProfile（ユーザー情報取得API・共有セーブAPI）](https://game.nicovideo.jp/atsumaru/games/gm9291)
+ - [【アツマールAPIサンプル】AsyncProfile（ユーザー情報取得API・共有セーブAPI）](https://game.nicovideo.jp/atsumaru/games/gm9291)
     - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#AsyncProfile)
- - [【ゲームAPIサンプル】スライムバトラー（ユーザーシグナルAPI・共有セーブAPI）](https://game.nicovideo.jp/atsumaru/games/gm9294)
+ - [【アツマールAPIサンプル】スライムバトラー（ユーザーシグナルAPI・共有セーブAPI）](https://game.nicovideo.jp/atsumaru/games/gm9294)
     - [プロジェクトファイルダウンロードはこちら](/download/sample-projects#SlimeBattler)
     
 ## 利用方法

@@ -54,8 +54,8 @@ interface NicoadPoints {
     
 名前|説明
 :---|:---
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
-[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
     
 ### ニコニ広告履歴取得
     
@@ -118,7 +118,7 @@ interface NicoadHistories {
         endedAt: 1534654290,
     },
     {
-        advertiserName: "RPGアツマール開発チーム",
+        advertiserName: "ゲームアツマール開発チーム",
         nicoadId: 1234560,
         adPoint: 10000,
         contribution: 30000,
@@ -133,8 +133,8 @@ interface NicoadHistories {
     
 名前|説明
 :---|:---
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
-[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
     
 ### ニコニ広告貢献度ランキング取得
     
@@ -173,7 +173,7 @@ type NicoadRanking = {
 // window.RPGAtsumaru.nicoad.getRanking().then(function(v) { console.log(v) }) を実行
 [
         {
-        advertiserName: "RPGアツマール開発チーム",
+        advertiserName: "ゲームアツマール開発チーム",
         totalContribution: 30000,
         rank: 1
         },
@@ -188,8 +188,8 @@ type NicoadRanking = {
     
 名前|説明
 :---|:---
-[INTERNAL_SERVER_ERROR](/common/error)|RPGアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
-[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にゲームAPIを利用しすぎて、一時的に利用を制限されている
+[INTERNAL_SERVER_ERROR](/common/error)|ゲームアツマールもしくはニコニ広告のサービス側で何らかの問題が発生しているか、または通信に失敗した（※ユーザーが広告ブロックしている場合も含む）
+[API_CALL_LIMIT_EXCEEDED](/common/error) |短時間にアツマールAPIを利用しすぎて、一時的に利用を制限されている
     
 ## 関連ドキュメント
     

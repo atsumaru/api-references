@@ -39,7 +39,7 @@ DisplayScreenshotModal
 #### 例
 「ゲーム情報編集」の「スクショツイート文言設定」が `占いゲーム` で、ゲームIDが `gm1234` の場合、そのままモーダルを開くと以下のツイート内容になります。
   
-> 占いゲーム #gm1234 #RPGアツマール https://game.nicovideo.jp/atsumaru/games/gm1234?link=share_twitter_sc
+> 占いゲーム #gm1234 #ゲームアツマール https://game.nicovideo.jp/atsumaru/games/gm1234?link=share_twitter_sc
   
 そこでプラグインパラメータ「ツイート文章」に変数 `0001 ツイート文章` を設定し、この変数に文章を代入してみます。変数に文章を代入するには、「変数の操作」で「スクリプト」を選び、`'文章'` のように `'` で囲む必要があります。下の例のように `'` が含まれていることを確認してください。
   
@@ -47,10 +47,10 @@ DisplayScreenshotModal
   
 上のイベントコマンドを実行してからモーダルを開くと、以下のようなツイート内容が表示されるようになります。
   
-> このユーザーの運勢は【大吉】でした。あなたも占ってみませんか？ #占い #gm1234 #RPGアツマール https://game.nicovideo.jp/atsumaru/games/gm1234?link=share_twitter_sc
+> このユーザーの運勢は【大吉】でした。あなたも占ってみませんか？ #占い #gm1234 #ゲームアツマール https://game.nicovideo.jp/atsumaru/games/gm1234?link=share_twitter_sc
     
 #### 備考
- - ハッシュタグ `#(ゲームID) #RPGアツマール` とゲームURLは、自動的に付加されます。
+ - ハッシュタグ `#(ゲームID) #ゲームアツマール` とゲームURLは、自動的に付加されます。
  - 上の例の `#占い` のように `#` を用いた文章を含めれば、独自にハッシュタグを付加することができます。
  - 変数に0を代入すると、最初の文章（上の例では `占いゲーム` ）に戻ります。
  - あくまで最初にツイート欄に表示される内容のため、ここからさらにユーザーがツイート内容を自由に編集できます。
@@ -62,7 +62,7 @@ DisplayScreenshotModal
 #### 例
 「ゲーム情報編集」の「スクショツイート文言設定」が `占いゲーム` で、ゲームIDが `gm1234` の場合、そのままモーダルを開くと以下のツイート内容になります。
   
-> 占いゲーム #gm1234 #RPGアツマール https://game.nicovideo.jp/atsumaru/games/gm1234?link=share_twitter_sc
+> 占いゲーム #gm1234 #ゲームアツマール https://game.nicovideo.jp/atsumaru/games/gm1234?link=share_twitter_sc
   
 そこでプラグインパラメータ「param1」に変数 `0011 うんのよさ` を設定し、この変数に値を代入してみます。
   
@@ -70,7 +70,7 @@ DisplayScreenshotModal
   
 上のイベントコマンドを実行してからモーダルを開くと、以下のようなツイート内容が表示されるようになります。
   
-> 占いゲーム #gm1234 #RPGアツマール https://game.nicovideo.jp/atsumaru/games/gm1234?link=share_twitter_sc&amp;param1=100
+> 占いゲーム #gm1234 #ゲームアツマール https://game.nicovideo.jp/atsumaru/games/gm1234?link=share_twitter_sc&amp;param1=100
   
 ツイート内容のゲームURLの最後に `param1=100` という記述が追加されます。つまり、このツイートを見た人がこのURLからアクセスしてくると `param1=100` というデータも一緒に渡ってきます。
   

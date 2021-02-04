@@ -1,5 +1,5 @@
 <!--
-RPGアツマールへの issue ありがとうございます！
+ゲームアツマールへの issue ありがとうございます！
 
 issue を提出する前に、以下のガイドラインを確認してください。
 https://github.com/atsumaru/api-references/blob/master/CONTRIBUTING.md
