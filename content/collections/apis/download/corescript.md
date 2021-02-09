@@ -17,7 +17,7 @@ navi: リソース
 https://github.com/rpgtkoolmv/corescript
   
 ## 導入方法
-こちらのページで詳しく解説をしています。[コアスクリプトの更新方法](general/corescript-usage)
+こちらのページで詳しく解説をしています。[コアスクリプトの更新方法](/general/corescript-usage)
   
 ※コアスクリプトを置き換えたことにより、ゲーム及びプラグインの挙動が変化する場合があります。
   
@@ -424,4 +424,4 @@ Next time, "Overcome delaying of sounds!" Look forward to it!
   
   
 ## 最終更新日
- - 2020/02/28
+ - 2021/02/09

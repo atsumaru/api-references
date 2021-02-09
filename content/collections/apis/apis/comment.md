@@ -39,7 +39,7 @@ navi: APIでの利用方法
     
 メソッド |`window.RPGAtsumaru.comment.pushContextFactor(factor: string)`
 :---|:---
-説明|<ul><li>コメントシステムにContextFactorとなる値(ツクールでいうセリフと選択肢)をpushして、contextを更新する。</li><li>contextが更新されることでgposが更新され、文脈にあわせたコメントが流れる。</li><li>また、minorcontextを初期化する。</li><li>**gpos v2では無効なため、利用非推奨**</li></ul>
+説明|<ul><li>コメントシステムにContextFactorとなる値(ツクールでいうセリフと選択肢)をpushして、contextを更新する。</li><li>contextが更新されることでgposが更新され、文脈にあわせたコメントが流れる。</li><li>また、minorcontextを初期化する。</li><li>**gpos v1以外では無効なため、利用非推奨**</li></ul>
 引数|コメントシステムにpushするコンテキストを表す文字列
 戻り値|なし
     
@@ -47,7 +47,7 @@ navi: APIでの利用方法
     
 メソッド |`window.RPGAtsumaru.comment.pushMinorContext()`
 :---|:---
-説明|<ul><li>コメントシステムのgposを更新する。</li><li>contextが更新されることでgposKeyが更新され、文脈にあわせたコメントが流れる。</li><li>内部的にminorcontext値を持っており、それを+1することでgposを更新している。pushContextFactorを使うと、minorcontext値は初期値に戻される。</li><li>MinorContextは「ContextFactorのさらに細かい状態」を想定している。</li><li>ツクールではエンジンにwaitがかかるような命令で使用している。</li><li>**gpos v2では無効なため、利用非推奨**</li></ul>
+説明|<ul><li>コメントシステムのgposを更新する。</li><li>contextが更新されることでgposKeyが更新され、文脈にあわせたコメントが流れる。</li><li>内部的にminorcontext値を持っており、それを+1することでgposを更新している。pushContextFactorを使うと、minorcontext値は初期値に戻される。</li><li>MinorContextは「ContextFactorのさらに細かい状態」を想定している。</li><li>ツクールではエンジンにwaitがかかるような命令で使用している。</li><li>**gpos v1以外では無効なため、利用非推奨**</li></ul>
 引数|なし
 戻り値|なし
     
@@ -232,6 +232,15 @@ gpos v2 updated.
 	context(decoded): v2/MapEvent1/page1/こは
 ```
 
+gpos v3の場合
+
+```
+gpos v3 updated.
+	scene: map1
+	context: v3/%E3%82%84%E3%83%89%E3%81%AF%E3%81%A0%E3%82%93%E3%81%BC%5D%E3%82%A4%5B%E3%81%BF%E3%83%BC%E3%81%A6
+	context(decoded): v3/やドはだんぼ]イ[みーて
+```
+
 ### シーンコメント取得API
     
 メソッド |`window.RPGAtsumaru.comment.getSceneComments(sceneName: string)`
@@ -244,8 +253,8 @@ gpos v2 updated.
     
 メソッド |`window.RPGAtsumaru.comment.changeAutoGposMode(mode: string)`
 :---|:---
-説明|`v1` `v2` を指定するとgpos v1, v2に変更します。 `none` でgposの自動設定自体を無効にできます
-引数|モードを表す文字列。 `v1` `v2` `none` のどれか一つ
+説明|`v1` `v2` `v3` を指定するとgpos v1, v2, v3に変更します。 `none` でgposの自動設定自体を無効にできます
+引数|モードを表す文字列。 `v1` `v2` `v3` `none` のどれか一つ
 戻り値|
     
 ## 関連ドキュメント
@@ -256,4 +265,4 @@ gpos v2 updated.
 プラグインでの利用方法|[プラグインでの利用方法](/plugins)|RPGツクールシリーズユーザー向け
     
 ## 最終更新日
- - 2020/11/25
+ - 2021/02/09
