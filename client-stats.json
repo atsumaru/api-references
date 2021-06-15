@@ -3,7 +3,7 @@
   "warnings": [],
   "version": "3.12.0",
   "hash": "3c9585fa47931b54ebe5",
-  "time": 8654,
+  "time": 8412,
   "publicPath": "https://atsumaru.github.io/api-references/",
   "assetsByChunkName": {
     "src/containers/Reference": [
@@ -3241,9 +3241,9 @@
             3
           ],
           "assets": [],
-          "issuer": "/home/nicogame/jenkins/workspace/publish-github.com/target/node_modules/react-router/es/matchPath.js",
-          "issuerId": 17,
-          "issuerName": "./node_modules/react-router/es/matchPath.js",
+          "issuer": "/home/nicogame/jenkins/workspace/publish-github.com/target/node_modules/react-router/es/generatePath.js",
+          "issuerId": 30,
+          "issuerName": "./node_modules/react-router/es/generatePath.js",
           "failed": false,
           "errors": 0,
           "warnings": 0,
@@ -9933,9 +9933,9 @@
         3
       ],
       "assets": [],
-      "issuer": "/home/nicogame/jenkins/workspace/publish-github.com/target/node_modules/react-router/es/matchPath.js",
-      "issuerId": 17,
-      "issuerName": "./node_modules/react-router/es/matchPath.js",
+      "issuer": "/home/nicogame/jenkins/workspace/publish-github.com/target/node_modules/react-router/es/generatePath.js",
+      "issuerId": 30,
+      "issuerName": "./node_modules/react-router/es/generatePath.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
