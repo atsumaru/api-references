@@ -1,4 +1,4 @@
-import { reloadRoutes } from "react-static/node";
+import { reloadClientData } from "react-static/node";
 import path from "path";
 import url from "url";
 import jdown from "jdown";
@@ -16,7 +16,7 @@ const convertHref = href => /^\//.test(href) ? url.resolve(siteRoot, path.join(b
 const originImageRenderer = renderer.image;
 renderer.image = (href, title, text) => originImageRenderer.apply(renderer, [convertHref(href), title, text]);
 
-chokidar.watch("content").on("all", () => reloadRoutes());
+chokidar.watch("content").on("all", () => reloadClientData());
 
 export default {
   siteRoot,
@@ -55,7 +55,7 @@ export default {
         })),
       },
       {
-        is404: true,
+        path: "/404",
         component: "src/containers/404",
         getData: () => ({
           apiList,
