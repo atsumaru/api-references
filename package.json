@@ -18,7 +18,7 @@
     "htmr": "0.7.0",
     "jdown": "1.0.1",
     "lodash": "4.17.13",
-    "marked": "0.6.1",
+    "marked": "4.0.10",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-hot-loader": "^4.0.0-beta.21",
